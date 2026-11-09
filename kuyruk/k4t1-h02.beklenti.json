@@ -1,0 +1,51 @@
+{
+  "_aciklama": "ÖN-KAYIT (deney-yürütücü, 2026-10-14, K4 tur 1): kuyruk k4t1-h02 başlatılmadan ÖNCE yazıldı; koşum sonrası değiştirilmez. Kart: hipotezler/H02.md (RevIN-afin, kontrol kolu, mtime 02:36). Eşikler kartın üst tablosundan (Öldürme kuralı / Mekanik DUR, 'görülmemiş kadar iyi' eşiği, Bütçe tavanı) ve uygulama notundan aynen alındı; foreground duman/ön-uçuş sonuçlarına göre AYARLANMADI. Kaynaksız kalan alt/üst mekanik sınırlar K3 beklentisinin (k3-baseline-v2.beklenti.json) kaynaklı sınırlarıdır. Duman öncesi CPU tek-değişken sağlaması (varyantlar/revin-afin/dogrula_esdeger.py, maks. fark < 1e-6) foreground'da GEÇTİ (fark 0.0). Ebeveyn (baseline) bu kuyrukta yok → yon_vs/sure_orani kuralları burada sınanamaz; ebeveynle karşılaştırma leaderboard.py (eşleştirilmiş seed) ve kartın öldürme kuralıyla. TEST sayısı hiçbir kurala konmadı (M4).",
+  "metrik": "val_mse_avg",
+  "yon": "min",
+  "asama": {
+    "1": {
+      "aciklama": "DUMAN — varyant revin-afin-duman: s2023, yalnız ufuk 96, --epoch-ust 1. Kod yolu (RevIN sarmalayıcı + resmî eğitim + val köprüsü) çalışıyor mu.",
+      "kurallar": [
+        {"tur": "sonlu"},
+        {"tur": "min_kosum", "n": 1},
+        {"tur": "aralik", "varyant": "revin-afin-duman", "alt": 0.05, "ust": 0.1923,
+         "kaynak": "üst: H02 kartı Mekanik DUR 'duman val_mse_h96 > 0.1923' (= 1.5 × Repeat val h96 0.1282); alt: K3 duman alt sınırı 0.05 ≈ 0.6 × lit. test h96 0.086 (Liu et al. 2024 Tab.10) → altı sızıntı/protokol şüphesi"}
+      ]
+    },
+    "2": {
+      "aciklama": "ÖN-UÇUŞ — varyant revin-afin-onucus: s2023, 4 ufuk, --epoch-ust 2 (h336 resmî 1).",
+      "kurallar": [
+        {"tur": "sonlu"},
+        {"tur": "min_kosum", "n": 1},
+        {"tur": "aralik", "varyant": "revin-afin-onucus", "alt": 0.40, "ust": 0.49,
+         "kaynak": "H02 kartı Mekanik DUR + Uygulama notu: ön-uçuş val_mse_avg ∈ [0.40, 0.49] (ebeveyn ön-uçuşu 0.4453 ± %10)"},
+        {"tur": "ikincil_aralik", "metrik": "revin_gamma_min", "alt": 0.05, "ust": 100,
+         "kaynak": "H02 kartı Mekanik DUR: öğrenilen γ herhangi bir değişkende ≤ 0.05 → İNCELE (de-normalizasyonda bölme patlaması); üst 100 yalnız sonluluk"},
+        {"tur": "ikincil_aralik", "metrik": "egitim_sure_sn", "alt": 10, "ust": 900,
+         "kaynak": "K3 ön-uçuş süre sınırıyla aynı (ebeveyn ön-uçuş 133–233 s; hesaplama-kaynagi.md §4); RevIN +16 parametre süreyi değiştirmemeli (kart)"}
+      ]
+    },
+    "3": {
+      "aciklama": "TAM — varyant revin-afin: 3 seed {2023, 2024, 2025} (ebeveynle aynı seed kümesi, M5), resmî ayar + RevIN. Kuyruk son aşamadan sonra kapı koşmaz; şef/tahlilci beklenti_kontrol.py --asama 3 ile elle koşar. TUT/ÖLDÜR kararı kartın öldürme kuralıyla (Δavg ≥ 0 veya <3/4 ufukta iyileşme → ÖLDÜR; |Δavg| < %8.1 → ayırt edilemez), leaderboard'dan betikle.",
+      "kurallar": [
+        {"tur": "sonlu"},
+        {"tur": "farkli_seedler_farkli"},
+        {"tur": "min_kosum", "n": 3},
+        {"tur": "aralik", "varyant": "revin-afin", "alt": 0.4003, "ust": 0.634,
+         "kaynak": "alt: H02 kartı 'görülmemiş kadar iyi' (a) val_mse_avg ≤ 0.4003 (Δ ≤ −10%, literatur-cipa §5.5 A7-a) → İNCELE; üst: K3 aşama-3 makullük sınırı 1.34 × Repeat val 0.473 (Liu et al. 2024 Tab.10 / Zeng et al. 2023 Tab.2)"},
+        {"tur": "ikincil_aralik", "metrik": "val_mse_h96", "alt": 0.1124, "ust": 0.1718,
+         "kaynak": "alt: H02 kartı İNCELE (b) h96 Δ ≤ −10% (<0.1124); üst: 1.34 × Repeat val h96 0.1282 (K3 oranı)"},
+        {"tur": "ikincil_aralik", "metrik": "val_mse_h192", "alt": 0.1903, "ust": 0.3032,
+         "kaynak": "alt: H02 kartı İNCELE (b) h192 (<0.1903); üst: 1.34 × Repeat val h192 0.2263"},
+        {"tur": "ikincil_aralik", "metrik": "val_mse_h336", "alt": 0.3603, "ust": 0.5270,
+         "kaynak": "alt: H02 kartı İNCELE (b) h336 (<0.3603); üst: 1.34 × Repeat val h336 0.3933"},
+        {"tur": "ikincil_aralik", "metrik": "val_mse_h720", "alt": 0.8343, "ust": 1.5334,
+         "kaynak": "alt: H02 kartı İNCELE (b) h720 Δ ≤ −20% (<0.8343); üst: 1.34 × Repeat val h720 1.1443"},
+        {"tur": "ikincil_aralik", "metrik": "revin_gamma_min", "alt": 0.05, "ust": 100,
+         "kaynak": "H02 kartı: γ ≤ 0.05 → İNCELE"},
+        {"tur": "ikincil_aralik", "metrik": "egitim_sure_sn", "alt": 60, "ust": 600,
+         "kaynak": "H02 kartı Bütçe tavanı: seed başına > 10 dk (ebeveynin > 2×) → durdur, teşhis"}
+      ]
+    }
+  }
+}

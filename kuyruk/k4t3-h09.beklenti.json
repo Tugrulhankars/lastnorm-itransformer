@@ -1,0 +1,53 @@
+{
+  "_aciklama": "ÖN-KAYIT (deney-yürütücü, 2026-10-14, K4 tur 3): foreground duman/ön-uçuştan ve kuyruk k4t3-h09 satırları eklenmeden ÖNCE yazıldı; koşum sonrası değiştirilmez. Kart: hipotezler/H09.md (lastnorm-dro, GroupDRO K = 4, η = 0.01; mtime 06:56:40 < ilk lastnorm-dro* koşumu). Eşikler kartın üst tablosundan (Öldürme kuralı / Mekanik DUR: duman ≤ 0.1923, ön-uçuş ∈ [0.40, 0.49], süre > 2× ebeveyn; 'görülmemiş kadar iyi' (a)(b); Bütçe tavanı) ve uygulama notundan AYNEN alındı. Kartta karşılığı olmayan üst sınırlar K3/tur-2 kaynaklı sınırlardır (1.34 × Repeat val; k4t2-h04.beklenti.json). Duman öncesi CPU sağlaması (varyantlar/lastnorm-dro/dogrula.py (i)–(v)) GEÇTİ (dogrula.log). PLASEBO (kart: ön-uçuş lastnorm-onucus_s2023 ile bit-bit aynı → mekanik DUR): ebeveyn kuyrukta yok → foreground ön-uçuşta val tahminleri 20261014-050501_lastnorm-onucus_s2023 ile karşılaştırılır ve günlüğe yazılır. Süre referansı (2× ebeveyn): ön-uçuş 050501_lastnorm-onucus_s2023 egitim_sure_sn 164.3 → 328.6 s; tam lastnorm egitim_sure_sn ort 415.3 → 830.6 s. Mekanizma-devrede-değil notu (son-epoch q_max < 0.30, h96/h192/h720) ve dayanıklılık-ödünleşimi notu karar dışıdır, kural değildir (tahlilde dro_q_maks_son_h{H} ve worst_block ile raporlanır). yon_vs / sure_orani ebeveyn kuyrukta olmadığı için sınanamaz; TUT/ÖLDÜR kartın öldürme kuralıyla leaderboard'dan (eşleştirilmiş seed). TEST sayısı hiçbir kurala konmadı (M4).",
+  "metrik": "val_mse_avg",
+  "yon": "min",
+  "asama": {
+    "1": {
+      "aciklama": "DUMAN — varyant lastnorm-dro-duman: s2023, yalnız ufuk 96, --epoch-ust 1. Kod yolu (indeks sarmalayıcı + GroupDRO train override + resmî val + val köprüsü) çalışıyor mu.",
+      "kurallar": [
+        {"tur": "sonlu"},
+        {"tur": "min_kosum", "n": 1},
+        {"tur": "aralik", "varyant": "lastnorm-dro-duman", "alt": 0.05, "ust": 0.1923,
+         "kaynak": "üst: H09 kartı Mekanik DUR + uygulama notu 'duman val_mse_h96 ≤ 0.1923' (= 1.5 × Repeat val h96 0.1282); alt: K3 duman alt sınırı 0.05 ≈ 0.6 × lit. test h96 0.086 (Liu et al. 2024 Tab.10) → altı sızıntı/protokol şüphesi"},
+        {"tur": "ikincil_aralik", "metrik": "param_sayisi", "alt": 224224, "ust": 224224,
+         "kaynak": "H09 kartı dogrula (v): parametre ebeveynle eşit (h96 224 224)"}
+      ]
+    },
+    "2": {
+      "aciklama": "ÖN-UÇUŞ — varyant lastnorm-dro-onucus: s2023, 4 ufuk, --epoch-ust 2 (h336 resmî 1).",
+      "kurallar": [
+        {"tur": "sonlu"},
+        {"tur": "min_kosum", "n": 1},
+        {"tur": "aralik", "varyant": "lastnorm-dro-onucus", "alt": 0.40, "ust": 0.49,
+         "kaynak": "H09 kartı Mekanik DUR + uygulama notu: ön-uçuş val_mse_avg ∈ [0.40, 0.49] (lastnorm-onucus_s2023 0.4454 ± ~%10)"},
+        {"tur": "ikincil_aralik", "metrik": "egitim_sure_sn", "alt": 10, "ust": 328.6,
+         "kaynak": "H09 kartı Mekanik DUR 'süre > 2× ebeveyn': ebeveyn ön-uçuş 20261014-050501_lastnorm-onucus_s2023 egitim_sure_sn 164.3 × 2"},
+        {"tur": "ikincil_aralik", "metrik": "param_sayisi", "alt": 304720, "ust": 304720,
+         "kaynak": "H09 kartı: parametre ebeveynle eşit (param_sayisi = son ufuk h720 304 720)"}
+      ]
+    },
+    "3": {
+      "aciklama": "TAM — varyant lastnorm-dro: 3 seed {2023, 2024, 2025} (ebeveyn lastnorm ile aynı seed kümesi, M5). Kuyruk son aşamadan sonra kapı koşmaz; şef/tahlilci beklenti_kontrol.py --asama 3 ile elle koşar. Karar kartın öldürme kuralıyla (Δavg ≥ 0 veya < 3/4 ufukta Δ_H < 0 → ÖLDÜR; |Δavg| < %8.1 → ayırt edilemez; İNCELE TUT'u askıya alır), leaderboard'dan betikle.",
+      "kurallar": [
+        {"tur": "sonlu"},
+        {"tur": "farkli_seedler_farkli"},
+        {"tur": "min_kosum", "n": 3},
+        {"tur": "aralik", "varyant": "lastnorm-dro", "alt": 0.3850, "ust": 0.634,
+         "kaynak": "alt: H09 kartı İNCELE (a) val_mse_avg ≤ 0.3850 (Δ ≤ −10%, literatur-cipa §5.5 A5 eşiği); üst: K3 aşama-3 makullük sınırı 1.34 × Repeat val 0.473 (k4t2-h04.beklenti.json ile aynı)"},
+        {"tur": "ikincil_aralik", "metrik": "val_mse_h96", "alt": 0.1113, "ust": 0.1718,
+         "kaynak": "alt: H09 kartı İNCELE (b) h96 ≤ −8% (< 0.1113); üst: 1.34 × Repeat val h96 0.1282 (K3 oranı)"},
+        {"tur": "ikincil_aralik", "metrik": "val_mse_h192", "alt": 0.1834, "ust": 0.3032,
+         "kaynak": "alt: H09 kartı İNCELE (b) h192 ≤ −12% (< 0.1834); üst: 1.34 × Repeat val h192 0.2263"},
+        {"tur": "ikincil_aralik", "metrik": "val_mse_h336", "alt": 0.3724, "ust": 0.5270,
+         "kaynak": "alt: H09 kartı İNCELE (b) h336 ≤ −5% (< 0.3724; 1 epoch'ta q ≈ uniform); üst: 1.34 × Repeat val h336 0.3933"},
+        {"tur": "ikincil_aralik", "metrik": "val_mse_h720", "alt": 0.7424, "ust": 1.5334,
+         "kaynak": "alt: H09 kartı İNCELE (b) h720 ≤ −25% (< 0.7424); üst: 1.34 × Repeat val h720 1.1443"},
+        {"tur": "ikincil_aralik", "metrik": "param_sayisi", "alt": 304720, "ust": 304720,
+         "kaynak": "H09 kartı: parametre ebeveynle eşit olmalı (224 224 / 236 608 / 255 184 / 304 720)"},
+        {"tur": "ikincil_aralik", "metrik": "egitim_sure_sn", "alt": 60, "ust": 830.6,
+         "kaynak": "H09 kartı Mekanik DUR 'süre > 2× ebeveyn': lastnorm tam egitim_sure_sn ort 415.3 × 2 (Bütçe tavanı 15 dk'dan sıkı)"}
+      ]
+    }
+  }
+}

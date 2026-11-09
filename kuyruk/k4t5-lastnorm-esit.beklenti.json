@@ -1,0 +1,28 @@
+{
+  "_aciklama": "ÖN-KAYIT (deney-yürütücü, 2026-10-14 ~17:22, FAZ II tur 5): kart H14 (mtime 17:16) sonrası, kuyruk satırları eklenmeden ve koşumdan ÖNCE yazıldı; koşum sonrası değiştirilmez. lastnorm-esit (H14) = CPU son-işlem C = 0.5·P + 0.5·R, w sabit (kestirim yok, GPU 0): varyantlar/lastnorm-esit/ (dogrula.log GEÇTİ: w=1 → C==P bit-bit, w=0 → C==Repeat ve naif-kat.csv, kimlik |d| ≤ 1e-15, yalnız hedef koşum okunur, K0/iç model açılmaz). Kaynak koşumlar: K3 052508/053601/054213 (resmî lastnorm), K2 163051/163203/163345, K1 163510/163633/163802. Kartın yön beklentisi (K2 Δ<0 kesin, K3 Δ>0 kesin, K1 belirsiz; Δ̄ −1.0…+1.5%) ve İNCELE (b) Δ̄ ≤ −4% bu kuyruğun kapısında DEĞİL (ebeveyn başka kuyrukta; yon_vs/tavan kuyruk-içi referans ister) → tahlilcide sınanır. Buradaki üst sınırlar matematiksel: MSE(0.5) ≤ 0.5·MSE_P + 0.5·MSE_R (konvekslik/Jensen, seed başına ve ortalamada geçerli); alt sınırlar mekanik makullük. TEST sayısı hiçbir kurala konmadı.",
+  "metrik": "val_mse_avg",
+  "yon": "min",
+  "asama": {
+    "3": {
+      "aciklama": "TAM — lastnorm-esit × kat {1,2,3} × seed {2023,2024,2025} (CPU son-işlem; ebeveyn lastnorm-k{1,2} kat koşumları + K3 resmî).",
+      "kurallar": [
+        {"tur": "sonlu"},
+        {"tur": "farkli_seedler_farkli"},
+        {"tur": "kollar_farkli"},
+        {"tur": "min_kosum", "n": 9},
+        {"tur": "aralik", "varyant": "lastnorm-esit-k1", "alt": 0.1135, "ust": 0.222312,
+         "kaynak": "alt: 0.5 × naif Repeat K1 0.227003 (sonuclar/naif-kat.csv, mekanik); üst: konvekslik 0.5·lastnorm-k1 Ā 0.217618 + 0.5·naif 0.227003 = 0.222311 (kart H14 Mekanizma (1) kimliği)"},
+        {"tur": "aralik", "varyant": "lastnorm-esit-k2", "alt": 0.5652, "ust": 1.142843,
+         "kaynak": "alt: 0.5 × naif Repeat K2 1.130437 (mekanik); üst: konvekslik 0.5·lastnorm-k2 Ā 1.155247 + 0.5·naif 1.130437 = 1.142842"},
+        {"tur": "aralik", "varyant": "lastnorm-esit-k3", "alt": 0.2365, "ust": 0.450418,
+         "kaynak": "alt: 0.5 × naif Repeat K3 0.473029 (mekanik); üst: konvekslik 0.5·lastnorm K3 Ā 0.427804 + 0.5·naif 0.473029 = 0.450417"},
+        {"tur": "ikincil_aralik", "metrik": "saglama_gecti", "alt": 1, "ust": 1, "kaynak": "kart H14 Uygulama notu sağlamaları (i)–(v)"},
+        {"tur": "ikincil_aralik", "metrik": "oracle_ihlal_sayisi", "alt": 0, "ust": 0,
+         "kaynak": "kart H14 İNCELE (a): sabit w hücre oracle kazancını V(1−clip(α*,0,1))² aşamaz"},
+        {"tur": "ikincil_aralik", "metrik": "kimlik_fark_maks", "alt": 0, "ust": 1e-6, "kaynak": "kart H14 İNCELE (c)"},
+        {"tur": "ikincil_aralik", "metrik": "w", "alt": 0.5, "ust": 0.5, "kaynak": "kart H14: w ≡ 0.5 sabit"},
+        {"tur": "ikincil_aralik", "metrik": "egitim_sure_sn", "alt": 0, "ust": 0, "kaynak": "kart H14 Bütçe: GPU 0 (son-işlem)"}
+      ]
+    }
+  }
+}

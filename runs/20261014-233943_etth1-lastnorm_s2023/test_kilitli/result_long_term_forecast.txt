@@ -1,0 +1,12 @@
+ETTh1_96_96_iTransformer_ETTh1_M_ft96_sl48_ll96_pl256_dm8_nh2_el1_dl256_df1_fctimeF_ebTrue_dtExp_projection_0  
+mse:0.40907514095306396, mae:0.4187479317188263
+
+ETTh1_96_192_iTransformer_ETTh1_M_ft96_sl48_ll192_pl256_dm8_nh2_el1_dl256_df1_fctimeF_ebTrue_dtExp_projection_0  
+mse:0.4582746624946594, mae:0.44780242443084717
+
+ETTh1_96_336_iTransformer_ETTh1_M_ft96_sl48_ll336_pl512_dm8_nh2_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0  
+mse:0.5087829232215881, mae:0.47652626037597656
+
+ETTh1_96_720_iTransformer_ETTh1_M_ft96_sl48_ll720_pl512_dm8_nh2_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0  
+mse:0.5410020351409912, mae:0.5123286843299866
+

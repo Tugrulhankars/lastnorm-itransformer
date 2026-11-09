@@ -1,0 +1,81 @@
+Args in experiment:
+Namespace(is_training=1, model_id='Exchange_96_720', model='iTransformer', data='custom', root_path='C:\\Users\\karsl\\Downloads\\yzmakaleuretimskill\\yzmakaleuretimskill\\deney_workspace\\5-3-exchange-itransformer\\data\\exchange_rate\\', data_path='exchange_rate.csv', features='M', target='OT', freq='h', checkpoints='C:\\Users\\karsl\\Downloads\\yzmakaleuretimskill\\yzmakaleuretimskill\\deney_workspace\\5-3-exchange-itransformer\\runs\\20261015-060119_san-k2_s2024\\ckpt\\', seq_len=96, label_len=48, pred_len=720, enc_in=8, dec_in=8, c_out=8, d_model=128, n_heads=8, e_layers=2, d_layers=1, d_ff=128, moving_avg=25, factor=1, distil=True, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, do_predict=False, num_workers=0, itr=1, train_epochs=10, batch_size=32, patience=3, learning_rate=0.0001, des='Exp', loss='MSE', lradj='type1', use_amp=False, use_gpu=True, gpu=0, use_multi_gpu=False, devices='0,1,2,3', exp_name='MTSF', channel_independence=False, inverse=False, class_strategy='projection', target_root_path='./data/electricity/', target_data_path='electricity.csv', efficient_training=False, use_norm=0, partial_start_index=0)
+Use GPU: cuda:0
+>>>>>>>start training : Exchange_96_720_iTransformer_custom_M_ft96_sl48_ll720_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 3736
+val 41
+test 0
+	iters: 100, epoch: 1 | loss: 0.5368624
+	speed: 0.0099s/iter; left time: 16.2021s
+[SAN-onegitim] ep 1/5 adim 116 sure 1.1s | istasyon_train=0.4710282 istasyon_val=0.8188429
+Validation loss decreased (inf --> 0.818843).  Saving model ...
+Updating learning rate to 0.001
+	iters: 100, epoch: 2 | loss: 0.3637743
+	speed: 0.0133s/iter; left time: 20.3039s
+[SAN-onegitim] ep 2/5 adim 116 sure 1.2s | istasyon_train=0.4184664 istasyon_val=0.7207462
+Validation loss decreased (0.818843 --> 0.720746).  Saving model ...
+Updating learning rate to 0.0005
+	iters: 100, epoch: 3 | loss: 0.3471429
+	speed: 0.0122s/iter; left time: 17.2574s
+[SAN-onegitim] ep 3/5 adim 116 sure 1.2s | istasyon_train=0.3896347 istasyon_val=0.6797869
+Validation loss decreased (0.720746 --> 0.679787).  Saving model ...
+Updating learning rate to 0.00025
+	iters: 100, epoch: 4 | loss: 0.3494611
+	speed: 0.0138s/iter; left time: 17.8318s
+[SAN-onegitim] ep 4/5 adim 116 sure 1.4s | istasyon_train=0.3772781 istasyon_val=0.6976447
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 0.000125
+	iters: 100, epoch: 5 | loss: 0.3283235
+	speed: 0.0135s/iter; left time: 15.9442s
+[SAN-onegitim] ep 5/5 adim 116 sure 1.4s | istasyon_train=0.3723521 istasyon_val=0.6889840
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 6.25e-05
+[SAN] on-egitim bitti: en iyi istasyon checkpoint yuklendi (omurga fazinda SAN adim atmaz)
+	iters: 100, epoch: 6 | loss: 0.7308677
+	speed: 0.0355s/iter; left time: 37.6700s
+Epoch: 1 cost time: 3.906745195388794
+Epoch: 1, Steps: 116 | Train Loss: 0.7618696 Vali Loss: 1.3793774 Test Loss: nan
+Validation loss decreased (inf --> 1.379377).  Saving model ...
+Updating learning rate to 0.0001
+Updating learning rate to 0.001
+	iters: 100, epoch: 7 | loss: 0.6686594
+	speed: 0.0402s/iter; left time: 38.0046s
+Epoch: 2 cost time: 4.006760835647583
+Epoch: 2, Steps: 116 | Train Loss: 0.7613281 Vali Loss: 1.3698651 Test Loss: nan
+Validation loss decreased (1.379377 --> 1.369865).  Saving model ...
+Updating learning rate to 5e-05
+Updating learning rate to 0.0005
+	iters: 100, epoch: 8 | loss: 0.7488744
+	speed: 0.0379s/iter; left time: 31.3945s
+Epoch: 3 cost time: 3.637965202331543
+Epoch: 3, Steps: 116 | Train Loss: 0.7610071 Vali Loss: 1.3753015 Test Loss: nan
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 2.5e-05
+Updating learning rate to 0.00025
+	iters: 100, epoch: 9 | loss: 0.8146844
+	speed: 0.0346s/iter; left time: 24.7009s
+Epoch: 4 cost time: 3.389357328414917
+Epoch: 4, Steps: 116 | Train Loss: 0.7610312 Vali Loss: 1.3627087 Test Loss: nan
+Validation loss decreased (1.369865 --> 1.362709).  Saving model ...
+Updating learning rate to 1.25e-05
+Updating learning rate to 0.000125
+	iters: 100, epoch: 10 | loss: 0.6815255
+	speed: 0.0370s/iter; left time: 22.0640s
+Epoch: 5 cost time: 3.6616883277893066
+Epoch: 5, Steps: 116 | Train Loss: 0.7607602 Vali Loss: 1.3648328 Test Loss: nan
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 6.25e-06
+Updating learning rate to 6.25e-05
+	iters: 100, epoch: 11 | loss: 0.6909881
+	speed: 0.0365s/iter; left time: 17.5646s
+Epoch: 6 cost time: 3.6520752906799316
+Epoch: 6, Steps: 116 | Train Loss: 0.7609855 Vali Loss: 1.3734870 Test Loss: nan
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 3.125e-06
+Updating learning rate to 3.125e-05
+	iters: 100, epoch: 12 | loss: 0.8032680
+	speed: 0.0354s/iter; left time: 12.9293s
+Epoch: 7 cost time: 3.496541738510132
+Epoch: 7, Steps: 116 | Train Loss: 0.7602435 Vali Loss: 1.3635622 Test Loss: nan
+EarlyStopping counter: 3 out of 3
+Early stopping

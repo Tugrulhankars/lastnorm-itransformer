@@ -1,0 +1,7 @@
+# 2026-10-14T17:21:36 $ C:/Users/karsl/Downloads/yzmakaleuretimskill/yzmakaleuretimskill/deney_workspace/5-3-exchange-itransformer/env/.venv/Scripts/python.exe C:/Users/karsl/Downloads/yzmakaleuretimskill/yzmakaleuretimskill/deney_workspace/5-3-exchange-itransformer/varyantlar/lastnorm-esit/esit.py --kat 3 --seed 2024 --out 'C:\Users\karsl\Downloads\yzmakaleuretimskill\yzmakaleuretimskill\deney_workspace\5-3-exchange-itransformer\runs\20261014-172136_lastnorm-esit-k3_s2024/metrics.json'
+[H14] varyant=lastnorm-esit kat=3 seed=2024 w=0.5 sabit (kestirim yok, CPU)
+  K3 s2024 h96: (i) w=1 C==P bit-bit, |dMSE|=0.0e+00 OK | (ii) w=0 C==R, |dMSE naif|=3.4e-07 OK | (iii) kimlik |d|=1.4e-17 OK
+  K3 s2024 h192: (i) w=1 C==P bit-bit, |dMSE|=0.0e+00 OK | (ii) w=0 C==R, |dMSE naif|=2.6e-08 OK | (iii) kimlik |d|=2.8e-17 OK
+  K3 s2024 h336: (i) w=1 C==P bit-bit, |dMSE|=0.0e+00 OK | (ii) w=0 C==R, |dMSE naif|=2.7e-07 OK | (iii) kimlik |d|=1.1e-16 OK
+  K3 s2024 h720: (i) w=1 C==P bit-bit, |dMSE|=0.0e+00 OK | (ii) w=0 C==R, |dMSE naif|=4.5e-07 OK | (iii) kimlik |d|=2.2e-16 OK
+[H14] bitti: val_mse_avg=0.449095 (ebeveyn 0.429995) -> C:\Users\karsl\Downloads\yzmakaleuretimskill\yzmakaleuretimskill\deney_workspace\5-3-exchange-itransformer\runs\20261014-172136_lastnorm-esit-k3_s2024\metrics.json

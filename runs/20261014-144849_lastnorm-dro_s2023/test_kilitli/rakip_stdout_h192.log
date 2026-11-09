@@ -1,0 +1,55 @@
+Args in experiment:
+Namespace(is_training=1, model_id='Exchange_96_192', model='iTransformer', data='custom', root_path='C:\\Users\\karsl\\Downloads\\yzmakaleuretimskill\\yzmakaleuretimskill\\deney_workspace\\5-3-exchange-itransformer\\data\\exchange_rate\\', data_path='exchange_rate.csv', features='M', target='OT', freq='h', checkpoints='C:\\Users\\karsl\\Downloads\\yzmakaleuretimskill\\yzmakaleuretimskill\\deney_workspace\\5-3-exchange-itransformer\\runs\\20261014-144849_lastnorm-dro_s2023\\ckpt\\', seq_len=96, label_len=48, pred_len=192, enc_in=8, dec_in=8, c_out=8, d_model=128, n_heads=8, e_layers=2, d_layers=1, d_ff=128, moving_avg=25, factor=1, distil=True, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, do_predict=False, num_workers=0, itr=1, train_epochs=10, batch_size=32, patience=3, learning_rate=0.0001, des='Exp', loss='MSE', lradj='type1', use_amp=False, use_gpu=True, gpu=0, use_multi_gpu=False, devices='0,1,2,3', exp_name='MTSF', channel_independence=False, inverse=False, class_strategy='projection', target_root_path='./data/electricity/', target_data_path='electricity.csv', efficient_training=False, use_norm=0, partial_start_index=0)
+Use GPU: cuda:0
+>>>>>>>start training : Exchange_96_192_iTransformer_custom_M_ft96_sl48_ll192_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 5024
+val 569
+test 1326
+[H09] GroupDRO: K=4 eta=0.01 N_H=5024 grup_n=[1256, 1256, 1256, 1256]
+	iters: 100, epoch: 1 | loss: 0.3132081
+	speed: 0.0246s/iter; left time: 36.2290s
+Epoch: 1 cost time: 3.9035215377807617
+[H09] DRO epoch 1 | dro_kayip 0.2578747 | q [0.2596, 0.2151, 0.2116, 0.3138] | grup_train_mse [0.28163, 0.1614, 0.15109, 0.40877]
+Epoch: 1, Steps: 157 | Train Loss: 0.2507224 Vali Loss: 0.2230963 Test Loss: nan
+Validation loss decreased (inf --> 0.223096).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 2 | loss: 0.3331428
+	speed: 0.0407s/iter; left time: 53.4379s
+Epoch: 2 cost time: 3.979957342147827
+[H09] DRO epoch 2 | dro_kayip 0.2746068 | q [0.2591, 0.1807, 0.1737, 0.3865] | grup_train_mse [0.27434, 0.16286, 0.14789, 0.39746]
+Epoch: 2, Steps: 157 | Train Loss: 0.2456390 Vali Loss: 0.2120299 Test Loss: nan
+Validation loss decreased (0.223096 --> 0.212030).  Saving model ...
+Updating learning rate to 5e-05
+	iters: 100, epoch: 3 | loss: 0.2907028
+	speed: 0.0452s/iter; left time: 52.3445s
+Epoch: 3 cost time: 4.310271739959717
+[H09] DRO epoch 3 | dro_kayip 0.2791671 | q [0.2564, 0.1511, 0.1411, 0.4514] | grup_train_mse [0.2736, 0.1657, 0.1454, 0.38852]
+Epoch: 3, Steps: 157 | Train Loss: 0.2433035 Vali Loss: 0.2092520 Test Loss: nan
+Validation loss decreased (0.212030 --> 0.209252).  Saving model ...
+Updating learning rate to 2.5e-05
+	iters: 100, epoch: 4 | loss: 0.2208981
+	speed: 0.0409s/iter; left time: 40.8995s
+Epoch: 4 cost time: 3.829618215560913
+[H09] DRO epoch 4 | dro_kayip 0.2950542 | q [0.2491, 0.1232, 0.1117, 0.5161] | grup_train_mse [0.27283, 0.16541, 0.14542, 0.38291]
+Epoch: 4, Steps: 157 | Train Loss: 0.2416436 Vali Loss: 0.2105629 Test Loss: nan
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 1.25e-05
+	iters: 100, epoch: 5 | loss: 0.1784480
+	speed: 0.0394s/iter; left time: 33.2351s
+Epoch: 5 cost time: 3.787424087524414
+[H09] DRO epoch 5 | dro_kayip 0.3055454 | q [0.237, 0.0992, 0.087, 0.5768] | grup_train_mse [0.27287, 0.16665, 0.14596, 0.37955]
+Epoch: 5, Steps: 157 | Train Loss: 0.2412576 Vali Loss: 0.2122541 Test Loss: nan
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 6.25e-06
+	iters: 100, epoch: 6 | loss: 0.4677214
+	speed: 0.0421s/iter; left time: 28.8747s
+Epoch: 6 cost time: 4.022712230682373
+[H09] DRO epoch 6 | dro_kayip 0.3216260 | q [0.2194, 0.0779, 0.0659, 0.6368] | grup_train_mse [0.27204, 0.16754, 0.14588, 0.37804]
+Epoch: 6, Steps: 157 | Train Loss: 0.2408784 Vali Loss: 0.2102142 Test Loss: nan
+EarlyStopping counter: 3 out of 3
+Early stopping
+>>>>>>>testing : Exchange_96_192_iTransformer_custom_M_ft96_sl48_ll192_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 1326
+test shape: (1326, 1, 192, 8) (1326, 1, 192, 8)
+test shape: (1326, 192, 8) (1326, 192, 8)
+mse:0.17591075599193573, mae:0.29539915919303894

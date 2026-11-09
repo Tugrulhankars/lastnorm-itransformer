@@ -1,0 +1,7 @@
+# 2026-10-14T17:04:01 $ C:/Users/karsl/Downloads/yzmakaleuretimskill/yzmakaleuretimskill/deney_workspace/5-3-exchange-itransformer/env/.venv/Scripts/python.exe C:/Users/karsl/Downloads/yzmakaleuretimskill/yzmakaleuretimskill/deney_workspace/5-3-exchange-itransformer/varyantlar/lastnorm-olcek/olcek.py --kat 1 --seed 2024 --out 'C:\Users\karsl\Downloads\yzmakaleuretimskill\yzmakaleuretimskill\deney_workspace\5-3-exchange-itransformer\runs\20261014-170401_lastnorm-olcek-k1_s2024/metrics.json'
+[H13] varyant=lastnorm-olcek kat=1 seed=2024 donusum=max(alpha_hat, 0) (CPU)
+  K1 s2024 h96: w=[0.000, 0.000, 0.000, 0.000, 0.000, 0.000, 0.000, 0.000, 0.000, 0.000] | (i) OK (ii) OK (iv) |d|=0.00e+00 OK
+  K1 s2024 h192: w=[0.023, 0.000, 0.000, 0.000, 0.000, 0.000, 0.000, 0.000, 0.000, 0.000] | (i) OK (ii) OK (iv) |d|=0.00e+00 OK
+  K1 s2024 h336: w=[0.000, 0.000, 0.000, 0.000, 0.000, 0.000, 0.000, 0.000, 0.000, 0.000] | (i) OK (ii) OK (iv) |d|=0.00e+00 OK
+  K1 s2024 h720: w=[0.131, 0.000, 0.000, 0.000, 0.000, 0.000, 0.000, 0.000, 0.000, 0.000] | (i) OK (ii) OK (iv) |d|=0.00e+00 OK
+[H13] bitti: val_mse_avg=0.227007 (ebeveyn 0.218507) w=1 orani 0.00 -> C:\Users\karsl\Downloads\yzmakaleuretimskill\yzmakaleuretimskill\deney_workspace\5-3-exchange-itransformer\runs\20261014-170401_lastnorm-olcek-k1_s2024\metrics.json

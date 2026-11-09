@@ -1,0 +1,50 @@
+# 2026-10-14T02:57:11 $ C:/Users/karsl/Downloads/yzmakaleuretimskill/yzmakaleuretimskill/deney_workspace/5-3-exchange-itransformer/env/.venv/Scripts/python.exe C:/Users/karsl/Downloads/yzmakaleuretimskill/yzmakaleuretimskill/deney_workspace/5-3-exchange-itransformer/varyantlar/san/kos.py --seed 2023 --out 'C:\Users\karsl\Downloads\yzmakaleuretimskill\yzmakaleuretimskill\deney_workspace\5-3-exchange-itransformer\runs\20261014-025708_san-duman_s2023/metrics.json' --ufuklar 96 --epoch-ust 1 --num-workers 0
+[H01] varyant=san: --use_norm 0 + SAN (period_len=6, station_lr=0.001, adaptive, on-egitim 5 ep)
+[rakip_kos] rakip commit c2426e68ca13f74aaec08045c5c724d8ad328124 | run.py fix_seed=2023 -> sarmalayici seed=2023 | cihaz cuda:0 / NVIDIA GeForce RTX 3060 Laptop GPU | torch 2.4.1+cu121 | ufuklar [96] | epoch_ust=1 | num_workers=resmi
+Args in experiment:
+Namespace(is_training=1, model_id='Exchange_96_96', model='iTransformer', data='custom', root_path='C:\\Users\\karsl\\Downloads\\yzmakaleuretimskill\\yzmakaleuretimskill\\deney_workspace\\5-3-exchange-itransformer\\data\\exchange_rate\\', data_path='exchange_rate.csv', features='M', target='OT', freq='h', checkpoints='C:\\Users\\karsl\\Downloads\\yzmakaleuretimskill\\yzmakaleuretimskill\\deney_workspace\\5-3-exchange-itransformer\\runs\\20261014-025708_san-duman_s2023\\ckpt\\', seq_len=96, label_len=48, pred_len=96, enc_in=8, dec_in=8, c_out=8, d_model=128, n_heads=8, e_layers=2, d_layers=1, d_ff=128, moving_avg=25, factor=1, distil=True, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, do_predict=False, num_workers=0, itr=1, train_epochs=1, batch_size=32, patience=3, learning_rate=0.0001, des='Exp', loss='MSE', lradj='type1', use_amp=False, use_gpu=True, gpu=0, use_multi_gpu=False, devices='0,1,2,3', exp_name='MTSF', channel_independence=False, inverse=False, class_strategy='projection', target_root_path='./data/electricity/', target_data_path='electricity.csv', efficient_training=False, use_norm=0, partial_start_index=0)
+Use GPU: cuda:0
+>>>>>>>start training : Exchange_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 5120
+val 665
+test 1422
+	iters: 100, epoch: 1 | loss: 0.0563195
+	speed: 0.0157s/iter; left time: 13.5119s
+[SAN-onegitim] ep 1/5 adim 160 sure 1.8s | istasyon_train=0.0629891 istasyon_val=0.0841226
+Validation loss decreased (inf --> 0.084123).  Saving model ...
+Updating learning rate to 0.001
+	iters: 100, epoch: 2 | loss: 0.0623755
+	speed: 0.0142s/iter; left time: 9.9489s
+[SAN-onegitim] ep 2/5 adim 160 sure 1.4s | istasyon_train=0.0601166 istasyon_val=0.0797331
+Validation loss decreased (0.084123 --> 0.079733).  Saving model ...
+Updating learning rate to 0.0005
+	iters: 100, epoch: 3 | loss: 0.0492558
+	speed: 0.0148s/iter; left time: 8.0303s
+[SAN-onegitim] ep 3/5 adim 160 sure 1.5s | istasyon_train=0.0589675 istasyon_val=0.0822385
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 0.00025
+	iters: 100, epoch: 4 | loss: 0.0584277
+	speed: 0.0145s/iter; left time: 5.5162s
+[SAN-onegitim] ep 4/5 adim 160 sure 1.4s | istasyon_train=0.0584531 istasyon_val=0.0863345
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 0.000125
+	iters: 100, epoch: 5 | loss: 0.0643207
+	speed: 0.0144s/iter; left time: 3.1902s
+[SAN-onegitim] ep 5/5 adim 160 sure 1.4s | istasyon_train=0.0581956 istasyon_val=0.0821414
+EarlyStopping counter: 3 out of 3
+Updating learning rate to 6.25e-05
+[SAN] on-egitim bitti: en iyi istasyon checkpoint yuklendi (omurga fazinda SAN adim atmaz)
+	iters: 100, epoch: 6 | loss: 0.1532849
+	speed: 0.0350s/iter; left time: 2.1365s
+Epoch: 1 cost time: 4.527562856674194
+Epoch: 1, Steps: 160 | Train Loss: 0.1181376 Vali Loss: 0.1592387 Test Loss: <kilitli>
+Validation loss decreased (inf --> 0.159239).  Saving model ...
+Updating learning rate to 0.0001
+Updating learning rate to 0.001
+>>>>>>>testing : Exchange_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 1422
+test shape: (1422, 1, 96, 8) (1422, 1, 96, 8)
+test shape: (1422, 96, 8) (1422, 96, 8)
+<test metrigi kilitli: test_kilitli/ altinda>
+[rakip_kos] h96: val_mse=0.158678 val_mae=0.291880 epoch=1/1 sure=57.4s vram_tepe=31MB (test hesaplandi, kilitli)
+[rakip_kos] bitti: val_mse_avg=0.158678 sure=58.0s -> C:\Users\karsl\Downloads\yzmakaleuretimskill\yzmakaleuretimskill\deney_workspace\5-3-exchange-itransformer\runs\20261014-025708_san-duman_s2023\metrics.json

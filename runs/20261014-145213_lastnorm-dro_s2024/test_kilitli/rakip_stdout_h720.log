@@ -1,0 +1,62 @@
+Args in experiment:
+Namespace(is_training=1, model_id='Exchange_96_720', model='iTransformer', data='custom', root_path='C:\\Users\\karsl\\Downloads\\yzmakaleuretimskill\\yzmakaleuretimskill\\deney_workspace\\5-3-exchange-itransformer\\data\\exchange_rate\\', data_path='exchange_rate.csv', features='M', target='OT', freq='h', checkpoints='C:\\Users\\karsl\\Downloads\\yzmakaleuretimskill\\yzmakaleuretimskill\\deney_workspace\\5-3-exchange-itransformer\\runs\\20261014-145213_lastnorm-dro_s2024\\ckpt\\', seq_len=96, label_len=48, pred_len=720, enc_in=8, dec_in=8, c_out=8, d_model=128, n_heads=8, e_layers=2, d_layers=1, d_ff=128, moving_avg=25, factor=1, distil=True, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, do_predict=False, num_workers=0, itr=1, train_epochs=10, batch_size=32, patience=3, learning_rate=0.0001, des='Exp', loss='MSE', lradj='type1', use_amp=False, use_gpu=True, gpu=0, use_multi_gpu=False, devices='0,1,2,3', exp_name='MTSF', channel_independence=False, inverse=False, class_strategy='projection', target_root_path='./data/electricity/', target_data_path='electricity.csv', efficient_training=False, use_norm=0, partial_start_index=0)
+Use GPU: cuda:0
+>>>>>>>start training : Exchange_96_720_iTransformer_custom_M_ft96_sl48_ll720_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 4496
+val 41
+test 798
+[H09] GroupDRO: K=4 eta=0.01 N_H=4496 grup_n=[1124, 1124, 1124, 1124]
+	iters: 100, epoch: 1 | loss: 0.9051657
+	speed: 0.0256s/iter; left time: 33.2903s
+Epoch: 1 cost time: 3.571418523788452
+[H09] DRO epoch 1 | dro_kayip 0.8279543 | q [0.2962, 0.2238, 0.2588, 0.2212] | grup_train_mse [0.95124, 0.74684, 0.85252, 0.7399]
+Epoch: 1, Steps: 140 | Train Loss: 0.8226744 Vali Loss: 1.1320455 Test Loss: nan
+Validation loss decreased (inf --> 1.132046).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 2 | loss: 0.9154508
+	speed: 0.0363s/iter; left time: 42.1428s
+Epoch: 2 cost time: 3.682896852493286
+[H09] DRO epoch 2 | dro_kayip 0.8323938 | q [0.3467, 0.2, 0.26, 0.1933] | grup_train_mse [0.94234, 0.75398, 0.83925, 0.73021]
+Epoch: 2, Steps: 140 | Train Loss: 0.8164934 Vali Loss: 1.0329204 Test Loss: nan
+Validation loss decreased (1.132046 --> 1.032920).  Saving model ...
+Updating learning rate to 5e-05
+	iters: 100, epoch: 3 | loss: 0.8139403
+	speed: 0.0371s/iter; left time: 37.8598s
+Epoch: 3 cost time: 3.8089377880096436
+[H09] DRO epoch 3 | dro_kayip 0.8309660 | q [0.403, 0.1802, 0.2502, 0.1666] | grup_train_mse [0.93971, 0.76236, 0.80768, 0.72719]
+Epoch: 3, Steps: 140 | Train Loss: 0.8091954 Vali Loss: 0.9676305 Test Loss: nan
+Validation loss decreased (1.032920 --> 0.967631).  Saving model ...
+Updating learning rate to 2.5e-05
+	iters: 100, epoch: 4 | loss: 0.7903338
+	speed: 0.0400s/iter; left time: 35.2809s
+Epoch: 4 cost time: 3.9128851890563965
+[H09] DRO epoch 4 | dro_kayip 0.8363081 | q [0.4631, 0.1606, 0.2343, 0.1421] | grup_train_mse [0.93542, 0.75226, 0.79205, 0.72741]
+Epoch: 4, Steps: 140 | Train Loss: 0.8017560 Vali Loss: 0.8874485 Test Loss: nan
+Validation loss decreased (0.967631 --> 0.887449).  Saving model ...
+Updating learning rate to 1.25e-05
+	iters: 100, epoch: 5 | loss: 0.8981377
+	speed: 0.0413s/iter; left time: 30.5868s
+Epoch: 5 cost time: 3.913947820663452
+[H09] DRO epoch 5 | dro_kayip 0.8475866 | q [0.5232, 0.1389, 0.2174, 0.1206] | grup_train_mse [0.93173, 0.74659, 0.78734, 0.7278]
+Epoch: 5, Steps: 140 | Train Loss: 0.7982920 Vali Loss: 0.8995305 Test Loss: nan
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 6.25e-06
+	iters: 100, epoch: 6 | loss: 0.6794155
+	speed: 0.0360s/iter; left time: 21.6081s
+Epoch: 6 cost time: 3.6436097621917725
+[H09] DRO epoch 6 | dro_kayip 0.8509956 | q [0.5827, 0.1206, 0.1955, 0.1012] | grup_train_mse [0.93041, 0.75211, 0.77993, 0.72853]
+Epoch: 6, Steps: 140 | Train Loss: 0.7976984 Vali Loss: 0.9195296 Test Loss: nan
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 3.125e-06
+	iters: 100, epoch: 7 | loss: 0.9816499
+	speed: 0.0373s/iter; left time: 17.2170s
+Epoch: 7 cost time: 3.896523952484131
+[H09] DRO epoch 7 | dro_kayip 0.8611585 | q [0.6352, 0.1044, 0.1755, 0.0849] | grup_train_mse [0.92437, 0.75447, 0.78044, 0.73004]
+Epoch: 7, Steps: 140 | Train Loss: 0.7971869 Vali Loss: 0.8950266 Test Loss: nan
+EarlyStopping counter: 3 out of 3
+Early stopping
+>>>>>>>testing : Exchange_96_720_iTransformer_custom_M_ft96_sl48_ll720_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 798
+test shape: (798, 1, 720, 8) (798, 1, 720, 8)
+test shape: (798, 720, 8) (798, 720, 8)
+mse:0.8392732739448547, mae:0.6912455558776855

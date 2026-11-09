@@ -1,0 +1,17 @@
+[kat_dogrula] veri=etth2 csv=C:\Users\karsl\Downloads\yzmakaleuretimskill\yzmakaleuretimskill\deney_workspace\5-3-exchange-itransformer\data\etth2\ETTh2.csv sha256=a3dc2c597b9218c7ce1cd55eb77b283fd459a1d09d753063f944967dd6b9218b (sabit: a3dc2c597b9218c7ce1cd55eb77b283fd459a1d09d753063f944967dd6b9218b) taban=Dataset_ETT_hour
+
+=== kat K3: n=17420 T_resmi=8640 V=2880 | train satir [0,8640) | val hedef satir [8640,11520) | val girdi satir [8544,11520) | resmi test bas=11520
+  h96 (a) K3 == resmi Dataset_ETT_hour (train/val data_x, data_stamp, len, scaler): BIT-BIT ESIT
+  h96: pencere train 8449 (bek 8449) val 2785 (bek 2785) test 0 | satir/pencere OK | scaler==numpy(train) OK | olcek OK | sizinti yok (train son hedef 8639 < 8640; val hedef [8640,11519]; test 0 pencere, okuma hatasi=True) OK | naif Repeat val mse 0.315860 mae 0.395047 | data/naive_val_etth2.csv 0.315860/0.395047 -> ESIT
+  h192 (a) K3 == resmi Dataset_ETT_hour (train/val data_x, data_stamp, len, scaler): BIT-BIT ESIT
+  h192: pencere train 8353 (bek 8353) val 2689 (bek 2689) test 0 | satir/pencere OK | scaler==numpy(train) OK | olcek OK | sizinti yok (train son hedef 8639 < 8640; val hedef [8640,11519]; test 0 pencere, okuma hatasi=True) OK | naif Repeat val mse 0.385814 mae 0.434814 | data/naive_val_etth2.csv 0.385814/0.434814 -> ESIT
+  h336 (a) K3 == resmi Dataset_ETT_hour (train/val data_x, data_stamp, len, scaler): BIT-BIT ESIT
+  h336: pencere train 8209 (bek 8209) val 2545 (bek 2545) test 0 | satir/pencere OK | scaler==numpy(train) OK | olcek OK | sizinti yok (train son hedef 8639 < 8640; val hedef [8640,11519]; test 0 pencere, okuma hatasi=True) OK | naif Repeat val mse 0.477049 mae 0.480072 | data/naive_val_etth2.csv 0.477049/0.480072 -> ESIT
+  h720 (a) K3 == resmi Dataset_ETT_hour (train/val data_x, data_stamp, len, scaler): BIT-BIT ESIT
+  h720: pencere train 7825 (bek 7825) val 2161 (bek 2161) test 0 | satir/pencere OK | scaler==numpy(train) OK | olcek OK | sizinti yok (train son hedef 8639 < 8640; val hedef [8640,11519]; test 0 pencere, okuma hatasi=True) OK | naif Repeat val mse 0.740687 mae 0.606796 | data/naive_val_etth2.csv 0.740687/0.606796 -> ESIT
+  scaler ort (kat train) = [41.53683 12.27345 46.60977 10.52615  1.18699 -2.37322 26.87202]
+  scaler std (kat train) = [10.44884  4.58711 16.85819  3.01861  4.64101  8.46091 11.58472]
+
+naif Repeat val MSE (4 ufuk ort.): K3=0.479853
+yazildi: C:\Users\karsl\Downloads\yzmakaleuretimskill\yzmakaleuretimskill\deney_workspace\5-3-exchange-itransformer\sonuclar\naif-kat_etth2_k3.csv
+SONUC: GECTI

@@ -1,0 +1,72 @@
+{
+  "val_mse_avg": 0.12763290107250214,
+  "val_mae_avg": 0.24757948517799377,
+  "val_mse_h96": 0.12763290107250214,
+  "val_mae_h96": 0.24757948517799377,
+  "egitim_sure_sn": 10.3,
+  "cihaz": "cuda:0 / NVIDIA GeForce RTX 3060 Laptop GPU",
+  "seed": 2023,
+  "ufuk_sayisi": 1,
+  "kisaltilmis": 1,
+  "param_sayisi": 224224,
+  "epoch_ayar_h96": 1,
+  "epoch_resmi_h96": 10,
+  "param_sayisi_h96": 224224,
+  "epoch_kosulan_h96": 1,
+  "val_resmi_kayip_min_h96": 0.1278771,
+  "sure_sn_h96": 10.06,
+  "egitim_sure_sn_h96": 6.2,
+  "vram_tepe_mb_h96": 27.0,
+  "veri": "exchange",
+  "veri_sha256": "48b4d9d3d508f5104162e85b9a6042e3557fde11aa9f2944eba8c0d0efc89842",
+  "kat": 3,
+  "kat_val_satir": [
+    5311,
+    6071
+  ],
+  "kat_train_satir": [
+    0,
+    5311
+  ],
+  "kat_val_girdi_satir": [
+    5215,
+    6071
+  ],
+  "kat_V": 760,
+  "kat_T_resmi": 5311,
+  "kat_pencere_val_h96": 665,
+  "kat_pencere_train_h96": 5120,
+  "kat_scaler_ort": [
+    0.7229358747881756,
+    1.671601238373188,
+    0.785566129919036,
+    0.755919234795707,
+    0.13668337883637732,
+    0.008887640369045378,
+    0.6267546676708718,
+    0.6048248685746563
+  ],
+  "kat_scaler_std": [
+    0.10310762163854703,
+    0.16755898212938228,
+    0.10352909488756137,
+    0.10453969339531399,
+    0.02614358389110788,
+    0.0011011469241223103,
+    0.055640679736433614,
+    0.09529949685465589
+  ],
+  "alt_grup": {
+    "val_mse_h96_d0": 0.1705693155527115,
+    "val_mse_h96_d1": 0.0484713613986969,
+    "val_mse_h96_d2": 0.05785885080695152,
+    "val_mse_h96_d3": 0.35713452100753784,
+    "val_mse_h96_d4": 0.002542290836572647,
+    "val_mse_h96_d5": 0.10342460870742798,
+    "val_mse_h96_d6": 0.13283699750900269,
+    "val_mse_h96_d7": 0.14822529256343842
+  },
+  "varyant": "lastnorm",
+  "kart": "H04",
+  "ebeveyn": "baseline"
+}

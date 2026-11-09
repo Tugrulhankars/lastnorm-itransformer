@@ -1,0 +1,53 @@
+{
+  "_aciklama": "ÖN-KAYIT (deney-yürütücü, 2026-10-14, K4 tur 3): foreground duman/ön-uçuştan ve kuyruk k4t3-h10 satırları eklenmeden ÖNCE yazıldı; koşum sonrası değiştirilmez. Kart: hipotezler/H10.md (lastnorm-merkez, σ ≡ 1; H04 Ablasyon (1); mtime 06:57:48 < ilk lastnorm-merkez* koşumu). Eşikler kartın üst tablosundan (Öldürme kuralı / Mekanik DUR: duman ≤ 0.1923, ön-uçuş ∈ [0.38, 0.90], süre > 2× ebeveyn; 'görülmemiş kadar iyi' (a)(b); Bütçe tavanı) ve uygulama notundan AYNEN alındı. Duman öncesi CPU sağlaması (varyantlar/lastnorm-merkez/dogrula.py (i)–(v)) GEÇTİ (dogrula.log). Kart iki yönlüdür ve ters yönde DUR koymaz (Δavg ≥ +50% yalnız 'σ ölçeklemesi taşıyıcı' bilgi etiketi): bu yüzden aşama-3 üst sınırı kartın H06-tipi çöküş sınırı 0.90, ufuk üst sınırları yalnız sonluluk (100). PLASEBO (kart: ön-uçuş lastnorm-onucus_s2023 ile bit-bit aynı → mekanik DUR): ebeveyn kuyrukta yok, kollar_farkli ile sınanamaz → foreground ön-uçuşta val tahminleri 20261014-050501_lastnorm-onucus_s2023 ile karşılaştırılır ve günlüğe yazılır. Süre referansı (2× ebeveyn): ön-uçuş 050501_lastnorm-onucus_s2023 egitim_sure_sn 164.3 → 328.6 s; tam lastnorm egitim_sure_sn 433.4 / 352.1 / 460.4 (ort 415.3) → 830.6 s. yon_vs / sure_orani ebeveyn kuyrukta olmadığı için sınanamaz; TUT/ÖLDÜR kartın öldürme kuralıyla leaderboard'dan (eşleştirilmiş seed). TEST sayısı hiçbir kurala konmadı (M4).",
+  "metrik": "val_mse_avg",
+  "yon": "min",
+  "asama": {
+    "1": {
+      "aciklama": "DUMAN — varyant lastnorm-merkez-duman: s2023, yalnız ufuk 96, --epoch-ust 1. Kod yolu (σ ≡ 1 sarmalayıcı + resmî eğitim + val köprüsü) çalışıyor mu.",
+      "kurallar": [
+        {"tur": "sonlu"},
+        {"tur": "min_kosum", "n": 1},
+        {"tur": "aralik", "varyant": "lastnorm-merkez-duman", "alt": 0.05, "ust": 0.1923,
+         "kaynak": "üst: H10 kartı Mekanik DUR + uygulama notu 'duman val_mse_h96 ≤ 0.1923' (= 1.5 × Repeat val h96 0.1282); alt: K3 duman alt sınırı 0.05 ≈ 0.6 × lit. test h96 0.086 (Liu et al. 2024 Tab.10) → altı sızıntı/protokol şüphesi"},
+        {"tur": "ikincil_aralik", "metrik": "param_sayisi", "alt": 224224, "ust": 224224,
+         "kaynak": "H10 kartı dogrula (i): parametre ebeveynle eşit (h96 224 224)"}
+      ]
+    },
+    "2": {
+      "aciklama": "ÖN-UÇUŞ — varyant lastnorm-merkez-onucus: s2023, 4 ufuk, --epoch-ust 2 (h336 resmî 1).",
+      "kurallar": [
+        {"tur": "sonlu"},
+        {"tur": "min_kosum", "n": 1},
+        {"tur": "aralik", "varyant": "lastnorm-merkez-onucus", "alt": 0.38, "ust": 0.90,
+         "kaynak": "H10 kartı Mekanik DUR + uygulama notu: ön-uçuş val_mse_avg ∈ [0.38, 0.90] (alt: İNCELE bölgesine yakın; üst: lastnorm-onucus 0.4454 × 2, H06 tipi çöküş)"},
+        {"tur": "ikincil_aralik", "metrik": "egitim_sure_sn", "alt": 10, "ust": 328.6,
+         "kaynak": "H10 kartı Mekanik DUR 'süre > 2× ebeveyn': ebeveyn ön-uçuş 20261014-050501_lastnorm-onucus_s2023 egitim_sure_sn 164.3 × 2"},
+        {"tur": "ikincil_aralik", "metrik": "param_sayisi", "alt": 304720, "ust": 304720,
+         "kaynak": "H10 kartı: parametre ebeveynle eşit (param_sayisi = son ufuk h720 304 720)"}
+      ]
+    },
+    "3": {
+      "aciklama": "TAM — varyant lastnorm-merkez: 3 seed {2023, 2024, 2025} (ebeveyn lastnorm ile aynı seed kümesi, M5). Kuyruk son aşamadan sonra kapı koşmaz; şef/tahlilci beklenti_kontrol.py --asama 3 ile elle koşar. Karar kartın öldürme kuralıyla (Δavg ≥ 0 veya < 3/4 ufukta Δ_H < 0 → ÖLDÜR; |Δavg| < %8.1 → ayırt edilemez; Z2 koruma notu D1 M/R h96 > 1.10; ters yönlü Δavg ≥ +50% bilgi etiketi), leaderboard'dan betikle.",
+      "kurallar": [
+        {"tur": "sonlu"},
+        {"tur": "farkli_seedler_farkli"},
+        {"tur": "min_kosum", "n": 3},
+        {"tur": "aralik", "varyant": "lastnorm-merkez", "alt": 0.3722, "ust": 0.90,
+         "kaynak": "alt: H10 kartı İNCELE (a) val_mse_avg ≤ 0.3722 (Δ ≤ −13%; NLinear Exchange en büyük ufuk etkisi |8.5%| × 1.5, Zeng et al. 2023 Tab.2); üst: kartın H06-tipi çöküş sınırı 0.90 (Mekanik DUR, lastnorm-onucus × 2) — kart ters yönde İNCELE koymaz"},
+        {"tur": "ikincil_aralik", "metrik": "val_mse_h96", "alt": 0.1113, "ust": 100,
+         "kaynak": "alt: H10 kartı İNCELE (b) h96 ≤ −8% (< 0.1113); üst: yalnız sonluluk (kart iki yönlü)"},
+        {"tur": "ikincil_aralik", "metrik": "val_mse_h192", "alt": 0.1834, "ust": 100,
+         "kaynak": "alt: H10 kartı İNCELE (b) h192 ≤ −12% (< 0.1834); üst: yalnız sonluluk"},
+        {"tur": "ikincil_aralik", "metrik": "val_mse_h336", "alt": 0.3332, "ust": 100,
+         "kaynak": "alt: H10 kartı İNCELE (b) h336 ≤ −15% (< 0.3332); üst: yalnız sonluluk"},
+        {"tur": "ikincil_aralik", "metrik": "val_mse_h720", "alt": 0.7424, "ust": 100,
+         "kaynak": "alt: H10 kartı İNCELE (b) h720 ≤ −25% (< 0.7424); üst: yalnız sonluluk"},
+        {"tur": "ikincil_aralik", "metrik": "param_sayisi", "alt": 304720, "ust": 304720,
+         "kaynak": "H10 kartı: parametre ebeveynle eşit olmalı"},
+        {"tur": "ikincil_aralik", "metrik": "egitim_sure_sn", "alt": 60, "ust": 830.6,
+         "kaynak": "H10 kartı Mekanik DUR 'süre > 2× ebeveyn': lastnorm tam egitim_sure_sn ort 415.3 × 2 (Bütçe tavanı 15 dk'dan sıkı)"}
+      ]
+    }
+  }
+}

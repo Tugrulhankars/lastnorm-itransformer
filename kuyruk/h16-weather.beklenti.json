@@ -1,0 +1,95 @@
+{
+  "_aciklama": "ON-KAYIT (deney-yurutucu, FAZ III H16, 2026-10-15): weather tam kosumlarindan ONCE yazildi. Satir = (kol, ufuk, seed); varyant adi '<veri>-<kol>-h<H>', metrik val_mse_avg = o ufkun val MSE'si (--ufuk-basi; notlar/h16-kuyruk.md sema). Kollar: baseline = resmi iTransformer .sh birebir (scripts/rakip_kos.py), lastnorm = H04 AYNEN (varyantlar/lastnorm/kos.py; hiperparametre aktarma/ayar yok). Yon kurali YOK: H16 tahmini TEST uzerinde ve test kilitli; val'de secim yapilmaz. TEST hicbir kurala konmadi. Replikasyon capasi (yalniz kilit acilisinda, 4 ufuk birlestirilmis seed basina test_mse_avg ortalamasi): lit 0.258 (Liu 2024 Tab.10 Avg), tol 0.008, YESIL [0.250, 0.266], SARI [0.242, 0.274] (notlar/literatur-cipa-faz3.md §3). Son asamadan sonra kapi otomatik kosmaz -> sef beklenti_kontrol.py --asama 3 ile elle. | EK (2026-10-15 06:50, ETTm1 dumanlari 20261015-062958 / 063927 SONRASI, tam kosumlardan ONCE; mevcut kurallar degistirilmedi): egitim_sure_sn ikincil araligi (kaba, Weather duman yok) eklendi.",
+  "metrik": "val_mse_avg",
+  "yon": "min",
+  "asama": {
+    "3": {
+      "aciklama": "TAM -- {baseline, lastnorm} x h{96,192,336,720} x seed {2023,2024,2025} = 24 satir; resmi weather .sh birebir (10 epoch, patience 3), ufuk basina ayri surec.",
+      "kurallar": [
+        {
+          "tur": "sonlu"
+        },
+        {
+          "tur": "farkli_seedler_farkli"
+        },
+        {
+          "tur": "kollar_farkli"
+        },
+        {
+          "tur": "min_kosum",
+          "n": 24
+        },
+        {
+          "tur": "aralik",
+          "varyant": "weather-baseline-h96",
+          "alt": 0.2989,
+          "ust": 0.7916,
+          "kaynak": "alt = 0.5 x lit oran 0.6718 (iTr 0.174 Liu 2024 Tab.10 s.23 / Repeat 0.259 Zeng 2023 Tab.2 s.5) x Repeat val h96 0.8899; ust = en iyi trivial val h96 min(Repeat 0.8899, train-ort 0.7916) (data/naive_val_weather.csv; P2 ETTh1 emsali)"
+        },
+        {
+          "tur": "aralik",
+          "varyant": "weather-lastnorm-h96",
+          "alt": 0.2989,
+          "ust": 0.7916,
+          "kaynak": "alt = 0.5 x lit oran 0.6718 (iTr 0.174 Liu 2024 Tab.10 s.23 / Repeat 0.259 Zeng 2023 Tab.2 s.5) x Repeat val h96 0.8899; ust = en iyi trivial val h96 min(Repeat 0.8899, train-ort 0.7916) (data/naive_val_weather.csv; P2 ETTh1 emsali); lastnorm: ayni makullük araligi (yon kurali yok, secim yok)"
+        },
+        {
+          "tur": "aralik",
+          "varyant": "weather-baseline-h192",
+          "alt": 0.3318,
+          "ust": 0.7949,
+          "kaynak": "alt = 0.5 x lit oran 0.7152 (iTr 0.221 Liu 2024 Tab.10 s.23 / Repeat 0.309 Zeng 2023 Tab.2 s.5) x Repeat val h192 0.9279; ust = en iyi trivial val h192 min(Repeat 0.9279, train-ort 0.7949) (data/naive_val_weather.csv; P2 ETTh1 emsali)"
+        },
+        {
+          "tur": "aralik",
+          "varyant": "weather-lastnorm-h192",
+          "alt": 0.3318,
+          "ust": 0.7949,
+          "kaynak": "alt = 0.5 x lit oran 0.7152 (iTr 0.221 Liu 2024 Tab.10 s.23 / Repeat 0.309 Zeng 2023 Tab.2 s.5) x Repeat val h192 0.9279; ust = en iyi trivial val h192 min(Repeat 0.9279, train-ort 0.7949) (data/naive_val_weather.csv; P2 ETTh1 emsali); lastnorm: ayni makullük araligi (yon kurali yok, secim yok)"
+        },
+        {
+          "tur": "aralik",
+          "varyant": "weather-baseline-h336",
+          "alt": 0.3846,
+          "ust": 0.7961,
+          "kaynak": "alt = 0.5 x lit oran 0.7374 (iTr 0.278 Liu 2024 Tab.10 s.23 / Repeat 0.377 Zeng 2023 Tab.2 s.5) x Repeat val h336 1.0431; ust = en iyi trivial val h336 min(Repeat 1.0431, train-ort 0.7961) (data/naive_val_weather.csv; P2 ETTh1 emsali)"
+        },
+        {
+          "tur": "aralik",
+          "varyant": "weather-lastnorm-h336",
+          "alt": 0.3846,
+          "ust": 0.7961,
+          "kaynak": "alt = 0.5 x lit oran 0.7374 (iTr 0.278 Liu 2024 Tab.10 s.23 / Repeat 0.377 Zeng 2023 Tab.2 s.5) x Repeat val h336 1.0431; ust = en iyi trivial val h336 min(Repeat 1.0431, train-ort 0.7961) (data/naive_val_weather.csv; P2 ETTh1 emsali); lastnorm: ayni makullük araligi (yon kurali yok, secim yok)"
+        },
+        {
+          "tur": "aralik",
+          "varyant": "weather-baseline-h720",
+          "alt": 0.4733,
+          "ust": 0.7883,
+          "kaynak": "alt = 0.5 x lit oran 0.7699 (iTr 0.358 Liu 2024 Tab.10 s.23 / Repeat 0.465 Zeng 2023 Tab.2 s.5) x Repeat val h720 1.2296; ust = en iyi trivial val h720 min(Repeat 1.2296, train-ort 0.7883) (data/naive_val_weather.csv; P2 ETTh1 emsali)"
+        },
+        {
+          "tur": "aralik",
+          "varyant": "weather-lastnorm-h720",
+          "alt": 0.4733,
+          "ust": 0.7883,
+          "kaynak": "alt = 0.5 x lit oran 0.7699 (iTr 0.358 Liu 2024 Tab.10 s.23 / Repeat 0.465 Zeng 2023 Tab.2 s.5) x Repeat val h720 1.2296; ust = en iyi trivial val h720 min(Repeat 1.2296, train-ort 0.7883) (data/naive_val_weather.csv; P2 ETTh1 emsali); lastnorm: ayni makullük araligi (yon kurali yok, secim yok)"
+        },
+        {
+          "tur": "ikincil_aralik",
+          "metrik": "param_sayisi",
+          "alt": 4833888,
+          "ust": 5154000,
+          "kaynak": "resmi Model(.sh h96..h720) CPU sayimi; ikincil_aralik varyanta gore suzulmez -> ufuk min..max; LastNorm esit"
+        },
+        {
+          "tur": "ikincil_aralik",
+          "metrik": "egitim_sure_sn",
+          "alt": 200,
+          "ust": 2400,
+          "kaynak": "Weather dumani YOK; ETTm1 duman olcumunden kaba olcekleme (train 1.07x, eval pencere 0.68x, model 21x param); ust = zaman siniri 40 dk"
+        }
+      ]
+    }
+  }
+}

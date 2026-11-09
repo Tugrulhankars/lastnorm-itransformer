@@ -1,0 +1,26 @@
+{
+  "_aciklama": "ÖN-KAYIT (deney-yürütücü, 2026-10-15 05:53, FAZ III E2): kuyruk satırları eklenmeden, foreground regresyon dumanlarından ve tam koşumdan ÖNCE yazıldı; koşum sonrası değiştirilmez. Amaç: ön-kayıtlı çift (resmî iTransformer baseline ↔ H04 lastnorm) için Exchange resmî protokolde +7 seed {2026..2032}; mevcut 3 seed {2023,2024,2025} ile birlikte n=10 eşleştirilmiş seed (havuzlama run_id ile yapılır; varyant adları baseline-ekseed / lastnorm-ekseed seçildi ki leaderboard'daki n=3 'baseline'/'lastnorm' satırları ve diğer varyantların Δ'sı geriye dönük değişmesin). Komutlar mevcut tam satırlarla AYNI: baseline = k3-baseline-v2 tam satırı (scripts/rakip_kos.py --num-workers 0) yalnız --kapi-test-metrics OLMADAN (bu bayrak yalnız test_* anahtarlarını metrics.json'a kopyalar; hesap değişmez; K3 replikasyon kapısı istisnasıydı); lastnorm = k4t2-h04 tam satırı (varyantlar/lastnorm/kos.py --num-workers 0) birebir. Test KİLİTLİ yazımı aynen: test yalnız {RUN_DIR}/test_metrics.json ve test_kilitli/ altına yazılır, metrics.json'da test_ anahtarı YOK. Exchange test'i 15:42'de açıldı → bu 7 seed'in test sonuçları yalnız BETİMSEL ve 'test açıldıktan sonra koşuldu' beyanlı raporlanır; hiçbir seçim/karar test'e dayanmaz. Aralık kaynağı (şef talimatı): mevcut 3 seed val_mse_avg ort ± 3 sd (örneklem sd); kural 7 yeni seed'in ORTALAMASINI sınar (gevşek; tek seed sapması için ikincil kural yok çünkü ikincil_aralik varyanta göre süzülmüyor). yon_vs: ön-kayıtlı H04 yönü (lastnorm < baseline, val), kaynak resmî val 3-seed −3.83% ve kat protokolü −6.71% (12/12 hücre). Yalnız aşama 3; kapı otomatik koşmaz, şef/tahlilci beklenti_kontrol.py --asama 3 ile elle koşar. TEST sayısı hiçbir kurala konmadı.",
+  "metrik": "val_mse_avg",
+  "yon": "min",
+  "asama": {
+    "3": {
+      "aciklama": "TAM — {baseline-ekseed, lastnorm-ekseed} × seed {2026,...,2032}; Exchange resmî .sh birebir (h336 = 1 epoch), 4 ufuk, test kilitli.",
+      "kurallar": [
+        {"tur": "sonlu"},
+        {"tur": "farkli_seedler_farkli"},
+        {"tur": "kollar_farkli"},
+        {"tur": "min_kosum", "n": 14},
+        {"tur": "aralik", "varyant": "baseline-ekseed", "alt": 0.4091, "ust": 0.4806,
+         "kaynak": "mevcut baseline tam koşumları 20261014-020531/021024/021448 val_mse_avg ort. 0.444847 ± 3 × sd 0.011913 (leaderboard.md 'baseline' satırı)"},
+        {"tur": "aralik", "varyant": "lastnorm-ekseed", "alt": 0.4102, "ust": 0.4454,
+         "kaynak": "mevcut lastnorm tam koşumları 20261014-052508/053601/054213 val_mse_avg ort. 0.427804 ± 3 × sd 0.005876 (leaderboard.md 'lastnorm' satırı)"},
+        {"tur": "yon_vs", "varyant": "lastnorm-ekseed", "referans": "baseline-ekseed", "beklenen": "+", "en_az": 0.0,
+         "kaynak": "H04 ön-kayıtlı yön (hipotezler/H04.md); resmî val 3-seed Δ −0.0170 (−3.83%), kat protokolü −6.71% (sonuclar/tahlil-tur4.md)"},
+        {"tur": "ikincil_aralik", "metrik": "param_sayisi", "alt": 304720, "ust": 304720,
+         "kaynak": "resmî iTransformer Exchange h720 param = 304 720; H04 lastnorm parametre eşit (dogrula.log)"},
+        {"tur": "ikincil_aralik", "metrik": "egitim_sure_sn", "alt": 60, "ust": 900,
+         "kaynak": "ölçülen tam koşum süreleri baseline 253–279 s, lastnorm 352–460 s (runs/BILDIRIM.log); seed başına > 15 dk → teşhis (kat emsali)"}
+      ]
+    }
+  }
+}

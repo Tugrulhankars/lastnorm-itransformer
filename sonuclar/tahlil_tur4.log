@@ -1,0 +1,164 @@
+# Tur 4 tahlili (FAZ II, kat protokolu) -- yalniz val
+
+## Kosum listesi
+  baseline           K3: 020531_baseline_s2023, 021024_baseline_s2024, 021448_baseline_s2025
+  baseline           K2: 162123_baseline-k2_s2023, 162312_baseline-k2_s2024, 162501_baseline-k2_s2025
+  baseline           K1: 162640_baseline-k1_s2023, 162755_baseline-k1_s2024, 162916_baseline-k1_s2025
+  lastnorm           K3: 052508_lastnorm_s2023, 053601_lastnorm_s2024, 054213_lastnorm_s2025
+  lastnorm           K2: 163051_lastnorm-k2_s2023, 163203_lastnorm-k2_s2024, 163345_lastnorm-k2_s2025
+  lastnorm           K1: 163510_lastnorm-k1_s2023, 163633_lastnorm-k1_s2024, 163802_lastnorm-k1_s2025
+  lastnorm           K0: 170039_lastnorm-k0_s2023, 170128_lastnorm-k0_s2024, 170216_lastnorm-k0_s2025
+  lastnorm-birlesim  K3: 170302_lastnorm-birlesim-k3_s2023, 170306_lastnorm-birlesim-k3_s2024, 170310_lastnorm-birlesim-k3_s2025
+  lastnorm-birlesim  K2: 170314_lastnorm-birlesim-k2_s2023, 170317_lastnorm-birlesim-k2_s2024, 170321_lastnorm-birlesim-k2_s2025
+  lastnorm-birlesim  K1: 170325_lastnorm-birlesim-k1_s2023, 170329_lastnorm-birlesim-k1_s2024, 170332_lastnorm-birlesim-k1_s2025
+  lastnorm-olcek     K3: 170336_lastnorm-olcek-k3_s2023, 170340_lastnorm-olcek-k3_s2024, 170343_lastnorm-olcek-k3_s2025
+  lastnorm-olcek     K2: 170346_lastnorm-olcek-k2_s2023, 170350_lastnorm-olcek-k2_s2024, 170354_lastnorm-olcek-k2_s2025
+  lastnorm-olcek     K1: 170358_lastnorm-olcek-k1_s2023, 170401_lastnorm-olcek-k1_s2024, 170405_lastnorm-olcek-k1_s2025
+
+## 1. Kat x ufuk val MSE (3 seed ort. +- sd) ve naif orani M/R
+
+[baseline]
+  K1: h96 0.09156+-0.00077 (M/R 1.186) | h192 0.14970+-0.00150 (M/R 1.101) | h336 0.24445+-0.00128 (M/R 1.055) | h720 0.45280+-0.00922 (M/R 0.978) | havg 0.23463+-0.00247 (M/R 1.034)
+  K2: h96 0.39252+-0.00460 (M/R 1.104) | h192 0.92986+-0.00310 (M/R 1.059) | h336 1.70798+-0.01488 (M/R 1.093) | h720 1.97221+-0.01764 (M/R 1.143) | havg 1.25064+-0.00779 (M/R 1.106)
+  K3: h96 0.12486+-0.00105 (M/R 0.974) | h192 0.21139+-0.00246 (M/R 0.934) | h336 0.40027+-0.00196 (M/R 1.018) | h720 1.04286+-0.04391 (M/R 0.911) | havg 0.44485+-0.01191 (M/R 0.940)
+
+[lastnorm]
+  K1: h96 0.08391+-0.00136 (M/R 1.087) | h192 0.14081+-0.00055 (M/R 1.036) | h336 0.23382+-0.00066 (M/R 1.009) | h720 0.41192+-0.00308 (M/R 0.890) | havg 0.21762+-0.00077 (M/R 0.959)
+  K2: h96 0.36047+-0.00169 (M/R 1.014) | h192 0.88928+-0.00162 (M/R 1.013) | h336 1.60014+-0.00291 (M/R 1.024) | h720 1.77110+-0.00911 (M/R 1.026) | havg 1.15525+-0.00281 (M/R 1.022)
+  K3: h96 0.12096+-0.00039 (M/R 0.944) | h192 0.20837+-0.00045 (M/R 0.921) | h336 0.39197+-0.00309 (M/R 0.997) | h720 0.98992+-0.02366 (M/R 0.865) | havg 0.42780+-0.00588 (M/R 0.904)
+
+[lastnorm-birlesim]
+  K1: h96 0.07718+-0.00000 (M/R 1.000) | h192 0.13598+-0.00000 (M/R 1.000) | h336 0.23180+-0.00000 (M/R 1.000) | h720 0.46306+-0.00001 (M/R 1.000) | havg 0.22700+-0.00000 (M/R 1.000)
+  K2: h96 0.35543+-0.00000 (M/R 1.000) | h192 0.88168+-0.00128 (M/R 1.004) | h336 1.58380+-0.00289 (M/R 1.014) | h720 1.73615+-0.00873 (M/R 1.006) | havg 1.13926+-0.00302 (M/R 1.008)
+  K3: h96 0.12639+-0.00203 (M/R 0.986) | h192 0.22240+-0.00048 (M/R 0.983) | h336 0.39295+-0.00011 (M/R 0.999) | h720 1.10376+-0.05115 (M/R 0.965) | havg 0.46137+-0.01335 (M/R 0.975)
+
+[lastnorm-olcek]
+  K1: h96 0.07718+-0.00000 (M/R 1.000) | h192 0.13598+-0.00000 (M/R 1.000) | h336 0.23180+-0.00000 (M/R 1.000) | h720 0.46306+-0.00001 (M/R 1.000) | havg 0.22700+-0.00000 (M/R 1.000)
+  K2: h96 0.35543+-0.00000 (M/R 1.000) | h192 0.88168+-0.00128 (M/R 1.004) | h336 1.58697+-0.00325 (M/R 1.016) | h720 1.76588+-0.00581 (M/R 1.023) | havg 1.14749+-0.00045 (M/R 1.015)
+  K3: h96 0.12639+-0.00203 (M/R 0.986) | h192 0.22240+-0.00048 (M/R 0.983) | h336 0.39295+-0.00011 (M/R 0.999) | h720 1.09813+-0.06075 (M/R 0.960) | havg 0.45997+-0.01576 (M/R 0.972)
+
+[lastnorm K0 (yalniz ic model; karar disi bilgi)]  h96 0.16807 (M/R 1.145) | h192 0.37651 (M/R 1.175) | h336 0.81648 (M/R 1.177) | h720 2.85337 (M/R 1.058) | havg 1.05361 (M/R 1.093)
+[naif Repeat]  K0: 0.14679 0.32051 0.69351 2.69579 0.96415 ; K1: 0.07718 0.13598 0.23180 0.46305 0.22700 ; K2: 0.35543 0.87787 1.56229 1.72617 1.13044 ; K3: 0.12820 0.22632 0.39332 1.14427 0.47303
+
+## 2. Kart kararlari (ebeveyn lastnorm; kural on-kayitli)
+
+### H12 lastnorm-birlesim vs lastnorm
+  K1: A 0.22700 vs 0.21762  D_k +0.00939 (+4.31%)  p(3 seed, esl.) 0.002226
+  K2: A 1.13926 vs 1.15525  D_k -0.01598 (-1.38%)  p(3 seed, esl.) 0.002469
+  K3: A 0.46137 vs 0.42780  D_k +0.03357 (+7.85%)  p(3 seed, esl.) 0.06362
+  Abar 0.60921 vs 0.60022  Dbar +0.00899 (+1.50%)
+  D_H (kat-ort.): h96 -0.00211 (-1.12%) h192 +0.00053 (+0.13%) h336 -0.00580 (-0.78%) h720 +0.04334 (+4.10%)
+  #{k: D_k<0} = 1/3   #{H: D_H<0} = 2/4   -> OLDUR
+  9 cift (kat x seed): 3/9 negatif; esl. t p 0.2711; log-oran t p 0.04142 (geo-ort. oran +3.51%); Wilcoxon p 0.5703
+
+### H12 lastnorm-birlesim (rakip iddiasi, karar disi) vs baseline
+  K1: A 0.22700 vs 0.23463  D_k -0.00762 (-3.25%)  p(3 seed, esl.) 0.03331
+  K2: A 1.13926 vs 1.25064  D_k -0.11138 (-8.91%)  p(3 seed, esl.) 0.002747
+  K3: A 0.46137 vs 0.44485  D_k +0.01653 (+3.72%)  p(3 seed, esl.) 0.1119
+  Abar 0.60921 vs 0.64337  Dbar -0.03416 (-5.31%)
+  D_H (kat-ort.): h96 -0.01665 (-8.20%) h192 -0.01696 (-3.94%) h336 -0.04806 (-6.13%) h720 -0.05497 (-4.76%)
+  #{k: D_k<0} = 2/3   #{H: D_H<0} = 4/4   -> TUT
+  9 cift (kat x seed): 6/9 negatif; esl. t p 0.1223; log-oran t p 0.1584 (geo-ort. oran -2.95%); Wilcoxon p 0.3594
+  INCELE esigi (Dbar<= -6%): asilmadi
+  K1 ^ K2 alt-sonucu (D_1<0 ^ D_2<0): False
+  naif hedefi: 5/12 hucre M/R<=1; kat M/R K1 1.0000 K2 1.0078 K3 0.9754
+
+### H13 lastnorm-olcek vs lastnorm
+  K1: A 0.22700 vs 0.21762  D_k +0.00939 (+4.31%)  p(3 seed, esl.) 0.002226
+  K2: A 1.14749 vs 1.15525  D_k -0.00776 (-0.67%)  p(3 seed, esl.) 0.04692
+  K3: A 0.45997 vs 0.42780  D_k +0.03216 (+7.52%)  p(3 seed, esl.) 0.08873
+  Abar 0.61149 vs 0.60022  Dbar +0.01126 (+1.88%)
+  D_H (kat-ort.): h96 -0.00211 (-1.12%) h192 +0.00053 (+0.13%) h336 -0.00474 (-0.64%) h720 +0.05137 (+4.86%)
+  #{k: D_k<0} = 1/3   #{H: D_H<0} = 2/4   -> OLDUR
+  9 cift (kat x seed): 3/9 negatif; esl. t p 0.1222; log-oran t p 0.02694 (geo-ort. oran +3.65%); Wilcoxon p 0.1289
+
+### H13 lastnorm-olcek (rakip iddiasi, karar disi) vs baseline
+  K1: A 0.22700 vs 0.23463  D_k -0.00762 (-3.25%)  p(3 seed, esl.) 0.03331
+  K2: A 1.14749 vs 1.25064  D_k -0.10315 (-8.25%)  p(3 seed, esl.) 0.001686
+  K3: A 0.45997 vs 0.44485  D_k +0.01512 (+3.40%)  p(3 seed, esl.) 0.1525
+  Abar 0.61149 vs 0.64337  Dbar -0.03189 (-4.96%)
+  D_H (kat-ort.): h96 -0.01665 (-8.20%) h192 -0.01696 (-3.94%) h336 -0.04700 (-5.99%) h720 -0.04694 (-4.06%)
+  #{k: D_k<0} = 2/3   #{H: D_H<0} = 4/4   -> TUT
+  9 cift (kat x seed): 6/9 negatif; esl. t p 0.119; log-oran t p 0.1483 (geo-ort. oran -2.82%); Wilcoxon p 0.25
+  INCELE esigi (Dbar<= -15%, h720<=-30%): asilmadi
+  K1 ^ K2 alt-sonucu (D_1<0 ^ D_2<0): False
+  naif hedefi: 5/12 hucre M/R<=1; kat M/R K1 1.0000 K2 1.0151 K3 0.9724
+
+  H13 - H12 (9 cift avg): [ 0.       0.       0.       0.00774  0.01182  0.00512  0.      -0.00422
+  0.     ]  bit-bit esit cift: 5/9
+    K1 h96: H13==H12 True  H12~=Repeat True;    K1 h192: H13==H12 True  H12~=Repeat True;    K1 h336: H13==H12 True  H12~=Repeat True;    K1 h720: H13==H12 True  H12~=Repeat False;
+    K2 h96: H13==H12 True  H12~=Repeat True;    K2 h192: H13==H12 True  H12~=Repeat False;    K2 h336: H13==H12 False  H12~=Repeat False;    K2 h720: H13==H12 False  H12~=Repeat False;
+    K3 h96: H13==H12 True  H12~=Repeat False;    K3 h192: H13==H12 True  H12~=Repeat False;    K3 h336: H13==H12 True  H12~=Repeat False;    K3 h720: H13==H12 False  H12~=Repeat False;
+
+## 3. Kat protokolu bulgusu: baseline vs lastnorm vs naif
+
+### lastnorm (H04) vs baseline
+  K1: A 0.21762 vs 0.23463  D_k -0.01701 (-7.25%)  p(3 seed, esl.) 0.006478
+  K2: A 1.15525 vs 1.25064  D_k -0.09539 (-7.63%)  p(3 seed, esl.) 0.002976
+  K3: A 0.42780 vs 0.44485  D_k -0.01704 (-3.83%)  p(3 seed, esl.) 0.2276
+  Abar 0.60022 vs 0.64337  Dbar -0.04315 (-6.71%)
+  D_H (kat-ort.): h96 -0.01453 (-7.16%) h192 -0.01750 (-4.07%) h336 -0.04226 (-5.39%) h720 -0.09831 (-8.50%)
+  #{k: D_k<0} = 3/3   #{H: D_H<0} = 4/4   -> TUT
+  9 cift (kat x seed): 9/9 negatif; esl. t p 0.01251; log-oran t p 0.0001275 (geo-ort. oran -6.24%); Wilcoxon p 0.003906
+  kat x ufuk 12 hucre (lastnorm - baseline, 3 seed esl.):
+    K1: h96 -8.36% (3/3, p 0.0112) | h192 -5.93% (3/3, p 0.0153) | h336 -4.35% (3/3, p 0.00843) | h720 -9.03% (3/3, p 0.0086)
+    K2: h96 -8.16% (3/3, p 0.00755) | h192 -4.36% (3/3, p 0.0005) | h336 -6.31% (3/3, p 0.00516) | h720 -10.20% (3/3, p 0.00507)
+    K3: h96 -3.12% (3/3, p 0.0132) | h192 -1.43% (3/3, p 0.182) | h336 -2.08% (3/3, p 0.0285) | h720 -5.08% (3/3, p 0.303)
+  hucre: 12/12 lastnorm < baseline
+  36 (kat x ufuk x seed) log-oran: 36/36 negatif; geo-ort -5.73%; Wilcoxon p 2.91e-11 (bagimsizlik varsayimi iyimser: seed ve ufuk ic ice)
+  kat birim (n=3) isaret testi: 3/3 -> tek-yonlu binom p = 0.125
+
+  Naife karsi (M/R = model/Repeat; Repeat deterministik):
+    baseline  K1: h96 1.186 [1.177,1.197] p 0.00095 | h192 1.101 [1.088,1.108] p 0.0039 | h336 1.055 [1.049,1.060] p 0.0034 | h720 0.978 [0.955,0.992] p 0.19 | havg 1.034 [1.021,1.042] p 0.033
+    baseline  K2: h96 1.104 [1.095,1.119] p 0.0051 | h192 1.059 [1.056,1.063] p 0.0012 | h336 1.093 [1.087,1.104] p 0.0035 | h720 1.143 [1.136,1.154] p 0.0017 | havg 1.106 [1.100,1.114] p 0.0014
+    baseline  K3: h96 0.974 [0.965,0.980] p 0.032 | h192 0.934 [0.923,0.944] p 0.009 | h336 1.018 [1.013,1.022] p 0.025 | h720 0.911 [0.879,0.954] p 0.057 | havg 0.940 [0.918,0.968] p 0.055
+    baseline: naifi gecen hucre 4/12, kat 1/3; Abar 0.64337 vs naif 0.61016 (M/R 1.0544); kat-esit agirlikli geo-ort M/R 1.0244
+    lastnorm  K1: h96 1.087 [1.071,1.106] p 0.013 | h192 1.036 [1.031,1.039] p 0.0043 | h336 1.009 [1.006,1.012] p 0.034 | h720 0.890 [0.882,0.895] p 0.0012 | havg 0.959 [0.957,0.963] p 0.0022
+    lastnorm  K2: h96 1.014 [1.010,1.019] p 0.036 | h192 1.013 [1.011,1.015] p 0.0066 | h336 1.024 [1.022,1.025] p 0.002 | h720 1.026 [1.021,1.032] p 0.013 | havg 1.022 [1.020,1.025] p 0.0043
+    lastnorm  K3: h96 0.944 [0.941,0.947] p 0.00096 | h192 0.921 [0.919,0.923] p 0.00021 | h336 0.997 [0.988,1.004] p 0.53 | h720 0.865 [0.841,0.878] p 0.0077 | havg 0.904 [0.890,0.914] p 0.0056
+    lastnorm: naifi gecen hucre 5/12, kat 2/3; Abar 0.60022 vs naif 0.61016 (M/R 0.9837); kat-esit agirlikli geo-ort M/R 0.9604
+    baseline ufuk M/R (kat-ort. MSE / kat-ort. Repeat): h96 1.086 h192 1.041 h336 1.076 h720 1.040
+    lastnorm ufuk M/R (kat-ort. MSE / kat-ort. Repeat): h96 1.008 h192 0.999 h336 1.018 h720 0.952
+
+## 4. H12/H13 mekanizma (ic-holdout alfa vs kat-val oracle)
+  [H12 lastnorm-birlesim] oracle ihlal (dilim) toplam: 0; w=0 orani (kat): K1 0.97 K2 0.67 K3 0.67; w=1 orani: K1 0.00 K2 0.14 K3 0.02; alfa in [0.95,1.05]: K1 0.00 K2 0.14 K3 0.02
+  [H13 lastnorm-olcek] oracle ihlal (dilim) toplam: 0; w=0 orani (kat): K1 0.97 K2 0.67 K3 0.67; w=1 orani: K1 0.00 K2 0.00 K3 0.00; alfa in [0.95,1.05]: K1 0.00 K2 0.00 K3 0.00
+  kat x ufuk (3 seed ort.; birlesim): w_ort | w=0 | alfa_ic med | alfa_val med | isaret uyumu | Spearman | gozlenen | oracle(dilim)
+    K1 h96: 0.001 | 0.97 | -0.59 | -0.96 | 0.97 | +0.96 | +8.00% | +8.00%
+    K1 h192: 0.001 | 0.97 | -1.28 | -0.75 | 0.83 | -0.30 | +3.43% | +3.51%
+    K1 h336: 0.000 | 1.00 | -2.78 | -0.03 | 0.53 | -0.87 | +0.87% | +1.36%
+    K1 h720: 0.004 | 0.97 | -15.66 | +0.93 | 0.37 | -0.78 | -12.42% | +1.38%
+    K2 h96: 0.005 | 0.93 | -1.01 | -0.02 | 0.57 | -0.24 | +1.40% | +1.58%
+    K2 h192: 0.103 | 0.87 | -0.73 | -0.13 | 0.47 | -0.47 | +0.85% | +1.38%
+    K2 h336: 0.305 | 0.47 | +0.01 | -1.81 | 0.20 | -0.79 | +1.02% | +2.40%
+    K2 h720: 0.507 | 0.40 | +0.53 | -1.28 | 0.63 | +0.71 | +1.97% | +2.64%
+    K3 h96: 0.091 | 0.60 | -0.03 | +0.94 | 0.40 | +0.18 | -4.49% | +0.13%
+    K3 h192: 0.116 | 0.63 | -0.19 | +1.23 | 0.37 | -0.24 | -6.73% | +0.04%
+    K3 h336: 0.084 | 0.73 | -1.92 | +0.68 | 0.40 | +0.33 | -0.25% | +0.40%
+    K3 h720: 0.179 | 0.73 | -1.20 | +3.36 | 0.27 | -0.41 | -11.57% | -0.00%
+
+  Rejim: lastnorm M/R ic-holdout katinda (K_{k-1}) -> hedef katta (K_k):
+    K0->K1: h96 1.145 -> 1.087 | h192 1.175 -> 1.036 | h336 1.177 -> 1.009 | h720 1.058 -> 0.890
+    K1->K2: h96 1.087 -> 1.014 | h192 1.036 -> 1.013 | h336 1.009 -> 1.024 | h720 0.890 -> 1.026
+    K2->K3: h96 1.014 -> 0.944 | h192 1.013 -> 0.921 | h336 1.024 -> 0.997 | h720 1.026 -> 0.865
+
+## 5. H11 kapi (sonuclar/h11-kapi.csv)
+  K3 h96 relu     olu 1.000 q 0.00e+00 sigma_hat 0.0000 gercek 0.0480 R 1.208
+  K3 h96 softplus olu 0.827 q 1.13e-06 sigma_hat 0.0010 gercek 0.0480 R 1.208
+  K3 h192 relu     olu 1.000 q 0.00e+00 sigma_hat 0.0000 gercek 0.0490 R 1.351
+  K3 h192 softplus olu 0.847 q 8.20e-08 sigma_hat 0.0010 gercek 0.0490 R 1.351
+  K3 h336 relu     olu 1.000 q 0.00e+00 sigma_hat 0.0000 gercek 0.0502 R 1.250
+  K3 h336 softplus olu 0.828 q 2.39e-07 sigma_hat 0.0011 gercek 0.0502 R 1.250
+  K3 h720 relu     olu 0.988 q 0.00e+00 sigma_hat 0.0005 gercek 0.0473 R 1.144
+  K3 h720 softplus olu 0.875 q 5.76e-06 sigma_hat 0.0012 gercek 0.0473 R 1.144
+  K1 h96 relu     olu 0.998 q 0.00e+00 sigma_hat 0.0001 gercek 0.0394 R 1.058
+  K1 h96 softplus olu 0.556 q 1.47e-02 sigma_hat 0.0084 gercek 0.0394 R 1.058
+  K1 h192 relu     olu 0.929 q 0.00e+00 sigma_hat 0.0036 gercek 0.0384 R 0.973
+  K1 h192 softplus olu 0.553 q 1.50e-02 sigma_hat 0.0120 gercek 0.0384 R 0.973
+  K1 h336 relu     olu 0.952 q 0.00e+00 sigma_hat 0.0016 gercek 0.0386 R 1.118
+  K1 h336 softplus olu 0.551 q 1.42e-02 sigma_hat 0.0131 gercek 0.0386 R 1.118
+  K1 h720 relu     olu 0.978 q 0.00e+00 sigma_hat 0.0005 gercek 0.0405 R 1.016
+  K1 h720 softplus olu 0.676 q 3.72e-03 sigma_hat 0.0136 gercek 0.0405 R 1.016
+  G1=BASARISIZ;G2=BASARISIZ;G3=GECER;KAPI=BASARISIZ
+
+CSV: sonuclar/tahlil-tur4-kat.csv (195 satir), sonuclar/tahlil-tur4-mekanizma.csv (72 satir)

@@ -1,0 +1,65 @@
+Args in experiment:
+Namespace(is_training=1, model_id='Exchange_96_192', model='iTransformer', data='custom', root_path='C:\\Users\\karsl\\Downloads\\yzmakaleuretimskill\\yzmakaleuretimskill\\deney_workspace\\5-3-exchange-itransformer\\data\\exchange_rate\\', data_path='exchange_rate.csv', features='M', target='OT', freq='h', checkpoints='C:\\Users\\karsl\\Downloads\\yzmakaleuretimskill\\yzmakaleuretimskill\\deney_workspace\\5-3-exchange-itransformer\\runs\\20261014-040547_san_s2024\\ckpt\\', seq_len=96, label_len=48, pred_len=192, enc_in=8, dec_in=8, c_out=8, d_model=128, n_heads=8, e_layers=2, d_layers=1, d_ff=128, moving_avg=25, factor=1, distil=True, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, do_predict=False, num_workers=0, itr=1, train_epochs=10, batch_size=32, patience=3, learning_rate=0.0001, des='Exp', loss='MSE', lradj='type1', use_amp=False, use_gpu=True, gpu=0, use_multi_gpu=False, devices='0,1,2,3', exp_name='MTSF', channel_independence=False, inverse=False, class_strategy='projection', target_root_path='./data/electricity/', target_data_path='electricity.csv', efficient_training=False, use_norm=0, partial_start_index=0)
+Use GPU: cuda:0
+>>>>>>>start training : Exchange_96_192_iTransformer_custom_M_ft96_sl48_ll192_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 5024
+val 569
+test 1326
+	iters: 100, epoch: 1 | loss: 0.1086043
+	speed: 0.0083s/iter; left time: 18.7391s
+[SAN-onegitim] ep 1/5 adim 157 sure 1.4s | istasyon_train=0.1231151 istasyon_val=0.1345252
+Validation loss decreased (inf --> 0.134525).  Saving model ...
+Updating learning rate to 0.001
+	iters: 100, epoch: 2 | loss: 0.1085643
+	speed: 0.0153s/iter; left time: 32.0518s
+[SAN-onegitim] ep 2/5 adim 157 sure 1.5s | istasyon_train=0.1147354 istasyon_val=0.1547203
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 0.0005
+	iters: 100, epoch: 3 | loss: 0.1394652
+	speed: 0.0144s/iter; left time: 27.9897s
+[SAN-onegitim] ep 3/5 adim 157 sure 1.5s | istasyon_train=0.1121362 istasyon_val=0.1736569
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 0.00025
+	iters: 100, epoch: 4 | loss: 0.1019710
+	speed: 0.0147s/iter; left time: 26.2292s
+[SAN-onegitim] ep 4/5 adim 157 sure 1.4s | istasyon_train=0.1115655 istasyon_val=0.1713225
+EarlyStopping counter: 3 out of 3
+Updating learning rate to 0.000125
+	iters: 100, epoch: 5 | loss: 0.0968847
+	speed: 0.0139s/iter; left time: 22.6649s
+[SAN-onegitim] ep 5/5 adim 157 sure 1.4s | istasyon_train=0.1109235 istasyon_val=0.1711714
+EarlyStopping counter: 4 out of 3
+Updating learning rate to 6.25e-05
+[SAN] on-egitim bitti: en iyi istasyon checkpoint yuklendi (omurga fazinda SAN adim atmaz)
+	iters: 100, epoch: 6 | loss: 0.2373048
+	speed: 0.0304s/iter; left time: 44.7170s
+Epoch: 1 cost time: 3.82773494720459
+Epoch: 1, Steps: 157 | Train Loss: 0.2326477 Vali Loss: 0.2687585 Test Loss: 0.1562523
+Validation loss decreased (inf --> 0.268758).  Saving model ...
+Updating learning rate to 0.0001
+Updating learning rate to 0.001
+	iters: 100, epoch: 7 | loss: 0.2384176
+	speed: 0.1079s/iter; left time: 141.7605s
+Epoch: 2 cost time: 3.704922914505005
+Epoch: 2, Steps: 157 | Train Loss: 0.2326476 Vali Loss: 0.2714264 Test Loss: 0.1562522
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 5e-05
+Updating learning rate to 0.0005
+	iters: 100, epoch: 8 | loss: 0.2436583
+	speed: 0.1047s/iter; left time: 121.1376s
+Epoch: 3 cost time: 3.9525516033172607
+Epoch: 3, Steps: 157 | Train Loss: 0.2326475 Vali Loss: 0.2708243 Test Loss: 0.1562522
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 2.5e-05
+Updating learning rate to 0.00025
+	iters: 100, epoch: 9 | loss: 0.2842094
+	speed: 0.1063s/iter; left time: 106.3441s
+Epoch: 4 cost time: 3.81847882270813
+Epoch: 4, Steps: 157 | Train Loss: 0.2326475 Vali Loss: 0.2690939 Test Loss: 0.1562522
+EarlyStopping counter: 3 out of 3
+Early stopping
+>>>>>>>testing : Exchange_96_192_iTransformer_custom_M_ft96_sl48_ll192_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 1326
+test shape: (1326, 1, 192, 8) (1326, 1, 192, 8)
+test shape: (1326, 192, 8) (1326, 192, 8)
+mse:0.15625223517417908, mae:0.2921924889087677

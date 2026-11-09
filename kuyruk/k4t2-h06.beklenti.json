@@ -1,0 +1,51 @@
+{
+  "_aciklama": "ÖN-KAYIT (deney-yürütücü, 2026-10-14, K4 tur 2): kuyruk k4t2-h06 satırları eklenmeden ve kuyruk başlatılmadan ÖNCE yazıldı; koşum sonrası değiştirilmez. Kart: hipotezler/H06.md (normsuz; ABLASYON satırı, ÖLDÜR beklenen sonuç; mtime < ilk normsuz* koşumu 05:08:26). Eşikler kartın üst tablosundan (Mekanik DUR: duman ≤ 5.0 ve plasebo, ön-uçuş ∈ [0.40, 10.0], ters yönlü İNCELE (b)(c), Bütçe tavanı) ve uygulama notundan AYNEN alındı; foreground sonuçlarına göre AYARLANMADI. Kart gereği KÖTÜ SONUÇTA KUYRUK DURDURULMAZ, n = 3 tamamlanır: bu yüzden üst sınırlar kartın geniş 'sayısal patlama' sınırıdır (10.0), beklenen kötüleşme aralığı (+5…+210%, 0.467–1.379) kural DEĞİL, yalnız tahlilde raporlanır. Canlı kural (--kural) ust_sinir val_loss/loss 10.0'a çekildi (tur-1'in 3.0'ı normsuz modelin meşru kötü val kaybını öldürürdü; kart mekanik DUR > 10.0). PLASEBO (kart (d): bit-bit aynı → mekanik DUR): ebeveyn kuyrukta yok → foreground'da sınandı: duman 20261014-050826_normsuz-duman_s2023 vs 20261014-015848_baseline-duman_s2023 val_mse_h96 |fark| 2.05 (> 1e-9); ön-uçuş 20261014-050923_normsuz-onucus_s2023 vs 20261014-015930_baseline-onucus_s2023 ufuk |fark| ≥ 1.00, val tahmin maks |fark| 1.88–4.40 → bayrak devrede (stdout use_norm=0). yon_vs / sure_orani ebeveyn kuyrukta olmadığı için burada sınanamaz. TEST sayısı hiçbir kurala konmadı (M4).",
+  "metrik": "val_mse_avg",
+  "yon": "min",
+  "asama": {
+    "1": {
+      "aciklama": "DUMAN — varyant normsuz-duman: s2023, yalnız ufuk 96, --epoch-ust 1 (--use_norm 0).",
+      "kurallar": [
+        {"tur": "sonlu"},
+        {"tur": "min_kosum", "n": 1},
+        {"tur": "aralik", "varyant": "normsuz-duman", "alt": 0.05, "ust": 5.0,
+         "kaynak": "üst: H06 kartı uygulama notu 'duman val_mse_h96 sonlu ve ≤ 5.0'; alt: K3 duman alt sınırı 0.05 ≈ 0.6 × lit. test h96 0.086 (Liu et al. 2024 Tab.10) → altı sızıntı/protokol şüphesi"}
+      ]
+    },
+    "2": {
+      "aciklama": "ÖN-UÇUŞ — varyant normsuz-onucus: s2023, 4 ufuk, --epoch-ust 2 (h336 resmî 1).",
+      "kurallar": [
+        {"tur": "sonlu"},
+        {"tur": "min_kosum", "n": 1},
+        {"tur": "aralik", "varyant": "normsuz-onucus", "alt": 0.40, "ust": 10.0,
+         "kaynak": "H06 kartı Mekanik DUR + uygulama notu: ön-uçuş val_mse_avg ∈ [0.40, 10.0]; alt sınır ters yönlü İNCELE (b) (normsuz ebeveyn ön-uçuşundan belirgin iyi), üst sınır sayısal patlama"},
+        {"tur": "ikincil_aralik", "metrik": "egitim_sure_sn", "alt": 10, "ust": 466,
+         "kaynak": "H06 kartı Mekanik DUR 'süre > 2× ebeveyn': ebeveyn ön-uçuş 20261014-011230_baseline-onucus_s2023 egitim_sure_sn 233.2 × 2 ≈ 466 s"},
+        {"tur": "ikincil_aralik", "metrik": "param_sayisi", "alt": 304720, "ust": 304720,
+         "kaynak": "H06 kartı: parametre sayısı ebeveynle eşit olmalı (h720 304 720)"}
+      ]
+    },
+    "3": {
+      "aciklama": "TAM — varyant normsuz: 3 seed {2023, 2024, 2025} (ebeveynle aynı seed kümesi, M5). Kart: kötüleşme büyük olsa da n = 3 tamamlanır. Kuyruk son aşamadan sonra kapı koşmaz; şef/tahlilci beklenti_kontrol.py --asama 3 ile elle koşar. Karar kartın öldürme kuralıyla (ÖLDÜR beklenen; TUT koşulu sağlanırsa önce İNCELE (a)).",
+      "kurallar": [
+        {"tur": "sonlu"},
+        {"tur": "farkli_seedler_farkli"},
+        {"tur": "min_kosum", "n": 3},
+        {"tur": "aralik", "varyant": "normsuz", "alt": 0.4088, "ust": 10.0,
+         "kaynak": "alt: H06 kartı ters yönlü İNCELE (b) Δavg ≤ −8.1% (MDE) → < 0.4088 koşulsuz İNCELE; üst: kart Mekanik DUR sayısal patlama 10.0 (kartın geniş aralığı; kötü sonuçta kuyruk durdurulmaz)"},
+        {"tur": "ikincil_aralik", "metrik": "val_mse_h96", "alt": 0.1154, "ust": 100,
+         "kaynak": "alt: H06 kartı İNCELE (c) h96 < 0.1154 (val Repeat −10%); üst: yalnız sonluluk"},
+        {"tur": "ikincil_aralik", "metrik": "val_mse_h192", "alt": 0.2037, "ust": 100,
+         "kaynak": "alt: H06 kartı İNCELE (c) h192 < 0.2037 (val Repeat −10%); üst: yalnız sonluluk"},
+        {"tur": "ikincil_aralik", "metrik": "val_mse_h336", "alt": 0.3540, "ust": 100,
+         "kaynak": "alt: H06 kartı İNCELE (c) h336 < 0.3540 (val Repeat −10%); üst: yalnız sonluluk"},
+        {"tur": "ikincil_aralik", "metrik": "val_mse_h720", "alt": 0.9154, "ust": 100,
+         "kaynak": "alt: H06 kartı İNCELE (c) h720 < 0.9154 (val Repeat −20%); üst: yalnız sonluluk"},
+        {"tur": "ikincil_aralik", "metrik": "param_sayisi", "alt": 304720, "ust": 304720,
+         "kaynak": "H06 kartı: parametre ebeveynle eşit olmalı"},
+        {"tur": "ikincil_aralik", "metrik": "egitim_sure_sn", "alt": 60, "ust": 540,
+         "kaynak": "H06 kartı Bütçe tavanı: seed başına > 9 dk → durdur"}
+      ]
+    }
+  }
+}

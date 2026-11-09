@@ -1,0 +1,108 @@
+Args in experiment:
+Namespace(is_training=1, model_id='Exchange_96_192', model='iTransformer', data='custom', root_path='C:\\Users\\karsl\\Downloads\\yzmakaleuretimskill\\yzmakaleuretimskill\\deney_workspace\\5-3-exchange-itransformer\\data\\exchange_rate\\', data_path='exchange_rate.csv', features='M', target='OT', freq='h', checkpoints='C:\\Users\\karsl\\Downloads\\yzmakaleuretimskill\\yzmakaleuretimskill\\deney_workspace\\5-3-exchange-itransformer\\runs\\20261014-041102_san_s2025\\ckpt\\', seq_len=96, label_len=48, pred_len=192, enc_in=8, dec_in=8, c_out=8, d_model=128, n_heads=8, e_layers=2, d_layers=1, d_ff=128, moving_avg=25, factor=1, distil=True, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, do_predict=False, num_workers=0, itr=1, train_epochs=10, batch_size=32, patience=3, learning_rate=0.0001, des='Exp', loss='MSE', lradj='type1', use_amp=False, use_gpu=True, gpu=0, use_multi_gpu=False, devices='0,1,2,3', exp_name='MTSF', channel_independence=False, inverse=False, class_strategy='projection', target_root_path='./data/electricity/', target_data_path='electricity.csv', efficient_training=False, use_norm=0, partial_start_index=0)
+Use GPU: cuda:0
+>>>>>>>start training : Exchange_96_192_iTransformer_custom_M_ft96_sl48_ll192_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 5024
+val 569
+test 1326
+	iters: 100, epoch: 1 | loss: 0.1176750
+	speed: 0.0083s/iter; left time: 18.7399s
+[SAN-onegitim] ep 1/5 adim 157 sure 1.4s | istasyon_train=0.1227999 istasyon_val=0.1467623
+Validation loss decreased (inf --> 0.146762).  Saving model ...
+Updating learning rate to 0.001
+	iters: 100, epoch: 2 | loss: 0.1140832
+	speed: 0.0147s/iter; left time: 30.8609s
+[SAN-onegitim] ep 2/5 adim 157 sure 1.5s | istasyon_train=0.1144694 istasyon_val=0.1427809
+Validation loss decreased (0.146762 --> 0.142781).  Saving model ...
+Updating learning rate to 0.0005
+	iters: 100, epoch: 3 | loss: 0.1345835
+	speed: 0.0161s/iter; left time: 31.2375s
+[SAN-onegitim] ep 3/5 adim 157 sure 1.6s | istasyon_train=0.1119493 istasyon_val=0.1665194
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 0.00025
+	iters: 100, epoch: 4 | loss: 0.0863869
+	speed: 0.0158s/iter; left time: 28.2049s
+[SAN-onegitim] ep 4/5 adim 157 sure 1.5s | istasyon_train=0.1112523 istasyon_val=0.1635544
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 0.000125
+	iters: 100, epoch: 5 | loss: 0.1168374
+	speed: 0.0154s/iter; left time: 25.0063s
+[SAN-onegitim] ep 5/5 adim 157 sure 1.5s | istasyon_train=0.1107385 istasyon_val=0.1659257
+EarlyStopping counter: 3 out of 3
+Updating learning rate to 6.25e-05
+[SAN] on-egitim bitti: en iyi istasyon checkpoint yuklendi (omurga fazinda SAN adim atmaz)
+	iters: 100, epoch: 6 | loss: 0.2219396
+	speed: 0.0320s/iter; left time: 47.1046s
+Epoch: 1 cost time: 4.154142141342163
+Epoch: 1, Steps: 157 | Train Loss: 0.2290268 Vali Loss: 0.2862548 Test Loss: 0.1643571
+Validation loss decreased (inf --> 0.286255).  Saving model ...
+Updating learning rate to 0.0001
+Updating learning rate to 0.001
+	iters: 100, epoch: 7 | loss: 0.2604269
+	speed: 0.1447s/iter; left time: 190.1800s
+Epoch: 2 cost time: 4.134416818618774
+Epoch: 2, Steps: 157 | Train Loss: 0.2289537 Vali Loss: 0.2856404 Test Loss: 0.1643681
+Validation loss decreased (0.286255 --> 0.285640).  Saving model ...
+Updating learning rate to 5e-05
+Updating learning rate to 0.0005
+	iters: 100, epoch: 8 | loss: 0.1916416
+	speed: 0.1379s/iter; left time: 159.5956s
+Epoch: 3 cost time: 4.031182289123535
+Epoch: 3, Steps: 157 | Train Loss: 0.2289183 Vali Loss: 0.2855011 Test Loss: 0.1644206
+Validation loss decreased (0.285640 --> 0.285501).  Saving model ...
+Updating learning rate to 2.5e-05
+Updating learning rate to 0.00025
+	iters: 100, epoch: 9 | loss: 0.2500836
+	speed: 0.1373s/iter; left time: 137.3194s
+Epoch: 4 cost time: 3.995600700378418
+Epoch: 4, Steps: 157 | Train Loss: 0.2288960 Vali Loss: 0.2864862 Test Loss: 0.1644597
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 1.25e-05
+Updating learning rate to 0.000125
+	iters: 100, epoch: 10 | loss: 0.2420408
+	speed: 0.1407s/iter; left time: 118.6346s
+Epoch: 5 cost time: 4.063489198684692
+Epoch: 5, Steps: 157 | Train Loss: 0.2288878 Vali Loss: 0.2853991 Test Loss: 0.1644603
+Validation loss decreased (0.285501 --> 0.285399).  Saving model ...
+Updating learning rate to 6.25e-06
+Updating learning rate to 6.25e-05
+	iters: 100, epoch: 11 | loss: 0.2001306
+	speed: 0.1445s/iter; left time: 99.1136s
+Epoch: 6 cost time: 4.629277467727661
+Epoch: 6, Steps: 157 | Train Loss: 0.2288792 Vali Loss: 0.2861711 Test Loss: 0.1644694
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 3.125e-06
+Updating learning rate to 3.125e-05
+	iters: 100, epoch: 12 | loss: 0.1955141
+	speed: 0.1441s/iter; left time: 76.2395s
+Epoch: 7 cost time: 4.26789665222168
+Epoch: 7, Steps: 157 | Train Loss: 0.2288792 Vali Loss: 0.2866326 Test Loss: 0.1644689
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 1.5625e-06
+Updating learning rate to 1.5625e-05
+	iters: 100, epoch: 13 | loss: 0.1857547
+	speed: 0.1372s/iter; left time: 51.0444s
+Epoch: 8 cost time: 4.062688589096069
+Epoch: 8, Steps: 157 | Train Loss: 0.2288763 Vali Loss: 0.2850014 Test Loss: 0.1644706
+Validation loss decreased (0.285399 --> 0.285001).  Saving model ...
+Updating learning rate to 7.8125e-07
+Updating learning rate to 7.8125e-06
+	iters: 100, epoch: 14 | loss: 0.2272308
+	speed: 0.1413s/iter; left time: 30.3767s
+Epoch: 9 cost time: 4.44584059715271
+Epoch: 9, Steps: 157 | Train Loss: 0.2288752 Vali Loss: 0.2871231 Test Loss: 0.1644711
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 3.90625e-07
+Updating learning rate to 3.90625e-06
+	iters: 100, epoch: 15 | loss: 0.2089814
+	speed: 0.1414s/iter; left time: 8.2003s
+Epoch: 10 cost time: 4.200786352157593
+Epoch: 10, Steps: 157 | Train Loss: 0.2288759 Vali Loss: 0.2863916 Test Loss: 0.1644713
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 1.953125e-07
+Updating learning rate to 1.953125e-06
+>>>>>>>testing : Exchange_96_192_iTransformer_custom_M_ft96_sl48_ll192_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 1326
+test shape: (1326, 1, 192, 8) (1326, 1, 192, 8)
+test shape: (1326, 192, 8) (1326, 192, 8)
+mse:0.16447065770626068, mae:0.3006865084171295

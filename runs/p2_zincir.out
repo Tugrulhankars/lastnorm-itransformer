@@ -1,0 +1,59 @@
+[satir_kos] p2-etth1-baseline satır 1/3 varyant=etth1-baseline seed=2023 asama=3
+[kosum] torch 2.4.1+cu121 cuda_available=True
+[kosum] başladı run=20261014-230036_etth1-baseline_s2023 pid=34348
+[kosum] bitti run=20261014-230036_etth1-baseline_s2023 rc=0 sure=900.7s  val_mse_avg=1.1256015449762344, val_mae_avg=0.7028567492961884, val_mse_h96=0.6743456721305847, val_mse_h192=0.9911047220230103, val_mse_h336=1.2790534496307373, val_mse_h720=1.5579023361206055
+[satir_kos] bitti rc=0
+[zincir] p2-etth1-baseline 1 rc=0
+[satir_kos] p2-etth1-baseline satır 2/3 varyant=etth1-baseline seed=2024 asama=3
+[kosum] torch 2.4.1+cu121 cuda_available=True
+[kosum] başladı run=20261014-231547_etth1-baseline_s2024 pid=6220
+[kosum] bitti run=20261014-231547_etth1-baseline_s2024 rc=0 sure=852.0s  val_mse_avg=1.1261063516139984, val_mae_avg=0.7024016231298447, val_mse_h96=0.6761696934700012, val_mse_h192=0.9870383143424988, val_mse_h336=1.2768669128417969, val_mse_h720=1.5643504858016968
+[satir_kos] bitti rc=0
+[zincir] p2-etth1-baseline 2 rc=0
+[satir_kos] p2-etth1-baseline satır 3/3 varyant=etth1-baseline seed=2025 asama=3
+[kosum] torch 2.4.1+cu121 cuda_available=True
+[kosum] başladı run=20261014-233004_etth1-baseline_s2025 pid=26984
+[kosum] bitti run=20261014-233004_etth1-baseline_s2025 rc=0 sure=573.2s  val_mse_avg=1.1287978738546371, val_mae_avg=0.7043941915035248, val_mse_h96=0.6742504835128784, val_mse_h192=0.9897823929786682, val_mse_h336=1.283918857574463, val_mse_h720=1.567239761352539
+[satir_kos] bitti rc=0
+[zincir] p2-etth1-baseline 3 rc=0
+[satir_kos] p2-etth1-lastnorm satır 1/3 varyant=etth1-lastnorm seed=2023 asama=3
+[kosum] torch 2.4.1+cu121 cuda_available=True
+[kosum] başladı run=20261014-233943_etth1-lastnorm_s2023 pid=33092
+[kosum] bitti run=20261014-233943_etth1-lastnorm_s2023 rc=0 sure=478.7s  val_mse_avg=1.1354143619537354, val_mae_avg=0.7098953723907471, val_mse_h96=0.6801206469535828, val_mse_h192=0.9878353476524353, val_mse_h336=1.2957348823547363, val_mse_h720=1.577966570854187
+[satir_kos] bitti rc=0
+[zincir] p2-etth1-lastnorm 1 rc=0
+[satir_kos] p2-etth1-lastnorm satır 2/3 varyant=etth1-lastnorm seed=2024 asama=3
+[kosum] torch 2.4.1+cu121 cuda_available=True
+[kosum] başladı run=20261014-234744_etth1-lastnorm_s2024 pid=5924
+[kosum] bitti run=20261014-234744_etth1-lastnorm_s2024 rc=0 sure=529.8s  val_mse_avg=1.1313254833221436, val_mae_avg=0.7090175598859787, val_mse_h96=0.6843673586845398, val_mse_h192=0.9899635910987854, val_mse_h336=1.2855689525604248, val_mse_h720=1.5654020309448242
+[satir_kos] bitti rc=0
+[zincir] p2-etth1-lastnorm 2 rc=0
+[satir_kos] p2-etth1-lastnorm satır 3/3 varyant=etth1-lastnorm seed=2025 asama=3
+[kosum] torch 2.4.1+cu121 cuda_available=True
+[kosum] başladı run=20261014-235637_etth1-lastnorm_s2025 pid=35472
+[zincir] atla p2-etth1-baseline 1 (bitti)
+[zincir] atla p2-etth1-baseline 2 (bitti)
+[zincir] atla p2-etth1-baseline 3 (bitti)
+[zincir] atla p2-etth1-lastnorm 1 (bitti)
+[zincir] atla p2-etth1-lastnorm 2 (bitti)
+[satir_kos] p2-etth1-lastnorm satır 3/3 varyant=etth1-lastnorm seed=2025 asama=3
+[kosum] torch 2.4.1+cu121 cuda_available=True
+[kosum] başladı run=20261015-001831_etth1-lastnorm_s2025 pid=32584
+[kosum] bitti run=20261015-001831_etth1-lastnorm_s2025 rc=0 sure=582.0s  val_mse_avg=1.1341895908117294, val_mae_avg=0.7105076014995575, val_mse_h96=0.6848752498626709, val_mse_h192=0.9918466210365295, val_mse_h336=1.284501075744629, val_mse_h720=1.5755354166030884
+[satir_kos] bitti rc=0
+[zincir] p2-etth1-lastnorm 3 rc=0
+[satir_kos] p2-etth2-baseline satır 1/3 varyant=etth2-baseline seed=2023 asama=3
+[kosum] torch 2.4.1+cu121 cuda_available=True
+[kosum] başladı run=20261015-002817_etth2-baseline_s2023 pid=30200
+[kosum] bitti run=20261015-002817_etth2-baseline_s2023 rc=0 sure=496.7s  val_mse_avg=0.36852871254086494, val_mae_avg=0.40875208377838135, val_mse_h96=0.220888152718544, val_mse_h192=0.2810087203979492, val_mse_h336=0.3667745590209961, val_mse_h720=0.6054434180259705
+[satir_kos] bitti rc=0
+[zincir] p2-etth2-baseline 1 rc=0
+[satir_kos] p2-etth2-baseline satır 2/3 varyant=etth2-baseline seed=2024 asama=3
+[kosum] torch 2.4.1+cu121 cuda_available=True
+[kosum] başladı run=20261015-003636_etth2-baseline_s2024 pid=28612
+[kosum] bitti run=20261015-003636_etth2-baseline_s2024 rc=0 sure=479.0s  val_mse_avg=0.36588239669799805, val_mae_avg=0.40683142095804214, val_mse_h96=0.2174404263496399, val_mse_h192=0.2793498933315277, val_mse_h336=0.36491820216178894, val_mse_h720=0.6018210649490356
+[satir_kos] bitti rc=0
+[zincir] p2-etth2-baseline 2 rc=0
+[satir_kos] p2-etth2-baseline satır 3/3 varyant=etth2-baseline seed=2025 asama=3
+[kosum] torch 2.4.1+cu121 cuda_available=True
+[kosum] başladı run=20261015-004439_etth2-baseline_s2025 pid=21172

@@ -1,0 +1,51 @@
+{
+  "_aciklama": "ÖN-KAYIT (deney-yürütücü, 2026-10-14, K4 tur 2): kuyruk k4t2-h07 satırları eklenmeden ve kuyruk başlatılmadan ÖNCE yazıldı; koşum sonrası değiştirilmez. Kart: hipotezler/H07.md (xmark-yok, YEDEK; aktivasyon koşulu sağlandı: H05 ön-koşul kapısı BAŞARISIZ, varyantlar/san-mu/onkosul.log 'KAPI=BASARISIZ'; mtime < ilk xmark-yok* koşumu 05:12:58). Eşikler kartın üst tablosundan (Mekanik DUR, iki yönlü İNCELE (a)(b), Bütçe tavanı) ve uygulama notundan AYNEN alındı; foreground sonuçlarına göre AYARLANMADI. Kartta karşılığı olmayan üst sınırlar K3/tur-1 kaynaklı sınırlarıdır (1.34 × Repeat val). Duman öncesi CPU sağlaması (varyantlar/xmark-yok/dogrula.py (i)–(iii)) GEÇTİ (dogrula.log). PLASEBO (kart: ön-uçuş baseline-onucus_s2023 ile bit-bit aynı → mekanik DUR): ebeveyn kuyrukta yok → foreground'da sınandı: 20261014-051352_xmark-yok-onucus_s2023 vs 20261014-015930_baseline-onucus_s2023 val tahmin maks |fark| 0.09–0.39 (4 ufuk), bit-bit aynı DEĞİL. yon_vs / sure_orani ebeveyn kuyrukta olmadığı için burada sınanamaz (kartın yön beklentisi iki yönlü, |Δavg| ≤ 2%). TEST sayısı hiçbir kurala konmadı (M4; kartın K5 test eşiği burada yok).",
+  "metrik": "val_mse_avg",
+  "yon": "min",
+  "asama": {
+    "1": {
+      "aciklama": "DUMAN — varyant xmark-yok-duman: s2023, yalnız ufuk 96, --epoch-ust 1.",
+      "kurallar": [
+        {"tur": "sonlu"},
+        {"tur": "min_kosum", "n": 1},
+        {"tur": "aralik", "varyant": "xmark-yok-duman", "alt": 0.05, "ust": 0.1923,
+         "kaynak": "üst: H07 kartı Mekanik DUR + uygulama notu 'duman val_mse_h96 ≤ 0.1923' (= 1.5 × Repeat val h96 0.1282); alt: K3 duman alt sınırı 0.05 ≈ 0.6 × lit. test h96 0.086 (Liu et al. 2024 Tab.10)"}
+      ]
+    },
+    "2": {
+      "aciklama": "ÖN-UÇUŞ — varyant xmark-yok-onucus: s2023, 4 ufuk, --epoch-ust 2 (h336 resmî 1).",
+      "kurallar": [
+        {"tur": "sonlu"},
+        {"tur": "min_kosum", "n": 1},
+        {"tur": "aralik", "varyant": "xmark-yok-onucus", "alt": 0.40, "ust": 0.49,
+         "kaynak": "H07 kartı Mekanik DUR + uygulama notu: ön-uçuş val_mse_avg ∈ [0.40, 0.49] (ebeveyn ön-uçuşu 0.4453 ± %10)"},
+        {"tur": "ikincil_aralik", "metrik": "egitim_sure_sn", "alt": 10, "ust": 466,
+         "kaynak": "H07 kartı Mekanik DUR 'süre > 2× ebeveyn': ebeveyn ön-uçuş 20261014-011230_baseline-onucus_s2023 egitim_sure_sn 233.2 × 2 ≈ 466 s"},
+        {"tur": "ikincil_aralik", "metrik": "param_sayisi", "alt": 304720, "ust": 304720,
+         "kaynak": "H07 kartı Mekanik DUR: parametre sayısı ebeveynle eşit olmalı (h720 304 720)"}
+      ]
+    },
+    "3": {
+      "aciklama": "TAM — varyant xmark-yok: 3 seed {2023, 2024, 2025} (ebeveynle aynı seed kümesi, M5). Kuyruk son aşamadan sonra kapı koşmaz; şef/tahlilci beklenti_kontrol.py --asama 3 ile elle koşar. Karar kartın öldürme kuralıyla (Δavg ≥ 0 veya < 3/4 ufuk → ÖLDÜR; |Δavg| < %8.1 → ayırt edilemez).",
+      "kurallar": [
+        {"tur": "sonlu"},
+        {"tur": "farkli_seedler_farkli"},
+        {"tur": "min_kosum", "n": 3},
+        {"tur": "aralik", "varyant": "xmark-yok", "alt": 0.4088, "ust": 0.4809,
+         "kaynak": "H07 kartı iki yönlü İNCELE (a): |Δavg| ≥ %8.1 (MDE) → ebeveyn 0.44485 × (1 ∓ 0.081) = [0.4088, 0.4809] dışı İNCELE"},
+        {"tur": "ikincil_aralik", "metrik": "val_mse_h96", "alt": 0.1184, "ust": 0.1718,
+         "kaynak": "alt: H07 kartı İNCELE (b) h96 ≤ −5.2% (< 0.1184); üst: 1.34 × Repeat val h96 0.1282 (K3 oranı)"},
+        {"tur": "ikincil_aralik", "metrik": "val_mse_h192", "alt": 0.1966, "ust": 0.3032,
+         "kaynak": "alt: H07 kartı İNCELE (b) h192 ≤ −7.0% (< 0.1966); üst: 1.34 × Repeat val h192 0.2263"},
+        {"tur": "ikincil_aralik", "metrik": "val_mse_h336", "alt": 0.3883, "ust": 0.5270,
+         "kaynak": "alt: H07 kartı İNCELE (b) h336 ≤ −3.0% (< 0.3883); üst: 1.34 × Repeat val h336 0.3933"},
+        {"tur": "ikincil_aralik", "metrik": "val_mse_h720", "alt": 0.7759, "ust": 1.5334,
+         "kaynak": "alt: H07 kartı İNCELE (b) h720 ≤ −25.6% (< 0.7759); üst: 1.34 × Repeat val h720 1.1443"},
+        {"tur": "ikincil_aralik", "metrik": "param_sayisi", "alt": 304720, "ust": 304720,
+         "kaynak": "H07 kartı: parametre ebeveynle eşit olmalı"},
+        {"tur": "ikincil_aralik", "metrik": "egitim_sure_sn", "alt": 60, "ust": 540,
+         "kaynak": "H07 kartı Bütçe tavanı: seed başına > 9 dk → durdur"}
+      ]
+    }
+  }
+}

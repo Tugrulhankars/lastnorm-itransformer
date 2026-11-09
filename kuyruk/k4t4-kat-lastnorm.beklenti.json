@@ -1,0 +1,26 @@
+{
+  "_aciklama": "ÖN-KAYIT (deney-geliştirici, 2026-10-14 ~16:20, FAZ II P1): kuyruk satırları eklenmeden ve tam koşumdan ÖNCE yazıldı; koşum sonrası değiştirilmez. Varyant: lastnorm (H04, varyantlar/lastnorm/kos.py; --kat ortak yoldan rakip_kos.main()'e geçer). Foreground sağlamalar: 20261014-161640_lastnorm-k3-duman_s2023 == 20261014-052110_lastnorm-duman_s2023 (val tahminleri np.array_equal); 20261014-161715_lastnorm-k1-duman_s2023 baseline-k1 dumanından farklı (plasebo değil), hedef_ilk_satir 3791. Bu nedenle lastnorm-k3 tam koşumu mevcut lastnorm tam koşumlarıyla (20261014-052508_s2023, 053601_s2024, 054213_s2025; val_mse_avg 0.43227001279592514 / 0.42999509908258915 / 0.4211476519703865, ort. 0.4278042546163003) BİT-BİT aynı olmalı → aralık ±1e-6. K1/K2: kaynaklı mekanik makullük [0.5, 1.5] × naif Repeat kat ortalaması (sonuclar/naif-kat.csv). Gerekçe baseline beklentisindekiyle aynı. Yalnız aşama 3 var; kapıyı şef/tahlilci beklenti_kontrol.py --asama 3 ile elle koşar. Seçim (TUT: ebeveynden düşük VE ≥2/3 katta VE ≥3/4 ufukta, kat-ort.) ŞEF ÖN-KAYDI'ndadır, bu dosyada değildir. TEST sayısı hiçbir kurala konmadı.",
+  "metrik": "val_mse_avg",
+  "yon": "min",
+  "asama": {
+    "3": {
+      "aciklama": "TAM — lastnorm × kat {1,2,3} × seed {2023,2024,2025}; --kat k, test hiç değerlendirilmez. Rakip referansı: kuyruk k4t4-kat-baseline (aynı kat/seed).",
+      "kurallar": [
+        {"tur": "sonlu"},
+        {"tur": "farkli_seedler_farkli"},
+        {"tur": "kollar_farkli"},
+        {"tur": "min_kosum", "n": 9},
+        {"tur": "aralik", "varyant": "lastnorm-k3", "alt": 0.4278032546163003, "ust": 0.42780525461630026,
+         "kaynak": "K3 == resmî val (kat_dogrula.log bit-bit; lastnorm-k3 dumanı lastnorm-duman ile bit-bit) → lastnorm tam koşumları 052508/053601/054213 val_mse_avg ort. 0.4278042546163003 ± 1e-6"},
+        {"tur": "aralik", "varyant": "lastnorm-k2", "alt": 0.5652, "ust": 1.6957,
+         "kaynak": "mekanik makullük [0.5, 1.5] × naif Repeat K2 4-ufuk ort. 1.130437 (sonuclar/naif-kat.csv); 1.5× emsali H03/H08"},
+        {"tur": "aralik", "varyant": "lastnorm-k1", "alt": 0.1135, "ust": 0.3405,
+         "kaynak": "mekanik makullük [0.5, 1.5] × naif Repeat K1 4-ufuk ort. 0.227003 (sonuclar/naif-kat.csv); 1.5× emsali H03/H08"},
+        {"tur": "ikincil_aralik", "metrik": "param_sayisi", "alt": 304720, "ust": 304720,
+         "kaynak": "H04 dogrula.log: lastnorm parametre sayısı ebeveynle eşit (h720 304 720)"},
+        {"tur": "ikincil_aralik", "metrik": "egitim_sure_sn", "alt": 30, "ust": 900,
+         "kaynak": "lastnorm tam koşumu 352–460 s; seed başına > 15 dk → teşhis (H08 bütçe tavanı emsali)"}
+      ]
+    }
+  }
+}

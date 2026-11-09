@@ -1,0 +1,38 @@
+{
+  "run_id": "20261014-162501_baseline-k2_s2025",
+  "varyant": "baseline-k2",
+  "seed": "2025",
+  "etiket": "P1 KAT: resmi iTransformer baseline, --kat 2 (rakip referansi; test yok)",
+  "ebeveyn": "20261014-021448_baseline_s2025",
+  "hipotez": "P1",
+  "kuyruk": "k4t4-kat-baseline",
+  "asama": 3,
+  "kural": {
+    "nan_kes": true,
+    "min_adim": 1,
+    "ust_sinir": {
+      "val_loss": 6.0,
+      "loss": 3.0
+    },
+    "alt_sinir": {
+      "val_loss": 0.01
+    },
+    "sabit_sn": 900,
+    "ilerleme_zorunlu_sn": 600
+  },
+  "komut": [
+    "C:/Users/karsl/Downloads/yzmakaleuretimskill/yzmakaleuretimskill/deney_workspace/5-3-exchange-itransformer/env/.venv/Scripts/python.exe",
+    "C:/Users/karsl/Downloads/yzmakaleuretimskill/yzmakaleuretimskill/deney_workspace/5-3-exchange-itransformer/scripts/rakip_kos.py",
+    "--seed",
+    "2025",
+    "--out",
+    "C:\\Users\\karsl\\Downloads\\yzmakaleuretimskill\\yzmakaleuretimskill\\deney_workspace\\5-3-exchange-itransformer\\runs\\20261014-162501_baseline-k2_s2025/metrics.json",
+    "--num-workers",
+    "0",
+    "--kat",
+    "2"
+  ],
+  "cwd": "C:\\Users\\karsl\\Downloads\\yzmakaleuretimskill\\yzmakaleuretimskill\\deney_workspace\\5-3-exchange-itransformer",
+  "baslangic": "2026-10-14T16:25:05",
+  "makine": "MetropolTilkisi"
+}

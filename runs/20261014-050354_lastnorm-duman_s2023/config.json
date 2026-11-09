@@ -1,0 +1,40 @@
+{
+  "run_id": "20261014-050354_lastnorm-duman_s2023",
+  "varyant": "lastnorm-duman",
+  "seed": "2023",
+  "etiket": "H04 duman (foreground): lastnorm h96 epoch<=1",
+  "ebeveyn": "20261014-020531_baseline_s2023",
+  "hipotez": "H04",
+  "kuyruk": null,
+  "asama": 1,
+  "kural": {
+    "nan_kes": true,
+    "min_adim": 1,
+    "ust_sinir": {
+      "val_loss": 3.0,
+      "loss": 3.0
+    },
+    "alt_sinir": {
+      "val_loss": 0.01
+    },
+    "sabit_sn": 900,
+    "ilerleme_zorunlu_sn": 600
+  },
+  "komut": [
+    "C:/Users/karsl/Downloads/yzmakaleuretimskill/yzmakaleuretimskill/deney_workspace/5-3-exchange-itransformer/env/.venv/Scripts/python.exe",
+    "C:/Users/karsl/Downloads/yzmakaleuretimskill/yzmakaleuretimskill/deney_workspace/5-3-exchange-itransformer/varyantlar/lastnorm/kos.py",
+    "--seed",
+    "2023",
+    "--out",
+    "C:\\Users\\karsl\\Downloads\\yzmakaleuretimskill\\yzmakaleuretimskill\\deney_workspace\\5-3-exchange-itransformer\\runs\\20261014-050354_lastnorm-duman_s2023/metrics.json",
+    "--ufuklar",
+    "96",
+    "--epoch-ust",
+    "1",
+    "--num-workers",
+    "0"
+  ],
+  "cwd": "C:\\Users\\karsl\\Downloads\\yzmakaleuretimskill\\yzmakaleuretimskill\\deney_workspace\\5-3-exchange-itransformer",
+  "baslangic": "2026-10-14T05:03:58",
+  "makine": "MetropolTilkisi"
+}

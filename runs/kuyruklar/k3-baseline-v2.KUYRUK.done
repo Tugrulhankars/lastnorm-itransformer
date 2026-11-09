@@ -1,0 +1,67 @@
+{
+  "kuyruk": "k3-baseline-v2",
+  "toplam": 6,
+  "koşulan": 6,
+  "basarili": 6,
+  "basarisiz": 0,
+  "sure_sn": 1242.4,
+  "bitis": "2026-10-14T02:19:30",
+  "kademeli": true,
+  "durduruldu_asama": null,
+  "kapi_raporlari": [
+    {
+      "asama": 1,
+      "rc": 0,
+      "rapor": "C:\\Users\\karsl\\Downloads\\yzmakaleuretimskill\\yzmakaleuretimskill\\deney_workspace\\5-3-exchange-itransformer\\sonuclar\\beklenti-k3-baseline-v2-asama1.md"
+    },
+    {
+      "asama": 2,
+      "rc": 0,
+      "rapor": "C:\\Users\\karsl\\Downloads\\yzmakaleuretimskill\\yzmakaleuretimskill\\deney_workspace\\5-3-exchange-itransformer\\sonuclar\\beklenti-k3-baseline-v2-asama2.md"
+    }
+  ],
+  "sonuclar": [
+    {
+      "sira": 0,
+      "varyant": "baseline-duman",
+      "seed": "2023",
+      "asama": 1,
+      "rc": 0
+    },
+    {
+      "sira": 1,
+      "varyant": "baseline-onucus",
+      "seed": "2023",
+      "asama": 2,
+      "rc": 0
+    },
+    {
+      "sira": 2,
+      "varyant": "baseline-onucus",
+      "seed": "2024",
+      "asama": 2,
+      "rc": 0
+    },
+    {
+      "sira": 3,
+      "varyant": "baseline",
+      "seed": "2023",
+      "asama": 3,
+      "rc": 0
+    },
+    {
+      "sira": 4,
+      "varyant": "baseline",
+      "seed": "2024",
+      "asama": 3,
+      "rc": 0
+    },
+    {
+      "sira": 5,
+      "varyant": "baseline",
+      "seed": "2025",
+      "asama": 3,
+      "rc": 0
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+Args in experiment:
+Namespace(is_training=1, model_id='Exchange_96_720', model='iTransformer', data='custom', root_path='C:\\Users\\karsl\\Downloads\\yzmakaleuretimskill\\yzmakaleuretimskill\\deney_workspace\\5-3-exchange-itransformer\\data\\exchange_rate\\', data_path='exchange_rate.csv', features='M', target='OT', freq='h', checkpoints='C:\\Users\\karsl\\Downloads\\yzmakaleuretimskill\\yzmakaleuretimskill\\deney_workspace\\5-3-exchange-itransformer\\runs\\20261014-032853_baseline-ep336eq_s2024\\ckpt\\', seq_len=96, label_len=48, pred_len=720, enc_in=8, dec_in=8, c_out=8, d_model=128, n_heads=8, e_layers=2, d_layers=1, d_ff=128, moving_avg=25, factor=1, distil=True, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, do_predict=False, num_workers=0, itr=1, train_epochs=10, batch_size=32, patience=3, learning_rate=0.0001, des='Exp', loss='MSE', lradj='type1', use_amp=False, use_gpu=True, gpu=0, use_multi_gpu=False, devices='0,1,2,3', exp_name='MTSF', channel_independence=False, inverse=False, class_strategy='projection', target_root_path='./data/electricity/', target_data_path='electricity.csv', efficient_training=False, use_norm=True, partial_start_index=0)
+Use GPU: cuda:0
+>>>>>>>start training : Exchange_96_720_iTransformer_custom_M_ft96_sl48_ll720_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 4496
+val 41
+test 798
+	iters: 100, epoch: 1 | loss: 0.9228517
+	speed: 0.0217s/iter; left time: 28.1800s
+Epoch: 1 cost time: 2.9465622901916504
+Epoch: 1, Steps: 140 | Train Loss: 0.8591858 Vali Loss: 1.1813712 Test Loss: 0.8712372
+Validation loss decreased (inf --> 1.181371).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 2 | loss: 0.8985691
+	speed: 0.0595s/iter; left time: 69.1215s
+Epoch: 2 cost time: 2.9567501544952393
+Epoch: 2, Steps: 140 | Train Loss: 0.8300883 Vali Loss: 1.0796804 Test Loss: 0.8599173
+Validation loss decreased (1.181371 --> 1.079680).  Saving model ...
+Updating learning rate to 5e-05
+	iters: 100, epoch: 3 | loss: 0.8869010
+	speed: 0.0656s/iter; left time: 67.0207s
+Epoch: 3 cost time: 2.7023861408233643
+Epoch: 3, Steps: 140 | Train Loss: 0.8243781 Vali Loss: 1.0622113 Test Loss: 0.8552104
+Validation loss decreased (1.079680 --> 1.062211).  Saving model ...
+Updating learning rate to 2.5e-05
+	iters: 100, epoch: 4 | loss: 0.7921405
+	speed: 0.0649s/iter; left time: 57.1617s
+Epoch: 4 cost time: 3.091912031173706
+Epoch: 4, Steps: 140 | Train Loss: 0.8216779 Vali Loss: 1.0072175 Test Loss: 0.8540919
+Validation loss decreased (1.062211 --> 1.007218).  Saving model ...
+Updating learning rate to 1.25e-05
+	iters: 100, epoch: 5 | loss: 0.9517974
+	speed: 0.0580s/iter; left time: 42.9713s
+Epoch: 5 cost time: 2.7197489738464355
+Epoch: 5, Steps: 140 | Train Loss: 0.8204106 Vali Loss: 0.9997263 Test Loss: 0.8549299
+Validation loss decreased (1.007218 --> 0.999726).  Saving model ...
+Updating learning rate to 6.25e-06
+	iters: 100, epoch: 6 | loss: 0.7213349
+	speed: 0.0585s/iter; left time: 35.1759s
+Epoch: 6 cost time: 2.704125165939331
+Epoch: 6, Steps: 140 | Train Loss: 0.8195773 Vali Loss: 1.0321137 Test Loss: 0.8543612
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 3.125e-06
+	iters: 100, epoch: 7 | loss: 0.9683309
+	speed: 0.0586s/iter; left time: 27.0168s
+Epoch: 7 cost time: 2.794816732406616
+Epoch: 7, Steps: 140 | Train Loss: 0.8182457 Vali Loss: 1.0176935 Test Loss: 0.8547013
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 1.5625e-06
+	iters: 100, epoch: 8 | loss: 0.7469603
+	speed: 0.0626s/iter; left time: 20.1061s
+Epoch: 8 cost time: 2.7326948642730713
+Epoch: 8, Steps: 140 | Train Loss: 0.8190267 Vali Loss: 1.0109457 Test Loss: 0.8546234
+EarlyStopping counter: 3 out of 3
+Early stopping
+>>>>>>>testing : Exchange_96_720_iTransformer_custom_M_ft96_sl48_ll720_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 798
+test shape: (798, 1, 720, 8) (798, 1, 720, 8)
+test shape: (798, 720, 8) (798, 720, 8)
+mse:0.8549295663833618, mae:0.6973162293434143

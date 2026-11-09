@@ -1,0 +1,30 @@
+{
+  "run_id": "20261014-165053_lastnorm-k0-duman_s2023",
+  "varyant": "lastnorm-k0-duman",
+  "seed": "2023",
+  "etiket": "T4 DUMAN: lastnorm --kat 0 (H12/H13 ic modeli) h96+h720 ep<=1",
+  "ebeveyn": "20261014-161715_lastnorm-k1-duman_s2023",
+  "hipotez": "H12",
+  "kuyruk": null,
+  "asama": 1,
+  "kural": null,
+  "komut": [
+    "C:/Users/karsl/Downloads/yzmakaleuretimskill/yzmakaleuretimskill/deney_workspace/5-3-exchange-itransformer/env/.venv/Scripts/python.exe",
+    "C:/Users/karsl/Downloads/yzmakaleuretimskill/yzmakaleuretimskill/deney_workspace/5-3-exchange-itransformer/varyantlar/lastnorm/kos.py",
+    "--seed",
+    "2023",
+    "--out",
+    "C:\\Users\\karsl\\Downloads\\yzmakaleuretimskill\\yzmakaleuretimskill\\deney_workspace\\5-3-exchange-itransformer\\runs\\20261014-165053_lastnorm-k0-duman_s2023/metrics.json",
+    "--ufuklar",
+    "96,720",
+    "--epoch-ust",
+    "1",
+    "--num-workers",
+    "0",
+    "--kat",
+    "0"
+  ],
+  "cwd": "C:\\Users\\karsl\\Downloads\\yzmakaleuretimskill\\yzmakaleuretimskill\\deney_workspace\\5-3-exchange-itransformer",
+  "baslangic": "2026-10-14T16:50:57",
+  "makine": "MetropolTilkisi"
+}

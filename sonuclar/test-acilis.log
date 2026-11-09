@@ -1,0 +1,48 @@
+GIRISIM baslangic 2026-10-14T15:42:23
+
+K5 TEST KILIDI ACILISI (tek oturum, D1) — TAMAM
+baslangic: 2026-10-14T15:42:23
+bitis:     2026-10-14T15:42:23
+betik: scripts/k5_test_ac.py md5=7d452e8a5fce65822a7e5f0b7f6ef2dd
+okunan test dosyasi sayisi: 30 (10 varyant x 3 seed; yalniz asama-3 rc=0)
+yetim/dislanan (OKUNMADI): 20261014-031950_baseline-ep336eq_s2024 (rc=96), 20261014-053238_lastnorm_s2024 (rc=96), 20261014-072750_lastnorm-ep336eq_s2023 (.done yok/rc=96), 20261014-145536_lastnorm-dro_s2025 (.done yok/rc=96)
+preds/test_kilitli/ ve test_kilitli/ altindaki ham dosyalar bu oturumda OKUNMADI (yalniz test_metrics.json).
+replikasyon sagmasi: baseline metrics.json test_mse_avg == test_metrics.json (3/3), ort 0.364622
+
+md5  yol
+8742dcff172a023cc374e672efd15993  runs/20261014-020531_baseline_s2023/test_metrics.json
+3d791b6068f2aa85085824ce83b5e4ab  runs/20261014-021024_baseline_s2024/test_metrics.json
+b7e78baf936426762b27b0cf73d696b9  runs/20261014-021448_baseline_s2025/test_metrics.json
+ea23d872b2014ea62159be8e2a6cad40  runs/20261014-031233_baseline-ep336eq_s2023/test_metrics.json
+4536c5ed871c00d403d7bbe676b1a874  runs/20261014-032853_baseline-ep336eq_s2024/test_metrics.json
+11a413a9c8a0cfccf4061a4f5d4a6b97  runs/20261014-033500_baseline-ep336eq_s2025/test_metrics.json
+451a4b5328391d99967e0b9deb7f7c5a  runs/20261014-034304_revin-afin_s2023/test_metrics.json
+71f6eced4ae4dad33409fd7831d95195  runs/20261014-034735_revin-afin_s2024/test_metrics.json
+58fc3cfe6d37cecd8e94d4c5f70e4874  runs/20261014-035213_revin-afin_s2025/test_metrics.json
+2f59f496ac1bc1a9c73fb6f112a2aeb0  runs/20261014-040042_san_s2023/test_metrics.json
+573f51898ba3247cf0effb73687205b2  runs/20261014-040547_san_s2024/test_metrics.json
+79948e6e2f7a51a0803e09de3de571af  runs/20261014-041102_san_s2025/test_metrics.json
+f682248a0fde7ec78a484dcafd254eec  runs/20261014-052508_lastnorm_s2023/test_metrics.json
+d3fbb68eefae7d99dd76434888e3ab44  runs/20261014-053601_lastnorm_s2024/test_metrics.json
+35ed28d2ac19e4d7c155b30c55d7cc6a  runs/20261014-054213_lastnorm_s2025/test_metrics.json
+cbf891f03f5d8cf91578293fac059039  runs/20261014-055518_normsuz_s2023/test_metrics.json
+395c1fc8ffcf0530cf2e9d728d386a5a  runs/20261014-060205_normsuz_s2024/test_metrics.json
+fe30c0b3b7df8da539e90bca0e4def70  runs/20261014-060859_normsuz_s2025/test_metrics.json
+15c85e45ce5160e611b03d2ab39d2eef  runs/20261014-061948_xmark-yok_s2023/test_metrics.json
+9a35b9ca10ef44996bb0d15973db469f  runs/20261014-062637_xmark-yok_s2024/test_metrics.json
+4048e17a286a973a8a1f1a3c74af5c90  runs/20261014-063215_xmark-yok_s2025/test_metrics.json
+89f3ba706a031f0aeca1394f7ca8e2a8  runs/20261014-140921_lastnorm-ep336eq_s2023/test_metrics.json
+8838ba0b1ffc9ab7ca9809a7dc7c8b9c  runs/20261014-141641_lastnorm-ep336eq_s2024/test_metrics.json
+8acaaff1f22d2f0671ad1824b11732df  runs/20261014-142407_lastnorm-ep336eq_s2025/test_metrics.json
+e9e369ed76a7ee3472d250e5623df2b3  runs/20261014-143314_lastnorm-merkez_s2023/test_metrics.json
+923acce3056a99ef33049deeee5e2aa2  runs/20261014-143820_lastnorm-merkez_s2024/test_metrics.json
+89f5acc54d3c4c7d4941c80653d96b82  runs/20261014-144341_lastnorm-merkez_s2025/test_metrics.json
+122b713fc4a3a132905bb638950bf83d  runs/20261014-144849_lastnorm-dro_s2023/test_metrics.json
+486d0314823ba6820c024e9c9d284882  runs/20261014-145213_lastnorm-dro_s2024/test_metrics.json
+902c06c4d999c09d46ba11bcae01de3a  runs/20261014-151234_lastnorm-dro_s2025/test_metrics.json
+
+OTURUM SONRASI TESHIS OKUMASI (secim/arama DEGIL; beyan edilir):
+- 2026-10-14 ~15:45 baseline-ep336eq h336 test degerinin baseline ile 4 hanede ayni cikmasi (0.3351/0.3351) "yanlis dosya okundu mu" suphesiyle denetlendi:
+  runs/20261014-031233_baseline-ep336eq_s2023/test_kilitli/result_long_term_forecast.txt, .../rakip_stdout_h336.log (epoch 1-8 Test Loss 0.338->0.336, erken durma ep.8),
+  runs/20261014-020531_baseline_s2023/test_kilitli/result_long_term_forecast.txt. Sonuc: seed bazinda degerler farkli (0.33765 vs 0.33791), dosya/okuma hatasi YOK;
+  10 epoch h336'yi val'de iyilestiriyor, test'te degistirmiyor (gercek val->test ayrismasi).

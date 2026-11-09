@@ -1,0 +1,72 @@
+Args in experiment:
+Namespace(is_training=1, model_id='Exchange_96_720', model='iTransformer', data='custom', root_path='C:\\Users\\karsl\\Downloads\\yzmakaleuretimskill\\yzmakaleuretimskill\\deney_workspace\\5-3-exchange-itransformer\\data\\exchange_rate\\', data_path='exchange_rate.csv', features='M', target='OT', freq='h', checkpoints='C:\\Users\\karsl\\Downloads\\yzmakaleuretimskill\\yzmakaleuretimskill\\deney_workspace\\5-3-exchange-itransformer\\runs\\20261014-040547_san_s2024\\ckpt\\', seq_len=96, label_len=48, pred_len=720, enc_in=8, dec_in=8, c_out=8, d_model=128, n_heads=8, e_layers=2, d_layers=1, d_ff=128, moving_avg=25, factor=1, distil=True, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, do_predict=False, num_workers=0, itr=1, train_epochs=10, batch_size=32, patience=3, learning_rate=0.0001, des='Exp', loss='MSE', lradj='type1', use_amp=False, use_gpu=True, gpu=0, use_multi_gpu=False, devices='0,1,2,3', exp_name='MTSF', channel_independence=False, inverse=False, class_strategy='projection', target_root_path='./data/electricity/', target_data_path='electricity.csv', efficient_training=False, use_norm=0, partial_start_index=0)
+Use GPU: cuda:0
+>>>>>>>start training : Exchange_96_720_iTransformer_custom_M_ft96_sl48_ll720_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 4496
+val 41
+test 798
+	iters: 100, epoch: 1 | loss: 0.3933110
+	speed: 0.0090s/iter; left time: 18.0535s
+[SAN-onegitim] ep 1/5 adim 140 sure 1.2s | istasyon_train=0.3889923 istasyon_val=0.6731182
+Validation loss decreased (inf --> 0.673118).  Saving model ...
+Updating learning rate to 0.001
+	iters: 100, epoch: 2 | loss: 0.3362671
+	speed: 0.0125s/iter; left time: 23.1789s
+[SAN-onegitim] ep 2/5 adim 140 sure 1.3s | istasyon_train=0.3503830 istasyon_val=0.8925333
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 0.0005
+	iters: 100, epoch: 3 | loss: 0.3532185
+	speed: 0.0128s/iter; left time: 22.0303s
+[SAN-onegitim] ep 3/5 adim 140 sure 1.3s | istasyon_train=0.3301949 istasyon_val=0.9290667
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 0.00025
+	iters: 100, epoch: 4 | loss: 0.3338147
+	speed: 0.0127s/iter; left time: 20.0050s
+[SAN-onegitim] ep 4/5 adim 140 sure 1.3s | istasyon_train=0.3231296 istasyon_val=1.0509678
+EarlyStopping counter: 3 out of 3
+Updating learning rate to 0.000125
+	iters: 100, epoch: 5 | loss: 0.3002220
+	speed: 0.0131s/iter; left time: 18.8613s
+[SAN-onegitim] ep 5/5 adim 140 sure 1.3s | istasyon_train=0.3197337 istasyon_val=1.0253314
+EarlyStopping counter: 4 out of 3
+Updating learning rate to 6.25e-05
+[SAN] on-egitim bitti: en iyi istasyon checkpoint yuklendi (omurga fazinda SAN adim atmaz)
+	iters: 100, epoch: 6 | loss: 0.8167301
+	speed: 0.0295s/iter; left time: 38.3802s
+Epoch: 1 cost time: 3.6589419841766357
+Epoch: 1, Steps: 140 | Train Loss: 0.7292379 Vali Loss: 1.3833712 Test Loss: 0.6911931
+Validation loss decreased (inf --> 1.383371).  Saving model ...
+Updating learning rate to 0.0001
+Updating learning rate to 0.001
+	iters: 100, epoch: 7 | loss: 0.8590271
+	speed: 0.0785s/iter; left time: 91.1737s
+Epoch: 2 cost time: 3.8472900390625
+Epoch: 2, Steps: 140 | Train Loss: 0.7285751 Vali Loss: 1.3186597 Test Loss: 0.6903296
+Validation loss decreased (1.383371 --> 1.318660).  Saving model ...
+Updating learning rate to 5e-05
+Updating learning rate to 0.0005
+	iters: 100, epoch: 8 | loss: 0.6561721
+	speed: 0.0797s/iter; left time: 81.3855s
+Epoch: 3 cost time: 3.628103733062744
+Epoch: 3, Steps: 140 | Train Loss: 0.7289833 Vali Loss: 1.3646897 Test Loss: 0.6899989
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 2.5e-05
+Updating learning rate to 0.00025
+	iters: 100, epoch: 9 | loss: 0.6648967
+	speed: 0.0755s/iter; left time: 66.5465s
+Epoch: 4 cost time: 3.686434268951416
+Epoch: 4, Steps: 140 | Train Loss: 0.7291654 Vali Loss: 1.3830298 Test Loss: 0.6898583
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 1.25e-05
+Updating learning rate to 0.000125
+	iters: 100, epoch: 10 | loss: 0.8596560
+	speed: 0.0788s/iter; left time: 58.3900s
+Epoch: 5 cost time: 3.5709280967712402
+Epoch: 5, Steps: 140 | Train Loss: 0.7291266 Vali Loss: 1.3579886 Test Loss: 0.6897942
+EarlyStopping counter: 3 out of 3
+Early stopping
+>>>>>>>testing : Exchange_96_720_iTransformer_custom_M_ft96_sl48_ll720_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 798
+test shape: (798, 1, 720, 8) (798, 1, 720, 8)
+test shape: (798, 720, 8) (798, 720, 8)
+mse:0.6903297901153564, mae:0.6278852224349976

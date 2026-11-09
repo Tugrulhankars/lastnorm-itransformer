@@ -1,0 +1,72 @@
+Args in experiment:
+Namespace(is_training=1, model_id='Exchange_96_336', model='iTransformer', data='custom', root_path='C:\\Users\\karsl\\Downloads\\yzmakaleuretimskill\\yzmakaleuretimskill\\deney_workspace\\5-3-exchange-itransformer\\data\\exchange_rate\\', data_path='exchange_rate.csv', features='M', target='OT', freq='h', checkpoints='C:\\Users\\karsl\\Downloads\\yzmakaleuretimskill\\yzmakaleuretimskill\\deney_workspace\\5-3-exchange-itransformer\\runs\\20261014-140921_lastnorm-ep336eq_s2023\\ckpt\\', seq_len=96, label_len=48, pred_len=336, enc_in=8, dec_in=8, c_out=8, d_model=128, n_heads=8, e_layers=2, d_layers=1, d_ff=128, moving_avg=25, factor=1, distil=True, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, do_predict=False, num_workers=0, itr=1, train_epochs=10, batch_size=32, patience=3, learning_rate=0.0001, des='Exp', loss='MSE', lradj='type1', use_amp=False, use_gpu=True, gpu=0, use_multi_gpu=False, devices='0,1,2,3', exp_name='MTSF', channel_independence=False, inverse=False, class_strategy='projection', target_root_path='./data/electricity/', target_data_path='electricity.csv', efficient_training=False, use_norm=0, partial_start_index=0)
+Use GPU: cuda:0
+>>>>>>>start training : Exchange_96_336_iTransformer_custom_M_ft96_sl48_ll336_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 4880
+val 425
+test 1182
+	iters: 100, epoch: 1 | loss: 0.3742597
+	speed: 0.0200s/iter; left time: 28.3936s
+Epoch: 1 cost time: 3.0721819400787354
+Epoch: 1, Steps: 152 | Train Loss: 0.4299540 Vali Loss: 0.3949235 Test Loss: 0.3174719
+Validation loss decreased (inf --> 0.394924).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 2 | loss: 0.4742202
+	speed: 0.0925s/iter; left time: 117.3265s
+Epoch: 2 cost time: 2.944023609161377
+Epoch: 2, Steps: 152 | Train Loss: 0.4237965 Vali Loss: 0.3704595 Test Loss: 0.3166720
+Validation loss decreased (0.394924 --> 0.370459).  Saving model ...
+Updating learning rate to 5e-05
+	iters: 100, epoch: 3 | loss: 0.2343326
+	speed: 0.0913s/iter; left time: 102.0334s
+Epoch: 3 cost time: 2.8659000396728516
+Epoch: 3, Steps: 152 | Train Loss: 0.4191227 Vali Loss: 0.3615530 Test Loss: 0.3177537
+Validation loss decreased (0.370459 --> 0.361553).  Saving model ...
+Updating learning rate to 2.5e-05
+	iters: 100, epoch: 4 | loss: 0.4280649
+	speed: 0.0995s/iter; left time: 95.9801s
+Epoch: 4 cost time: 3.1511850357055664
+Epoch: 4, Steps: 152 | Train Loss: 0.4142584 Vali Loss: 0.3569761 Test Loss: 0.3178417
+Validation loss decreased (0.361553 --> 0.356976).  Saving model ...
+Updating learning rate to 1.25e-05
+	iters: 100, epoch: 5 | loss: 0.3925078
+	speed: 0.0914s/iter; left time: 74.2978s
+Epoch: 5 cost time: 2.950864553451538
+Epoch: 5, Steps: 152 | Train Loss: 0.4119934 Vali Loss: 0.3572164 Test Loss: 0.3189646
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 6.25e-06
+	iters: 100, epoch: 6 | loss: 0.4298674
+	speed: 0.0912s/iter; left time: 60.2600s
+Epoch: 6 cost time: 2.992865562438965
+Epoch: 6, Steps: 152 | Train Loss: 0.4104399 Vali Loss: 0.3603705 Test Loss: 0.3195438
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 3.125e-06
+	iters: 100, epoch: 7 | loss: 0.4417449
+	speed: 0.0975s/iter; left time: 49.6490s
+Epoch: 7 cost time: 3.043818950653076
+Epoch: 7, Steps: 152 | Train Loss: 0.4097093 Vali Loss: 0.3559940 Test Loss: 0.3195073
+Validation loss decreased (0.356976 --> 0.355994).  Saving model ...
+Updating learning rate to 1.5625e-06
+	iters: 100, epoch: 8 | loss: 0.3272539
+	speed: 0.0947s/iter; left time: 33.8089s
+Epoch: 8 cost time: 3.1865429878234863
+Epoch: 8, Steps: 152 | Train Loss: 0.4094563 Vali Loss: 0.3574119 Test Loss: 0.3195958
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 7.8125e-07
+	iters: 100, epoch: 9 | loss: 0.3448251
+	speed: 0.0941s/iter; left time: 19.2891s
+Epoch: 9 cost time: 3.016796827316284
+Epoch: 9, Steps: 152 | Train Loss: 0.4089451 Vali Loss: 0.3559934 Test Loss: 0.3196551
+Validation loss decreased (0.355994 --> 0.355993).  Saving model ...
+Updating learning rate to 3.90625e-07
+	iters: 100, epoch: 10 | loss: 0.4571436
+	speed: 0.0977s/iter; left time: 5.1766s
+Epoch: 10 cost time: 3.4187021255493164
+Epoch: 10, Steps: 152 | Train Loss: 0.4094614 Vali Loss: 0.3571696 Test Loss: 0.3196613
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 1.953125e-07
+>>>>>>>testing : Exchange_96_336_iTransformer_custom_M_ft96_sl48_ll336_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 1182
+test shape: (1182, 1, 336, 8) (1182, 1, 336, 8)
+test shape: (1182, 336, 8) (1182, 336, 8)
+mse:0.31965509057044983, mae:0.4075438678264618

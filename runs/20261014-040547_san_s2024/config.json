@@ -1,0 +1,36 @@
+{
+  "run_id": "20261014-040547_san_s2024",
+  "varyant": "san",
+  "seed": "2024",
+  "etiket": "iTransformer + SAN (SAN@7e1ca66 resmi ayar, kod duzeltmesi yok; n=3 kanit)",
+  "ebeveyn": "20261014-021024_baseline_s2024",
+  "hipotez": "H01",
+  "kuyruk": "k4t1-h01",
+  "asama": 3,
+  "kural": {
+    "nan_kes": true,
+    "min_adim": 1,
+    "ust_sinir": {
+      "val_loss": 3.0,
+      "loss": 3.0
+    },
+    "alt_sinir": {
+      "val_loss": 0.01
+    },
+    "sabit_sn": 900,
+    "ilerleme_zorunlu_sn": 600
+  },
+  "komut": [
+    "C:/Users/karsl/Downloads/yzmakaleuretimskill/yzmakaleuretimskill/deney_workspace/5-3-exchange-itransformer/env/.venv/Scripts/python.exe",
+    "C:/Users/karsl/Downloads/yzmakaleuretimskill/yzmakaleuretimskill/deney_workspace/5-3-exchange-itransformer/varyantlar/san/kos.py",
+    "--seed",
+    "2024",
+    "--out",
+    "C:\\Users\\karsl\\Downloads\\yzmakaleuretimskill\\yzmakaleuretimskill\\deney_workspace\\5-3-exchange-itransformer\\runs\\20261014-040547_san_s2024/metrics.json",
+    "--num-workers",
+    "0"
+  ],
+  "cwd": "C:\\Users\\karsl\\Downloads\\yzmakaleuretimskill\\yzmakaleuretimskill\\deney_workspace\\5-3-exchange-itransformer",
+  "baslangic": "2026-10-14T04:05:50",
+  "makine": "MetropolTilkisi"
+}

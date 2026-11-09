@@ -1,0 +1,136 @@
+# 2026-10-15T10:59:36 $ C:/Users/karsl/Downloads/yzmakaleuretimskill/yzmakaleuretimskill/deney_workspace/5-3-exchange-itransformer/env/.venv/Scripts/python.exe C:/Users/karsl/Downloads/yzmakaleuretimskill/yzmakaleuretimskill/deney_workspace/5-3-exchange-itransformer/scripts/rakip_kos.py --veri ettm1 --ufuk-basi --ufuklar 96 --seed 2024 --out 'C:\Users\karsl\Downloads\yzmakaleuretimskill\yzmakaleuretimskill\deney_workspace\5-3-exchange-itransformer\runs\20261015-105932_ettm1-baseline-h96_s2024/metrics.json' --num-workers 0
+[rakip_kos] rakip commit c2426e68ca13f74aaec08045c5c724d8ad328124 | run.py fix_seed=2023 -> sarmalayici seed=2024 | cihaz cuda:0 / NVIDIA GeForce RTX 3060 Laptop GPU | torch 2.4.1+cu121 | ufuklar [96] | epoch_ust=None | num_workers=resmi
+Args in experiment:
+Namespace(is_training=1, model_id='ETTm1_96_96', model='iTransformer', data='ETTm1', root_path='C:\\Users\\karsl\\Downloads\\yzmakaleuretimskill\\yzmakaleuretimskill\\deney_workspace\\5-3-exchange-itransformer\\data\\ettm1\\', data_path='ETTm1.csv', features='M', target='OT', freq='h', checkpoints='C:\\Users\\karsl\\Downloads\\yzmakaleuretimskill\\yzmakaleuretimskill\\deney_workspace\\5-3-exchange-itransformer\\runs\\20261015-105932_ettm1-baseline-h96_s2024\\ckpt\\', seq_len=96, label_len=48, pred_len=96, enc_in=7, dec_in=7, c_out=7, d_model=128, n_heads=8, e_layers=2, d_layers=1, d_ff=128, moving_avg=25, factor=1, distil=True, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, do_predict=False, num_workers=0, itr=1, train_epochs=10, batch_size=32, patience=3, learning_rate=0.0001, des='Exp', loss='MSE', lradj='type1', use_amp=False, use_gpu=True, gpu=0, use_multi_gpu=False, devices='0,1,2,3', exp_name='MTSF', channel_independence=False, inverse=False, class_strategy='projection', target_root_path='./data/electricity/', target_data_path='electricity.csv', efficient_training=False, use_norm=True, partial_start_index=0)
+Use GPU: cuda:0
+>>>>>>>start training : ETTm1_96_96_iTransformer_ETTm1_M_ft96_sl48_ll96_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 34369
+val 11425
+test 11425
+	iters: 100, epoch: 1 | loss: 0.3103443
+	speed: 0.0273s/iter; left time: 290.1476s
+	iters: 200, epoch: 1 | loss: 0.3282849
+	speed: 0.0182s/iter; left time: 192.0285s
+	iters: 300, epoch: 1 | loss: 0.3526132
+	speed: 0.0183s/iter; left time: 190.9320s
+	iters: 400, epoch: 1 | loss: 0.3861430
+	speed: 0.0185s/iter; left time: 190.9895s
+	iters: 500, epoch: 1 | loss: 0.4020439
+	speed: 0.0188s/iter; left time: 192.3321s
+	iters: 600, epoch: 1 | loss: 0.3344947
+	speed: 0.0193s/iter; left time: 195.3002s
+	iters: 700, epoch: 1 | loss: 0.2652037
+	speed: 0.0201s/iter; left time: 201.7786s
+	iters: 800, epoch: 1 | loss: 0.3051646
+	speed: 0.0209s/iter; left time: 207.6307s
+	iters: 900, epoch: 1 | loss: 0.2818087
+	speed: 0.0213s/iter; left time: 209.9648s
+	iters: 1000, epoch: 1 | loss: 0.4403851
+	speed: 0.0211s/iter; left time: 205.9558s
+Epoch: 1 cost time: 21.520649909973145
+Epoch: 1, Steps: 1074 | Train Loss: 0.3479172 Vali Loss: 0.4000873 Test Loss: <kilitli>
+Validation loss decreased (inf --> 0.400087).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 2 | loss: 0.2420228
+	speed: 0.0629s/iter; left time: 601.4305s
+	iters: 200, epoch: 2 | loss: 0.2955138
+	speed: 0.0190s/iter; left time: 180.0195s
+	iters: 300, epoch: 2 | loss: 0.2812973
+	speed: 0.0189s/iter; left time: 177.4982s
+	iters: 400, epoch: 2 | loss: 0.3421974
+	speed: 0.0190s/iter; left time: 176.4968s
+	iters: 500, epoch: 2 | loss: 0.2549728
+	speed: 0.0192s/iter; left time: 175.7229s
+	iters: 600, epoch: 2 | loss: 0.3595508
+	speed: 0.0192s/iter; left time: 174.2361s
+	iters: 700, epoch: 2 | loss: 0.2943860
+	speed: 0.0189s/iter; left time: 169.6040s
+	iters: 800, epoch: 2 | loss: 0.2758367
+	speed: 0.0188s/iter; left time: 166.4824s
+	iters: 900, epoch: 2 | loss: 0.3129397
+	speed: 0.0192s/iter; left time: 168.4547s
+	iters: 1000, epoch: 2 | loss: 0.2454152
+	speed: 0.0193s/iter; left time: 166.8622s
+Epoch: 2 cost time: 20.576696157455444
+Epoch: 2, Steps: 1074 | Train Loss: 0.3015663 Vali Loss: 0.3916535 Test Loss: <kilitli>
+Validation loss decreased (0.400087 --> 0.391654).  Saving model ...
+Updating learning rate to 5e-05
+	iters: 100, epoch: 3 | loss: 0.3181161
+	speed: 0.0642s/iter; left time: 545.2272s
+	iters: 200, epoch: 3 | loss: 0.3117719
+	speed: 0.0199s/iter; left time: 167.0967s
+	iters: 300, epoch: 3 | loss: 0.2686381
+	speed: 0.0193s/iter; left time: 159.8101s
+	iters: 400, epoch: 3 | loss: 0.2901234
+	speed: 0.0186s/iter; left time: 152.1720s
+	iters: 500, epoch: 3 | loss: 0.2443696
+	speed: 0.0189s/iter; left time: 153.0447s
+	iters: 600, epoch: 3 | loss: 0.2577802
+	speed: 0.0189s/iter; left time: 151.2553s
+	iters: 700, epoch: 3 | loss: 0.2975201
+	speed: 0.0190s/iter; left time: 149.9979s
+	iters: 800, epoch: 3 | loss: 0.2510752
+	speed: 0.0195s/iter; left time: 152.3364s
+	iters: 900, epoch: 3 | loss: 0.3546194
+	speed: 0.0187s/iter; left time: 144.1454s
+	iters: 1000, epoch: 3 | loss: 0.2511725
+	speed: 0.0192s/iter; left time: 146.1505s
+Epoch: 3 cost time: 20.58363127708435
+Epoch: 3, Steps: 1074 | Train Loss: 0.2898244 Vali Loss: 0.3932850 Test Loss: <kilitli>
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 2.5e-05
+	iters: 100, epoch: 4 | loss: 0.2777095
+	speed: 0.0614s/iter; left time: 455.2286s
+	iters: 200, epoch: 4 | loss: 0.3254818
+	speed: 0.0190s/iter; left time: 139.3820s
+	iters: 300, epoch: 4 | loss: 0.2421207
+	speed: 0.0190s/iter; left time: 137.1074s
+	iters: 400, epoch: 4 | loss: 0.2848824
+	speed: 0.0192s/iter; left time: 136.9295s
+	iters: 500, epoch: 4 | loss: 0.3713197
+	speed: 0.0209s/iter; left time: 146.8603s
+	iters: 600, epoch: 4 | loss: 0.2291556
+	speed: 0.0210s/iter; left time: 145.1355s
+	iters: 700, epoch: 4 | loss: 0.3196513
+	speed: 0.0201s/iter; left time: 137.2779s
+	iters: 800, epoch: 4 | loss: 0.2844618
+	speed: 0.0195s/iter; left time: 130.8725s
+	iters: 900, epoch: 4 | loss: 0.3102209
+	speed: 0.0193s/iter; left time: 127.9856s
+	iters: 1000, epoch: 4 | loss: 0.2535619
+	speed: 0.0190s/iter; left time: 123.7369s
+Epoch: 4 cost time: 20.997548818588257
+Epoch: 4, Steps: 1074 | Train Loss: 0.2846359 Vali Loss: 0.3938377 Test Loss: <kilitli>
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 1.25e-05
+	iters: 100, epoch: 5 | loss: 0.2960619
+	speed: 0.0604s/iter; left time: 383.3969s
+	iters: 200, epoch: 5 | loss: 0.3906853
+	speed: 0.0194s/iter; left time: 121.0558s
+	iters: 300, epoch: 5 | loss: 0.3250735
+	speed: 0.0197s/iter; left time: 120.8959s
+	iters: 400, epoch: 5 | loss: 0.2458467
+	speed: 0.0194s/iter; left time: 117.5152s
+	iters: 500, epoch: 5 | loss: 0.2726952
+	speed: 0.0191s/iter; left time: 113.6151s
+	iters: 600, epoch: 5 | loss: 0.2905141
+	speed: 0.0193s/iter; left time: 112.7160s
+	iters: 700, epoch: 5 | loss: 0.3321435
+	speed: 0.0188s/iter; left time: 107.7257s
+	iters: 800, epoch: 5 | loss: 0.2646360
+	speed: 0.0194s/iter; left time: 109.5753s
+	iters: 900, epoch: 5 | loss: 0.3648034
+	speed: 0.0203s/iter; left time: 112.6369s
+	iters: 1000, epoch: 5 | loss: 0.2358895
+	speed: 0.0200s/iter; left time: 108.8918s
+Epoch: 5 cost time: 20.8752498626709
+Epoch: 5, Steps: 1074 | Train Loss: 0.2824927 Vali Loss: 0.3928662 Test Loss: <kilitli>
+EarlyStopping counter: 3 out of 3
+Early stopping
+>>>>>>>testing : ETTm1_96_96_iTransformer_ETTm1_M_ft96_sl48_ll96_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 11425
+test shape: (11425, 1, 96, 7) (11425, 1, 96, 7)
+test shape: (11425, 96, 7) (11425, 96, 7)
+<test metrigi kilitli: test_kilitli/ altinda>
+[rakip_kos] h96: val_mse=0.391674 val_mae=0.412670 epoch=5/10 sure=243.0s vram_tepe=26MB (test hesaplandi, kilitli)
+[rakip_kos] bitti: val_mse_avg=0.391674 sure=243.9s -> C:\Users\karsl\Downloads\yzmakaleuretimskill\yzmakaleuretimskill\deney_workspace\5-3-exchange-itransformer\runs\20261015-105932_ettm1-baseline-h96_s2024\metrics.json

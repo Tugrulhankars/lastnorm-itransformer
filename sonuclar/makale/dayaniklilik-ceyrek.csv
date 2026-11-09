@@ -1,0 +1,26 @@
+# betik: scripts/makale_dayaniklilik.py  (makale icin sonradan eklendi -- deney-gelistirici)
+# komut (WS_D kokunden): PYTHONIOENCODING=utf-8 env/.venv/Scripts/python.exe scripts/makale_dayaniklilik.py
+# uretim: 2026-10-29T23:41:04
+# TEST NOTU: test tahminleri resmi acilislarda (Exchange 2026-10-14 15:42:23; ETT 2026-10-15 01:30:32) zaten acilmisti; bu dosya yalniz raporlamadir, hicbir secim/ayar icin kullanilmadi.
+# tanim: sonuclar/hata-analizi.md s3.1 (test acilmadan once sabitlendi; val on-uygulamasi orada)
+# Spearman p-degeri ortusen pencereler nedeniyle verilmez
+# dogrulama: (a) 72 kosum x ufuk MSE == test_metrics.json; (b) 144 ceyrek MSE == hata-kirilim_<veri>.csv
+# kaynak_run_id: 20261014-020531_baseline_s2023 20261014-021024_baseline_s2024 20261014-021448_baseline_s2025 20261014-052508_lastnorm_s2023 20261014-053601_lastnorm_s2024 20261014-054213_lastnorm_s2025 20261014-230036_etth1-baseline_s2023 20261014-231547_etth1-baseline_s2024 20261014-233004_etth1-baseline_s2025 20261014-233943_etth1-lastnorm_s2023 20261014-234744_etth1-lastnorm_s2024 20261015-001831_etth1-lastnorm_s2025 20261015-002817_etth2-baseline_s2023 20261015-003636_etth2-baseline_s2024 20261015-010142_etth2-baseline_s2025 20261015-010801_etth2-lastnorm_s2023 20261015-011429_etth2-lastnorm_s2024 20261015-012039_etth2-lastnorm_s2025
+# mmd_train_ceyrek: data/kayma_mmd.csv mmd_b_z_sigmaMed (train -> test ceyregi, RBF, medyan bant)
+veri,ufuk,ceyrek,mmd_train_ceyrek,itr,lastnorm,repeat,d_ln_itr_pct,ln_M_R,itr_M_R
+exchange,96,Q1,0.9912,0.092816,0.089003,0.088315,-4.11,1.0078,1.051
+exchange,96,Q2,0.9508,0.070014,0.067777,0.064284,-3.19,1.0543,1.0891
+exchange,96,Q3,0.7368,0.099946,0.093566,0.095036,-6.38,0.9845,1.0517
+exchange,96,Q4,0.7427,0.084011,0.082111,0.077266,-2.26,1.0627,1.0873
+exchange,192,Q1,0.9912,0.18753,0.180998,0.179612,-3.48,1.0077,1.0441
+exchange,192,Q2,0.9508,0.116324,0.11241,0.10805,-3.36,1.0403,1.0766
+exchange,192,Q3,0.7368,0.248082,0.234832,0.226072,-5.34,1.0387,1.0974
+exchange,192,Q4,0.7427,0.163697,0.162578,0.154737,-0.68,1.0507,1.0579
+exchange,336,Q1,0.9912,0.30112,0.26578,0.258434,-11.74,1.0284,1.1652
+exchange,336,Q2,0.9508,0.180656,0.17174,0.167607,-4.94,1.0247,1.0779
+exchange,336,Q3,0.7368,0.524024,0.493755,0.472563,-5.78,1.0448,1.1089
+exchange,336,Q4,0.7427,0.307395,0.302197,0.301632,-1.69,1.0019,1.0191
+exchange,720,Q1,0.9912,0.293682,0.254302,0.264684,-13.41,0.9608,1.1096
+exchange,720,Q2,0.9508,0.388499,0.361337,0.361255,-6.99,1.0002,1.0754
+exchange,720,Q3,0.7368,1.299499,1.234821,1.232378,-4.98,1.002,1.0545
+exchange,720,Q4,0.7427,1.506487,1.48289,1.439516,-1.57,1.0301,1.0465

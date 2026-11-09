@@ -1,0 +1,16 @@
+{
+  "test_mse_avg": 0.364916542544961,
+  "test_mae_avg": 0.40749794617295265,
+  "test_mse_h96": 0.08774011582136154,
+  "test_mse_h192": 0.17930357158184052,
+  "test_mse_h336": 0.33769291639328003,
+  "test_mse_h720": 0.8549295663833618,
+  "test_mae_h96": 0.20814238488674164,
+  "test_mae_h192": 0.30267134308815,
+  "test_mae_h336": 0.42186182737350464,
+  "test_mae_h720": 0.6973162293434143,
+  "seed": 2024,
+  "ufuk_sayisi": 4,
+  "kisaltilmis": 0,
+  "not": "KILITLI: K4 ajanlarina verilmez; yalniz K3 replikasyon kapisi ve K5."
+}

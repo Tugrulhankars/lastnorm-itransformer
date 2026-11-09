@@ -1,0 +1,12 @@
+data/
+env/.venv/
+rakip/iTransformer/
+runs/*/ckpt/
+runs/*/preds/
+*.pt
+*.pth
+*.ckpt
+*.npz
+*.npy
+__pycache__/
+*.pyc

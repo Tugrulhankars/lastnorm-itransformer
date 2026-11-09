@@ -1,0 +1,30 @@
+{
+  "run_id": "20261014-164915_lastnorm-k3-regresyon_s2023",
+  "varyant": "lastnorm-k3-regresyon",
+  "seed": "2023",
+  "etiket": "T4 REGRESYON: --kat 0 eklendikten sonra lastnorm --kat 3 h96 ep<=1 (161640 ile bit-bit)",
+  "ebeveyn": "20261014-161640_lastnorm-k3-duman_s2023",
+  "hipotez": "H12",
+  "kuyruk": null,
+  "asama": 1,
+  "kural": null,
+  "komut": [
+    "C:/Users/karsl/Downloads/yzmakaleuretimskill/yzmakaleuretimskill/deney_workspace/5-3-exchange-itransformer/env/.venv/Scripts/python.exe",
+    "C:/Users/karsl/Downloads/yzmakaleuretimskill/yzmakaleuretimskill/deney_workspace/5-3-exchange-itransformer/varyantlar/lastnorm/kos.py",
+    "--seed",
+    "2023",
+    "--out",
+    "C:\\Users\\karsl\\Downloads\\yzmakaleuretimskill\\yzmakaleuretimskill\\deney_workspace\\5-3-exchange-itransformer\\runs\\20261014-164915_lastnorm-k3-regresyon_s2023/metrics.json",
+    "--ufuklar",
+    "96",
+    "--epoch-ust",
+    "1",
+    "--num-workers",
+    "0",
+    "--kat",
+    "3"
+  ],
+  "cwd": "C:\\Users\\karsl\\Downloads\\yzmakaleuretimskill\\yzmakaleuretimskill\\deney_workspace\\5-3-exchange-itransformer",
+  "baslangic": "2026-10-14T16:49:20",
+  "makine": "MetropolTilkisi"
+}

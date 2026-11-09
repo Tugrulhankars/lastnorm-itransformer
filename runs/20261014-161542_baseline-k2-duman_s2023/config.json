@@ -1,0 +1,30 @@
+{
+  "run_id": "20261014-161542_baseline-k2-duman_s2023",
+  "varyant": "baseline-k2-duman",
+  "seed": "2023",
+  "etiket": "P1 DUMAN: --kat 2 h96+h720 epoch<=1",
+  "ebeveyn": null,
+  "hipotez": "P1",
+  "kuyruk": null,
+  "asama": 1,
+  "kural": null,
+  "komut": [
+    "C:/Users/karsl/Downloads/yzmakaleuretimskill/yzmakaleuretimskill/deney_workspace/5-3-exchange-itransformer/env/.venv/Scripts/python.exe",
+    "C:/Users/karsl/Downloads/yzmakaleuretimskill/yzmakaleuretimskill/deney_workspace/5-3-exchange-itransformer/scripts/rakip_kos.py",
+    "--seed",
+    "2023",
+    "--out",
+    "C:\\Users\\karsl\\Downloads\\yzmakaleuretimskill\\yzmakaleuretimskill\\deney_workspace\\5-3-exchange-itransformer\\runs\\20261014-161542_baseline-k2-duman_s2023/metrics.json",
+    "--ufuklar",
+    "96,720",
+    "--epoch-ust",
+    "1",
+    "--num-workers",
+    "0",
+    "--kat",
+    "2"
+  ],
+  "cwd": "C:\\Users\\karsl\\Downloads\\yzmakaleuretimskill\\yzmakaleuretimskill\\deney_workspace\\5-3-exchange-itransformer",
+  "baslangic": "2026-10-14T16:15:46",
+  "makine": "MetropolTilkisi"
+}

@@ -1,0 +1,5 @@
+veri,kat,ufuk,seq_len,train_satir_son,val_satir_bas,val_satir_son,pencere_train,pencere_val,yontem,mse,mae
+exchange,0,96,96,3031,3031,3791,2840,665,repeat_last,0.146787,0.261828
+exchange,0,192,96,3031,3031,3791,2744,569,repeat_last,0.320508,0.400093
+exchange,0,336,96,3031,3031,3791,2600,425,repeat_last,0.693512,0.599725
+exchange,0,720,96,3031,3031,3791,2216,41,repeat_last,2.695795,1.275962

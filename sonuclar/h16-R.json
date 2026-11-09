@@ -1,0 +1,119 @@
+{
+  "olusturma": "2026-10-15 06:04:37",
+  "komut": "PYTHONIOENCODING=utf-8 env/.venv/Scripts/python.exe -I -X utf8 scripts/h16_R.py",
+  "L": 96,
+  "adim": 7,
+  "ufuklar": [
+    96,
+    192,
+    336,
+    720
+  ],
+  "belirsiz_bant": 0.05,
+  "kalibrasyon_beklenen": {
+    "exchange": 0.779,
+    "etth1": 1.54,
+    "etth2": 1.177
+  },
+  "tol": 0.002,
+  "sonuc": {
+    "exchange": {
+      "rol": "kalibrasyon",
+      "R_bar": 0.7789593022959416,
+      "R_H": [
+        0.5806314396522064,
+        0.7516988837248659,
+        0.8553786617958025,
+        0.9281282240108913
+      ],
+      "num_train": 5311,
+      "C": 8,
+      "csv_sha256": "48b4d9d3d508f5104162e85b9a6042e3557fde11aa9f2944eba8c0d0efc89842",
+      "tahmin": "iyilesir"
+    },
+    "etth1": {
+      "rol": "kalibrasyon",
+      "R_bar": 1.5398640099795726,
+      "R_H": [
+        1.5719560915196618,
+        1.5647512104012633,
+        1.5432500511302167,
+        1.4794986868671482
+      ],
+      "num_train": 8640,
+      "C": 7,
+      "csv_sha256": "f18de3ad269cef59bb07b5438d79bb3042d3be49bdeecf01c1cd6d29695ee066",
+      "tahmin": "kotulesir"
+    },
+    "etth2": {
+      "rol": "kalibrasyon",
+      "R_bar": 1.1769636607935994,
+      "R_H": [
+        1.1118980692797966,
+        1.1915443948828581,
+        1.2076571185310654,
+        1.1967550604806778
+      ],
+      "num_train": 8640,
+      "C": 7,
+      "csv_sha256": "a3dc2c597b9218c7ce1cd55eb77b283fd459a1d09d753063f944967dd6b9218b",
+      "tahmin": "kotulesir"
+    },
+    "ettm1": {
+      "rol": "sinama",
+      "R_bar": 1.5359902191197055,
+      "R_H": [
+        1.5235716653007298,
+        1.5608081681558363,
+        1.5482590152568576,
+        1.5113220277653976
+      ],
+      "num_train": 34560,
+      "C": 7,
+      "csv_sha256": "6ce1759b1a18e3328421d5d75fadcb316c449fcd7cec32820c8dafda71986c9e",
+      "tahmin": "kotulesir"
+    },
+    "ettm2": {
+      "rol": "sinama",
+      "R_bar": 1.0967452281003716,
+      "R_H": [
+        1.0431455255658761,
+        1.0795186583419474,
+        1.124849676309825,
+        1.1394670521838375
+      ],
+      "num_train": 34560,
+      "C": 7,
+      "csv_sha256": "db973ca252c6410a30d0469b13d696cf919648d0f3fd588c60f03fdbdbadd1fd",
+      "tahmin": "kotulesir"
+    },
+    "weather": {
+      "rol": "sinama",
+      "R_bar": 1.3317382796508985,
+      "R_H": [
+        1.3865346067174824,
+        1.2701649259747165,
+        1.3143314643351387,
+        1.3559221215762562
+      ],
+      "num_train": 36887,
+      "C": 21,
+      "csv_sha256": "34ee981d07313e51da2a50bb600072c8ae4a69cb4b0651f4cb93a069d7a2ba63",
+      "tahmin": "kotulesir"
+    },
+    "solar": {
+      "rol": "sinama",
+      "R_bar": 1.602359317347449,
+      "R_H": [
+        1.729134702669074,
+        1.4368022950725845,
+        1.5443600287106174,
+        1.6991402429375204
+      ],
+      "num_train": 36792,
+      "C": 137,
+      "csv_sha256": "230327ef72d2abb387939d4a35d6fd34f1066071bc7c40ce7ecf5531a0122ac2",
+      "tahmin": "kotulesir"
+    }
+  }
+}

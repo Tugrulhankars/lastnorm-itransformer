@@ -1,0 +1,7 @@
+# 2026-10-14T17:03:17 $ C:/Users/karsl/Downloads/yzmakaleuretimskill/yzmakaleuretimskill/deney_workspace/5-3-exchange-itransformer/env/.venv/Scripts/python.exe C:/Users/karsl/Downloads/yzmakaleuretimskill/yzmakaleuretimskill/deney_workspace/5-3-exchange-itransformer/varyantlar/lastnorm-birlesim/birlesim.py --kat 2 --seed 2024 --out 'C:\Users\karsl\Downloads\yzmakaleuretimskill\yzmakaleuretimskill\deney_workspace\5-3-exchange-itransformer\runs\20261014-170317_lastnorm-birlesim-k2_s2024/metrics.json'
+[H12] varyant=lastnorm-birlesim kat=2 seed=2024 donusum=clip(alpha_hat, 0, 1) (CPU)
+  K2 s2024 h96: w=[0.000, 0.000, 0.000, 0.000, 0.000, 0.000, 0.000, 0.000, 0.000, 0.000] | (i) OK (ii) OK (iv) |d|=0.00e+00 OK
+  K2 s2024 h192: w=[0.000, 0.000, 0.000, 0.000, 0.000, 0.000, 0.000, 0.000, 0.000, 0.601] | (i) OK (ii) OK (iv) |d|=0.00e+00 OK
+  K2 s2024 h336: w=[0.000, 0.000, 0.000, 0.000, 0.052, 0.000, 0.264, 0.563, 0.847, 1.000] | (i) OK (ii) OK (iv) |d|=0.00e+00 OK
+  K2 s2024 h720: w=[0.000, 0.000, 0.000, 0.000, 0.284, 0.758, 1.000, 1.000, 1.000, 1.000] | (i) OK (ii) OK (iv) |d|=0.00e+00 OK
+[H12] bitti: val_mse_avg=1.136178 (ebeveyn 1.153373) w=1 orani 0.12 -> C:\Users\karsl\Downloads\yzmakaleuretimskill\yzmakaleuretimskill\deney_workspace\5-3-exchange-itransformer\runs\20261014-170317_lastnorm-birlesim-k2_s2024\metrics.json

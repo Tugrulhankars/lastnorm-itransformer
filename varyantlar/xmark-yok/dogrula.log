@@ -1,0 +1,6 @@
+[H07 dogrula] torch 2.4.1+cu121 | cihaz CPU (cuda gorunur=False) | seed 2023
+h96: (i) agirlik maks.fark=0.0e+00 param resmi=224224 varyant=224224 beklenen=224224 -> GECTI | (ii) cikis (32, 96, 8) token varyant=8 (resmi=12; x_mark kanal=4) -> GECTI | (iii) x_mark'li vs x_mark'siz cikis maks.fark=8.522e-02 -> GECTI (farkli)
+h192: (i) agirlik maks.fark=0.0e+00 param resmi=236608 varyant=236608 beklenen=236608 -> GECTI | (ii) cikis (32, 192, 8) token varyant=8 (resmi=12; x_mark kanal=4) -> GECTI | (iii) x_mark'li vs x_mark'siz cikis maks.fark=1.527e-01 -> GECTI (farkli)
+h336: (i) agirlik maks.fark=0.0e+00 param resmi=255184 varyant=255184 beklenen=255184 -> GECTI | (ii) cikis (32, 336, 8) token varyant=8 (resmi=12; x_mark kanal=4) -> GECTI | (iii) x_mark'li vs x_mark'siz cikis maks.fark=1.980e-01 -> GECTI (farkli)
+h720: (i) agirlik maks.fark=0.0e+00 param resmi=304720 varyant=304720 beklenen=304720 -> GECTI | (ii) cikis (32, 720, 8) token varyant=8 (resmi=12; x_mark kanal=4) -> GECTI | (iii) x_mark'li vs x_mark'siz cikis maks.fark=1.156e-01 -> GECTI (farkli)
+SONUC: GECTI (i-iii saglandi; kart kosulabilir)

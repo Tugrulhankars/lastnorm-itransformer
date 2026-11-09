@@ -1,0 +1,11 @@
+[h16] exchange  kalibrasyon T=  5311 C=  8 R(H)=0.5806 0.7517 0.8554 0.9281  R_bar=0.7790  -> iyilesir
+[h16]   kalibrasyon OK: |0.7790 - 0.779| = 0.0000 <= 0.002
+[h16] etth1     kalibrasyon T=  8640 C=  7 R(H)=1.5720 1.5648 1.5433 1.4795  R_bar=1.5399  -> kotulesir
+[h16]   kalibrasyon OK: |1.5399 - 1.54| = 0.0001 <= 0.002
+[h16] etth2     kalibrasyon T=  8640 C=  7 R(H)=1.1119 1.1915 1.2077 1.1968  R_bar=1.1770  -> kotulesir
+[h16]   kalibrasyon OK: |1.1770 - 1.177| = 0.0000 <= 0.002
+[h16] ettm1     sinama      T= 34560 C=  7 R(H)=1.5236 1.5608 1.5483 1.5113  R_bar=1.5360  -> kotulesir
+[h16] ettm2     sinama      T= 34560 C=  7 R(H)=1.0431 1.0795 1.1248 1.1395  R_bar=1.0967  -> kotulesir
+[h16] weather   sinama      T= 36887 C= 21 R(H)=1.3865 1.2702 1.3143 1.3559  R_bar=1.3317  -> kotulesir
+[h16] solar     sinama      T= 36792 C=137 R(H)=1.7291 1.4368 1.5444 1.6991  R_bar=1.6024  -> kotulesir
+[h16] yazildi: C:\Users\karsl\Downloads\yzmakaleuretimskill\yzmakaleuretimskill\deney_workspace\5-3-exchange-itransformer\sonuclar\h16-R.csv, C:\Users\karsl\Downloads\yzmakaleuretimskill\yzmakaleuretimskill\deney_workspace\5-3-exchange-itransformer\sonuclar\h16-R.json (51.4 s)

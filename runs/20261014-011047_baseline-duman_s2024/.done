@@ -1,0 +1,36 @@
+{
+  "rc": 0,
+  "sure_sn": 79.7,
+  "bitis": "2026-10-14T01:12:12",
+  "metrics_var": true,
+  "metrics": {
+    "val_mse_avg": 0.13527797162532806,
+    "val_mae_avg": 0.26007014513015747,
+    "val_mse_h96": 0.13527797162532806,
+    "val_mae_h96": 0.26007014513015747,
+    "egitim_sure_sn": 66.7,
+    "cihaz": "cuda:0 / NVIDIA GeForce RTX 3060 Laptop GPU",
+    "seed": 2024,
+    "ufuk_sayisi": 1,
+    "kisaltilmis": 1,
+    "param_sayisi": 224224,
+    "epoch_ayar_h96": 1,
+    "epoch_resmi_h96": 10,
+    "param_sayisi_h96": 224224,
+    "epoch_kosulan_h96": 1,
+    "val_resmi_kayip_min_h96": 0.1363934,
+    "sure_sn_h96": 65.74,
+    "egitim_sure_sn_h96": 25.14,
+    "vram_tepe_mb_h96": 27.0,
+    "alt_grup": {
+      "val_mse_h96_d0": 0.17952927947044373,
+      "val_mse_h96_d1": 0.049350447952747345,
+      "val_mse_h96_d2": 0.05958307534456253,
+      "val_mse_h96_d3": 0.38622501492500305,
+      "val_mse_h96_d4": 0.0030614417046308517,
+      "val_mse_h96_d5": 0.11165580153465271,
+      "val_mse_h96_d6": 0.14536412060260773,
+      "val_mse_h96_d7": 0.14745445549488068
+    }
+  }
+}

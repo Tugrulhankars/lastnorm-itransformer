@@ -1,0 +1,41 @@
+{
+  "run_id": "20261015-101124_ettm1-baseline-h336_s2023",
+  "varyant": "ettm1-baseline-h336",
+  "seed": "2023",
+  "etiket": "H16: resmi iTransformer ettm1 .sh birebir (c2426e6), ufuk-basi h336",
+  "ebeveyn": null,
+  "hipotez": "H16",
+  "kuyruk": "h16-ettm1",
+  "asama": 3,
+  "kural": {
+    "nan_kes": true,
+    "min_adim": 1,
+    "ust_sinir": {
+      "val_loss": 3.0,
+      "loss": 3.0
+    },
+    "alt_sinir": {
+      "val_loss": 0.01
+    },
+    "sabit_sn": 900,
+    "ilerleme_zorunlu_sn": 600
+  },
+  "komut": [
+    "C:/Users/karsl/Downloads/yzmakaleuretimskill/yzmakaleuretimskill/deney_workspace/5-3-exchange-itransformer/env/.venv/Scripts/python.exe",
+    "C:/Users/karsl/Downloads/yzmakaleuretimskill/yzmakaleuretimskill/deney_workspace/5-3-exchange-itransformer/scripts/rakip_kos.py",
+    "--veri",
+    "ettm1",
+    "--ufuk-basi",
+    "--ufuklar",
+    "336",
+    "--seed",
+    "2023",
+    "--out",
+    "C:\\Users\\karsl\\Downloads\\yzmakaleuretimskill\\yzmakaleuretimskill\\deney_workspace\\5-3-exchange-itransformer\\runs\\20261015-101124_ettm1-baseline-h336_s2023/metrics.json",
+    "--num-workers",
+    "0"
+  ],
+  "cwd": "C:\\Users\\karsl\\Downloads\\yzmakaleuretimskill\\yzmakaleuretimskill\\deney_workspace\\5-3-exchange-itransformer",
+  "baslangic": "2026-10-15T10:11:36",
+  "makine": "MetropolTilkisi"
+}

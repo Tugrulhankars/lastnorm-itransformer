@@ -1,0 +1,24 @@
+{
+  "_aciklama": "ÖN-KAYIT (deney-yürütücü, 2026-10-15 05:53, FAZ III E1 / hakem B1): kuyruk satırları eklenmeden, foreground dumanlardan ve tam koşumdan ÖNCE yazıldı; koşum sonrası değiştirilmez. Varyant: san (H01, varyantlar/san/kos.py; DEĞİŞTİRİLMEDİ — --kat argümanı parse_known_args ile rakip_kos.main()'e aynen geçer, data_dict yaması süreç içinde ExpSAN'ın miras aldığı _get_data yolunu da kapsar; lastnorm-k1/k2 ile aynı yol). Protokol: orkestrasyon_durumu.md 'FAZ II ŞEF ÖN-KAYDI' P1 (K1 val [3791,4551), K2 [4551,5311); train = dilim öncesi tüm satırlar; scaler yalnız kat train'i). K3 KOŞULMAZ: K3 = resmî val, mevcut SAN tam koşumları 20261014-040042_san_s2023 / 040547_s2024 / 041102_s2025 (val_mse_avg 0.5835836790502071 / 0.5896136946976185 / 0.5811401717364788, ort. 0.5847791818281015, sd 0.00436) yeniden kullanılır — şefin baseline/lastnorm K3 kararıyla aynı gerekçe; bit-bit eşdeğerlik foreground san-k3 dumanıyla sınanır (notlar/faz3-kuyruk.md). Kat satırları TEST YAZMAZ (rakip_kos --kat: test() çağrılmaz, test_metrics.json yazılmaz). Aralık kaynağı: emsal kuyruklar k4t4-kat-baseline/k4t4-kat-lastnorm ile aynı mekanik makullük [0.5, 1.5] × naif Repeat kat ortalaması (sonuclar/naif-kat.csv). Bağlam (kural değil): SAN K3 M/R = 0.5848 / 0.4730 = 1.236 (baseline K3 0.940, lastnorm K3 0.904); SAN std başlığı ölü-ReLU ile dejenere (varyantlar/san/README.md) olduğundan K1/K2'de de M/R > 1 beklenir; 1.5 × Repeat üst sınırı bu oranın üstünde pay bırakır. Bu kuyruk yalnız aşama 3 içerir (duman foreground); kademeli koşumda kapı otomatik koşmaz, şef/tahlilci beklenti_kontrol.py --asama 3 ile elle koşar. Bu koşumlar bir seçim kararı değildir (Exchange araması kapalı); B1 için betimsel kat tablosu (SAN vs iTransformer/LastNorm/Repeat, K1–K3). TEST sayısı hiçbir kurala konmadı.",
+  "metrik": "val_mse_avg",
+  "yon": "min",
+  "asama": {
+    "3": {
+      "aciklama": "TAM — san × kat {1,2} × seed {2023,2024,2025} (ebeveyn baseline-k1/k2 ve lastnorm-k1/k2 ile aynı seed kümesi, M5); --kat k, test hiç değerlendirilmez. Rakip referansı: kuyruk k4t4-kat-baseline (aynı kat/seed), K3 = mevcut san tam koşumları.",
+      "kurallar": [
+        {"tur": "sonlu"},
+        {"tur": "farkli_seedler_farkli"},
+        {"tur": "kollar_farkli"},
+        {"tur": "min_kosum", "n": 6},
+        {"tur": "aralik", "varyant": "san-k2", "alt": 0.5652, "ust": 1.6957,
+         "kaynak": "mekanik makullük [0.5, 1.5] × naif Repeat K2 4-ufuk ort. 1.130437 (sonuclar/naif-kat.csv); emsal k4t4-kat-baseline/lastnorm beklentisi (1.5× emsali H03/H08); SAN K3 M/R 1.236 bu aralıkta"},
+        {"tur": "aralik", "varyant": "san-k1", "alt": 0.1135, "ust": 0.3405,
+         "kaynak": "mekanik makullük [0.5, 1.5] × naif Repeat K1 4-ufuk ort. 0.227003 (sonuclar/naif-kat.csv); emsal k4t4-kat-baseline/lastnorm beklentisi; SAN K3 M/R 1.236 bu aralıkta"},
+        {"tur": "ikincil_aralik", "metrik": "param_sayisi", "alt": 667472, "ust": 667472,
+         "kaynak": "SAN tam koşumları (K3) param_sayisi h720 = 667 472 (omurga 304 720 + SAN modülü); kat veri sınırları parametreyi değiştirmez"},
+        {"tur": "ikincil_aralik", "metrik": "egitim_sure_sn", "alt": 30, "ust": 900,
+         "kaynak": "H01 kartı Bütçe tavanı: seed başına > 15 dk → durdur, teşhis; kat emsali 30 s alt sınırı (k4t4-kat-*)"}
+      ]
+    }
+  }
+}

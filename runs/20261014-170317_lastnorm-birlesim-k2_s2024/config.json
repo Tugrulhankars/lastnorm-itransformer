@@ -1,0 +1,24 @@
+{
+  "run_id": "20261014-170317_lastnorm-birlesim-k2_s2024",
+  "varyant": "lastnorm-birlesim-k2",
+  "seed": "2024",
+  "etiket": "H12 konveks birlesim C=R+clip(a,0,1)(P-R), a ic-holdout (K_{k-1}), CPU son-islem; kat 2",
+  "ebeveyn": "20261014-163203_lastnorm-k2_s2024",
+  "hipotez": "H12",
+  "kuyruk": "k4t4-lastnorm-birlesim",
+  "asama": 3,
+  "kural": null,
+  "komut": [
+    "C:/Users/karsl/Downloads/yzmakaleuretimskill/yzmakaleuretimskill/deney_workspace/5-3-exchange-itransformer/env/.venv/Scripts/python.exe",
+    "C:/Users/karsl/Downloads/yzmakaleuretimskill/yzmakaleuretimskill/deney_workspace/5-3-exchange-itransformer/varyantlar/lastnorm-birlesim/birlesim.py",
+    "--kat",
+    "2",
+    "--seed",
+    "2024",
+    "--out",
+    "C:\\Users\\karsl\\Downloads\\yzmakaleuretimskill\\yzmakaleuretimskill\\deney_workspace\\5-3-exchange-itransformer\\runs\\20261014-170317_lastnorm-birlesim-k2_s2024/metrics.json"
+  ],
+  "cwd": "C:\\Users\\karsl\\Downloads\\yzmakaleuretimskill\\yzmakaleuretimskill\\deney_workspace\\5-3-exchange-itransformer",
+  "baslangic": "2026-10-14T17:03:17",
+  "makine": "MetropolTilkisi"
+}

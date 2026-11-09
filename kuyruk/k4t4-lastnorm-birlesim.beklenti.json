@@ -1,0 +1,26 @@
+{
+  "_aciklama": "ÖN-KAYIT (deney-yürütücü, 2026-10-14 ~17:00, tur 4): kuyruk satırları eklenmeden ve tam koşumdan ÖNCE yazıldı; koşum sonrası değiştirilmez. lastnorm-birlesim (H12) = CPU son-işlem (GPU 0): varyantlar/lastnorm-birlesim/, ağırlıklar yalnız kat train'i [0,b_k) içindeki iç-holdout'tan (dogrula.log: sızıntı/pertürbasyon testi GEÇTİ). Satırlar K3 → K2 → K1; K1 satırları kuyruk k4t4-lastnorm-k0 BİTTİKTEN SONRA koşulmalı (iç model lastnorm-k0). Saglama başarısızsa satır rc=1, metrics yok. Karar (TUT ⇔ Δ̄<0 ∧ ≥2/3 kat ∧ ≥3/4 ufuk, ebeveyn lastnorm kat koşumları) tahlilcide; beklenen yön/büyüklük (kart H12 Beklenen etki: Δ̄ −1.0…+0.5% (K3 Δ ≈ 0…+0.3%); P(TUT) 0.25) bu kuyruğun kapısında DEĞİL (ebeveyn başka kuyrukta; yon_vs kuralı kuyruk-içi referans ister) → aşağıdaki aralıklar yalnız mekanik makullüktür. Foreground ön-uçuş (s2023): K2 birleşim/K3 ölçek dumanları 20261014-165651 / 165655 rc=0; K3 s2023'te iç ağırlıklar ~0 (iç K2 modelinin α̂'sı negatif) → C ≈ Repeat, ebeveynden +9.0% (kartın K3 beklentisinin dışında; şefe raporlandı). TEST sayısı hiçbir kurala konmadı.",
+  "metrik": "val_mse_avg",
+  "yon": "min",
+  "asama": {
+    "3": {
+      "aciklama": "TAM — lastnorm-birlesim × kat {1,2,3} × seed {2023,2024,2025} (CPU son-işlem; ebeveyn lastnorm-k{1,2} kat koşumları + K3 resmî 052508/053601/054213).",
+      "kurallar": [
+        {"tur": "sonlu"},
+        {"tur": "farkli_seedler_farkli"},
+        {"tur": "kollar_farkli"},
+        {"tur": "min_kosum", "n": 9},
+        {"tur": "aralik", "varyant": "lastnorm-birlesim-k1", "alt": 0.1135, "ust": 0.3405,
+         "kaynak": "mekanik makullük [0.5, 1.5] × naif Repeat K1 4-ufuk ort. 0.227003 (sonuclar/naif-kat.csv); k4t4-kat-lastnorm emsali"},
+        {"tur": "aralik", "varyant": "lastnorm-birlesim-k2", "alt": 0.5652, "ust": 1.6957,
+         "kaynak": "mekanik makullük [0.5, 1.5] × naif Repeat K2 4-ufuk ort. 1.130437 (sonuclar/naif-kat.csv)"},
+        {"tur": "aralik", "varyant": "lastnorm-birlesim-k3", "alt": 0.2365, "ust": 0.7095,
+         "kaynak": "mekanik makullük [0.5, 1.5] × naif Repeat K3 4-ufuk ort. 0.473029 (sonuclar/naif-kat.csv)"},
+        {"tur": "ikincil_aralik", "metrik": "saglama_gecti", "alt": 1, "ust": 1, "kaynak": "kart H12 Uygulama notu sağlamaları (i)–(v)"},
+        {"tur": "ikincil_aralik", "metrik": "oracle_ihlal_sayisi", "alt": 0, "ust": 0,
+         "kaynak": "kart H12 İNCELE (a): konveks birleşim oracle kazancını matematiksel olarak aşamaz (dilim düzeyi sınır; tek-α/hücre sınırı ayrıca oracle_ihlal_sayisi_tek_alfa_hucre olarak raporlanır, dilim ağırlıkları onu meşru biçimde aşabilir)"},
+        {"tur": "ikincil_aralik", "metrik": "egitim_sure_sn", "alt": 0, "ust": 0, "kaynak": "kart: GPU süresi 0 (son-işlem)"}
+      ]
+    }
+  }
+}

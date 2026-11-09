@@ -1,0 +1,23 @@
+# 2026-10-14T02:50:53 $ C:/Users/karsl/Downloads/yzmakaleuretimskill/yzmakaleuretimskill/deney_workspace/5-3-exchange-itransformer/env/.venv/Scripts/python.exe C:/Users/karsl/Downloads/yzmakaleuretimskill/yzmakaleuretimskill/deney_workspace/5-3-exchange-itransformer/varyantlar/revin-afin/kos.py --seed 2023 --out 'C:\Users\karsl\Downloads\yzmakaleuretimskill\yzmakaleuretimskill\deney_workspace\5-3-exchange-itransformer\runs\20261014-025050_revin-afin-duman_s2023/metrics.json' --ufuklar 96 --epoch-ust 1 --num-workers 0
+[H02] varyant=revin-afin: --use_norm 0 + RevIN (afin gamma/beta) her ufukta
+[rakip_kos] rakip commit c2426e68ca13f74aaec08045c5c724d8ad328124 | run.py fix_seed=2023 -> sarmalayici seed=2023 | cihaz cuda:0 / NVIDIA GeForce RTX 3060 Laptop GPU | torch 2.4.1+cu121 | ufuklar [96] | epoch_ust=1 | num_workers=resmi
+Args in experiment:
+Namespace(is_training=1, model_id='Exchange_96_96', model='iTransformer', data='custom', root_path='C:\\Users\\karsl\\Downloads\\yzmakaleuretimskill\\yzmakaleuretimskill\\deney_workspace\\5-3-exchange-itransformer\\data\\exchange_rate\\', data_path='exchange_rate.csv', features='M', target='OT', freq='h', checkpoints='C:\\Users\\karsl\\Downloads\\yzmakaleuretimskill\\yzmakaleuretimskill\\deney_workspace\\5-3-exchange-itransformer\\runs\\20261014-025050_revin-afin-duman_s2023\\ckpt\\', seq_len=96, label_len=48, pred_len=96, enc_in=8, dec_in=8, c_out=8, d_model=128, n_heads=8, e_layers=2, d_layers=1, d_ff=128, moving_avg=25, factor=1, distil=True, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, do_predict=False, num_workers=0, itr=1, train_epochs=1, batch_size=32, patience=3, learning_rate=0.0001, des='Exp', loss='MSE', lradj='type1', use_amp=False, use_gpu=True, gpu=0, use_multi_gpu=False, devices='0,1,2,3', exp_name='MTSF', channel_independence=False, inverse=False, class_strategy='projection', target_root_path='./data/electricity/', target_data_path='electricity.csv', efficient_training=False, use_norm=0, partial_start_index=0)
+Traceback (most recent call last):
+  File "C:\Users\karsl\Downloads\yzmakaleuretimskill\yzmakaleuretimskill\deney_workspace\5-3-exchange-itransformer\varyantlar\revin-afin\kos.py", line 98, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "C:\Users\karsl\Downloads\yzmakaleuretimskill\yzmakaleuretimskill\deney_workspace\5-3-exchange-itransformer\varyantlar\revin-afin\kos.py", line 74, in main
+    rc = rakip_kos.main()
+         ^^^^^^^^^^^^^^^^
+  File "C:\Users\karsl\Downloads\yzmakaleuretimskill\yzmakaleuretimskill\deney_workspace\5-3-exchange-itransformer\scripts\rakip_kos.py", line 311, in main
+    exp = Exp_Long_Term_Forecast(args)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\karsl\Downloads\yzmakaleuretimskill\yzmakaleuretimskill\deney_workspace\5-3-exchange-itransformer\rakip\iTransformer\experiments\exp_long_term_forecasting.py", line 18, in __init__
+    super(Exp_Long_Term_Forecast, self).__init__(args)
+  File "C:\Users\karsl\Downloads\yzmakaleuretimskill\yzmakaleuretimskill\deney_workspace\5-3-exchange-itransformer\rakip\iTransformer\experiments\exp_long_term_forecasting.py", line 18, in __init__
+    super(Exp_Long_Term_Forecast, self).__init__(args)
+  File "C:\Users\karsl\Downloads\yzmakaleuretimskill\yzmakaleuretimskill\deney_workspace\5-3-exchange-itransformer\rakip\iTransformer\experiments\exp_long_term_forecasting.py", line 18, in __init__
+    super(Exp_Long_Term_Forecast, self).__init__(args)
+  [Previous line repeated 993 more times]
+RecursionError: maximum recursion depth exceeded

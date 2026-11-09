@@ -1,0 +1,36 @@
+{
+  "run_id": "20261014-145213_lastnorm-dro_s2024",
+  "varyant": "lastnorm-dro",
+  "seed": "2024",
+  "etiket": "lastnorm + zaman-grubu GroupDRO egitim kaybi (K=4, eta=0.01; val/erken durdurma resmi MSE; param ayni)",
+  "ebeveyn": "20261014-053601_lastnorm_s2024",
+  "hipotez": "H09",
+  "kuyruk": "k4t3-h09",
+  "asama": 3,
+  "kural": {
+    "nan_kes": true,
+    "min_adim": 1,
+    "ust_sinir": {
+      "val_loss": 3.0,
+      "loss": 3.0
+    },
+    "alt_sinir": {
+      "val_loss": 0.01
+    },
+    "sabit_sn": 900,
+    "ilerleme_zorunlu_sn": 600
+  },
+  "komut": [
+    "C:/Users/karsl/Downloads/yzmakaleuretimskill/yzmakaleuretimskill/deney_workspace/5-3-exchange-itransformer/env/.venv/Scripts/python.exe",
+    "C:/Users/karsl/Downloads/yzmakaleuretimskill/yzmakaleuretimskill/deney_workspace/5-3-exchange-itransformer/varyantlar/lastnorm-dro/kos.py",
+    "--seed",
+    "2024",
+    "--out",
+    "C:\\Users\\karsl\\Downloads\\yzmakaleuretimskill\\yzmakaleuretimskill\\deney_workspace\\5-3-exchange-itransformer\\runs\\20261014-145213_lastnorm-dro_s2024/metrics.json",
+    "--num-workers",
+    "0"
+  ],
+  "cwd": "C:\\Users\\karsl\\Downloads\\yzmakaleuretimskill\\yzmakaleuretimskill\\deney_workspace\\5-3-exchange-itransformer",
+  "baslangic": "2026-10-14T14:52:16",
+  "makine": "MetropolTilkisi"
+}

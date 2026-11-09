@@ -1,0 +1,60 @@
+Args in experiment:
+Namespace(is_training=1, model_id='Exchange_96_96', model='iTransformer', data='custom', root_path='C:\\Users\\karsl\\Downloads\\yzmakaleuretimskill\\yzmakaleuretimskill\\deney_workspace\\5-3-exchange-itransformer\\data\\exchange_rate\\', data_path='exchange_rate.csv', features='M', target='OT', freq='h', checkpoints='C:\\Users\\karsl\\Downloads\\yzmakaleuretimskill\\yzmakaleuretimskill\\deney_workspace\\5-3-exchange-itransformer\\runs\\20261014-143820_lastnorm-merkez_s2024\\ckpt\\', seq_len=96, label_len=48, pred_len=96, enc_in=8, dec_in=8, c_out=8, d_model=128, n_heads=8, e_layers=2, d_layers=1, d_ff=128, moving_avg=25, factor=1, distil=True, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, do_predict=False, num_workers=0, itr=1, train_epochs=10, batch_size=32, patience=3, learning_rate=0.0001, des='Exp', loss='MSE', lradj='type1', use_amp=False, use_gpu=True, gpu=0, use_multi_gpu=False, devices='0,1,2,3', exp_name='MTSF', channel_independence=False, inverse=False, class_strategy='projection', target_root_path='./data/electricity/', target_data_path='electricity.csv', efficient_training=False, use_norm=0, partial_start_index=0)
+Use GPU: cuda:0
+>>>>>>>start training : Exchange_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 5120
+val 665
+test 1422
+	iters: 100, epoch: 1 | loss: 0.1399881
+	speed: 0.0343s/iter; left time: 51.4415s
+Epoch: 1 cost time: 4.8278892040252686
+Epoch: 1, Steps: 160 | Train Loss: 0.1836437 Vali Loss: 0.1320070 Test Loss: 0.0880632
+Validation loss decreased (inf --> 0.132007).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 2 | loss: 0.1086348
+	speed: 0.1710s/iter; left time: 229.2832s
+Epoch: 2 cost time: 6.391944169998169
+Epoch: 2, Steps: 160 | Train Loss: 0.1357400 Vali Loss: 0.1309115 Test Loss: 0.0809028
+Validation loss decreased (0.132007 --> 0.130912).  Saving model ...
+Updating learning rate to 5e-05
+	iters: 100, epoch: 3 | loss: 0.1378236
+	speed: 0.1487s/iter; left time: 175.5778s
+Epoch: 3 cost time: 5.044780492782593
+Epoch: 3, Steps: 160 | Train Loss: 0.1326394 Vali Loss: 0.1293549 Test Loss: 0.0828160
+Validation loss decreased (0.130912 --> 0.129355).  Saving model ...
+Updating learning rate to 2.5e-05
+	iters: 100, epoch: 4 | loss: 0.1280661
+	speed: 0.1618s/iter; left time: 165.2307s
+Epoch: 4 cost time: 4.92798376083374
+Epoch: 4, Steps: 160 | Train Loss: 0.1315497 Vali Loss: 0.1306485 Test Loss: 0.0826320
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 1.25e-05
+	iters: 100, epoch: 5 | loss: 0.1213053
+	speed: 0.1837s/iter; left time: 158.2002s
+Epoch: 5 cost time: 5.108071804046631
+Epoch: 5, Steps: 160 | Train Loss: 0.1310569 Vali Loss: 0.1279420 Test Loss: 0.0848554
+Validation loss decreased (0.129355 --> 0.127942).  Saving model ...
+Updating learning rate to 6.25e-06
+	iters: 100, epoch: 6 | loss: 0.1792878
+	speed: 0.1226s/iter; left time: 85.9633s
+Epoch: 6 cost time: 3.3758718967437744
+Epoch: 6, Steps: 160 | Train Loss: 0.1308107 Vali Loss: 0.1287136 Test Loss: 0.0838786
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 3.125e-06
+	iters: 100, epoch: 7 | loss: 0.1391901
+	speed: 0.1192s/iter; left time: 64.4698s
+Epoch: 7 cost time: 4.611522436141968
+Epoch: 7, Steps: 160 | Train Loss: 0.1306322 Vali Loss: 0.1300322 Test Loss: 0.0835448
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 1.5625e-06
+	iters: 100, epoch: 8 | loss: 0.1320646
+	speed: 0.1086s/iter; left time: 41.3635s
+Epoch: 8 cost time: 3.3000810146331787
+Epoch: 8, Steps: 160 | Train Loss: 0.1306060 Vali Loss: 0.1285444 Test Loss: 0.0838111
+EarlyStopping counter: 3 out of 3
+Early stopping
+>>>>>>>testing : Exchange_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 1422
+test shape: (1422, 1, 96, 8) (1422, 1, 96, 8)
+test shape: (1422, 96, 8) (1422, 96, 8)
+mse:0.08485543727874756, mae:0.2016395479440689

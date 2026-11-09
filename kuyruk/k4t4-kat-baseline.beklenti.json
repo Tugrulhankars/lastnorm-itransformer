@@ -1,0 +1,26 @@
+{
+  "_aciklama": "ÖN-KAYIT (deney-geliştirici, 2026-10-14 ~16:20, FAZ II P1): kuyruk satırları eklenmeden ve tam koşumdan ÖNCE yazıldı; koşum sonrası değiştirilmez. Protokol: orkestrasyon_durumu.md 'FAZ II ŞEF ÖN-KAYDI' (P1 kat protokolü). Kod: scripts/rakip_kos.py --kat (notlar/eksik-kod-teklifi-faz2.md). Foreground sağlamalar: CPU scripts/kat_dogrula.py → sonuclar/kat-dogrula.log GEÇTİ (K3 == resmî Dataset_Custom bit-bit, sızıntı yok); GPU 20261014-161200_baseline-k3-duman_s2023 == 20261014-015848_baseline-duman_s2023 (val tahminleri np.array_equal), 20261014-161302_baseline-k3-rng_s2023 == 20261014-015930_baseline-onucus_s2023 h96 (epoch 2, test iterator RNG çekilişi korunuyor), 20261014-161352_baseline-katsiz-regresyon_s2023 (--kat'sız yol değişmedi). Bu nedenle baseline-k3 tam koşumu resmî baseline tam koşumlarıyla (20261014-020531_s2023, 021024_s2024, 021448_s2025; val_mse_avg 0.44275007396936417 / 0.4341217167675495 / 0.4576699547469616, ort. 0.4448472484946251) BİT-BİT aynı olmalı → aralık ±1e-6. K1/K2: kaynaklı mekanik makullük [0.5, 1.5] × naif Repeat kat ortalaması (sonuclar/naif-kat.csv: K1 0.227003, K2 1.130437). Üst sınır 1.5 × Repeat, H03/H08 beklentilerindeki emsal. Alt sınır 0.5 × Repeat: Exchange'de K3 resmî baseline/Repeat oranı 0.94; literatürde Exchange'de Repeat'i iki kat geçen model yok. Altına inen sonuç sızıntı soruşturmasıdır. Kuyruk yalnız aşama 3 içerir (duman/ön-uçuş foreground yapıldı). Bu yüzden kademeli koşumda kapı otomatik koşmaz; şef/tahlilci beklenti_kontrol.py --asama 3 ile elle koşar. Seçim kuralı (TUT/ÖLDÜR) bu dosyada değil, ŞEF ÖN-KAYDI'nda. TEST sayısı hiçbir kurala konmadı.",
+  "metrik": "val_mse_avg",
+  "yon": "min",
+  "asama": {
+    "3": {
+      "aciklama": "TAM — baseline (resmî iTransformer c2426e6, Exchange .sh birebir) × kat {1,2,3} × seed {2023,2024,2025}; --kat k, test hiç değerlendirilmez.",
+      "kurallar": [
+        {"tur": "sonlu"},
+        {"tur": "farkli_seedler_farkli"},
+        {"tur": "kollar_farkli"},
+        {"tur": "min_kosum", "n": 9},
+        {"tur": "aralik", "varyant": "baseline-k3", "alt": 0.4448462484946251, "ust": 0.44484824849462506,
+         "kaynak": "K3 == resmî val (kat_dogrula.log (a) bit-bit; GPU duman + epoch-2 RNG sağlaması bit-bit) → resmî baseline tam koşumları 020531/021024/021448 val_mse_avg ort. 0.4448472484946251 ± 1e-6"},
+        {"tur": "aralik", "varyant": "baseline-k2", "alt": 0.5652, "ust": 1.6957,
+         "kaynak": "mekanik makullük [0.5, 1.5] × naif Repeat K2 4-ufuk ort. 1.130437 (sonuclar/naif-kat.csv); 1.5× emsali H03/H08 beklentileri"},
+        {"tur": "aralik", "varyant": "baseline-k1", "alt": 0.1135, "ust": 0.3405,
+         "kaynak": "mekanik makullük [0.5, 1.5] × naif Repeat K1 4-ufuk ort. 0.227003 (sonuclar/naif-kat.csv); 1.5× emsali H03/H08 beklentileri"},
+        {"tur": "ikincil_aralik", "metrik": "param_sayisi", "alt": 304720, "ust": 304720,
+         "kaynak": "resmî iTransformer Exchange h720 parametre sayısı (K3 baseline koşumları, H04 dogrula.log)"},
+        {"tur": "ikincil_aralik", "metrik": "egitim_sure_sn", "alt": 30, "ust": 900,
+         "kaynak": "resmî baseline tam koşumu 253–279 s; seed başına > 15 dk → teşhis (H08 bütçe tavanı emsali)"}
+      ]
+    }
+  }
+}

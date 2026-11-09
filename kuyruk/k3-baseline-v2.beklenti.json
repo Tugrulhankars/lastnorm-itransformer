@@ -1,0 +1,42 @@
+{
+  "_aciklama": "ÖN-KAYIT (rakip-kurucu, 2026-10-14): kuyruk k3-baseline başlatılmadan ÖNCE yazıldı; koşum sonrası değiştirilmez. Metrik val_mse_avg = 4 ufkun (96/192/336/720) val MSE ortalaması; ölçekli uzay (StandardScaler, yalnız train), val'in TÜM pencereleri (drop_last yok, batch 1), test ile aynı tanım. Aralıklar literatür çıpasından (notlar/literatur-cipa.md) ve K2'nin YALNIZ-VAL naif referansından (data/naive_val.csv: Repeat-last val MSE 0.1282/0.2263/0.3933/1.1443, ort. 0.4730; train-ortalaması 'sıfır' tahmincisi 5.67-6.23) türetildi; metrik aralıkları foreground duman/ön-uçuş sonuçlarına göre AYARLANMADI (yalnız süre üst sınırları foreground ölçümüne dayanır). TEST sayısı hiçbir kurala konmadı (replikasyon kapısı ayrı: replikasyon_kapisi.py, literatur-cipa.md §3).",
+  "metrik": "val_mse_avg",
+  "yon": "min",
+  "asama": {
+    "1": {
+      "aciklama": "DUMAN — varyant baseline-duman: 1 seed (2023), yalnız ufuk 96, train_epochs<=1 (--epoch-ust 1). Kod yolu (resmi train+test, val köprüsü, preds, progress) çalışıyor mu.",
+      "kurallar": [
+        {"tur": "sonlu"},
+        {"tur": "min_kosum", "n": 1},
+        {"tur": "aralik", "varyant": "baseline-duman", "alt": 0.05, "ust": 0.26,
+         "kaynak": "Yalnız h96 (val_mse_avg = val_mse_h96). Üst 0.26 ≈ 2 × Repeat-last val MSE h96 0.1282 (data/naive_val.csv): iTransformer use_norm=True ile pencere-ortalaması etrafında başlar; 1 epoch sonra naif tekrarın 2 katından kötüyse öğrenmiyor/kurulum hatası. Alt 0.05 ≈ 0.6 × literatür TEST h96 0.086 (Liu et al. 2024 Tab.10; val testten daha kaymalı, data_manifest.md) → altı sızıntı/protokol şüphesi."}
+      ]
+    },
+    "2": {
+      "aciklama": "ÖN-UÇUŞ — varyant baseline-onucus: 2 seed (2023, 2024), 4 ufkun hepsi, train_epochs<=2 (--epoch-ust 2; h336 resmi ayarda zaten 1 epoch). Tam kod yolu; seed bağlama; süre/donanım.",
+      "kurallar": [
+        {"tur": "sonlu"},
+        {"tur": "farkli_seedler_farkli"},
+        {"tur": "min_kosum", "n": 2},
+        {"tur": "aralik", "varyant": "baseline-onucus", "alt": 0.36, "ust": 0.71,
+         "kaynak": "Repeat-last val ort. 0.4730 (data/naive_val.csv) ölçeğinde. Üst 0.71 = 1.5 × 0.473: kısaltılmış eğitim (≤2 epoch) için gevşetildi; Tab.10'daki en kötü L=96 modeli (Stationary 0.461) / Repeat test (0.344, Zeng et al. 2023 Tab.2) = 1.34 oranının üstünde pay. Alt 0.36 ≈ 0.76 × 0.473: literatürde L=96/7:1:2'de Repeat'i en çok geçen bildirilen sonuç DUET lookback-aramalı 0.280/0.344 = 0.81 (Qiu et al. 2025 Tab.3, hesap, literatur-cipa.md §5.5); ≤2 epoch'lu iTransformer'ın bunun da altına inmesi sızıntı/protokol şüphesi."},
+        {"tur": "ikincil_aralik", "metrik": "val_mse_h96", "alt": 0.05, "ust": 0.26,
+         "kaynak": "aşama 1 ile aynı gerekçe (Repeat val h96 0.1282 × 2; lit. test h96 0.086 × 0.6)"},
+        {"tur": "ikincil_aralik", "metrik": "egitim_sure_sn", "alt": 10, "ust": 900,
+         "kaynak": "Foreground ön-uçuş ölçümü 233 s (RTX 3060 Laptop, num_workers=0); hesaplama-kaynagi.md §4: beklenenin ~4 katı üstü = CPU'ya düşüş/worker sorunu teşhisi"}
+      ]
+    },
+    "3": {
+      "aciklama": "TAM — varyant baseline: 3 seed {2023, 2024, 2025}, resmi Exchange betiği birebir (ufuk 336 için train_epochs=1 dahil), 4 ufuk. Mekanik kurallar + gevşek makullük aralığı (kuyruk son aşamadan sonra kapı koşmaz; şef beklenti_kontrol.py --asama 3 ile elle koşabilir). Replikasyon kararı ayrı (test_mse_avg, replikasyon_kapisi.py).",
+      "kurallar": [
+        {"tur": "sonlu"},
+        {"tur": "farkli_seedler_farkli"},
+        {"tur": "min_kosum", "n": 3},
+        {"tur": "aralik", "varyant": "baseline", "alt": 0.36, "ust": 0.634,
+         "kaynak": "Tam eğitim: üst 0.634 = 1.34 × Repeat val 0.473 (1.34 = Tab.10 en kötü L=96 model Stationary 0.461 / Repeat test 0.344; Liu et al. 2024 Tab.10, Zeng et al. 2023 Tab.2); alt 0.36 ≈ 0.76 × 0.473 (DUET 0.280/0.344 = 0.81 oranının altı, Qiu et al. 2025 Tab.3) → altı İNCELE."},
+        {"tur": "ikincil_aralik", "metrik": "egitim_sure_sn", "alt": 60, "ust": 3000,
+         "kaynak": "Tahmini ≤600 s/seed (ön-uçuş epoch süreleri × resmi en çok 10 epoch + değerlendirme); 5× = 3000 s (hesaplama-kaynagi.md §4 süre anormalliği eşiği)"}
+      ]
+    }
+  }
+}

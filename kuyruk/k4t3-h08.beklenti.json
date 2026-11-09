@@ -1,0 +1,49 @@
+{
+  "_aciklama": "ÖN-KAYIT (deney-yürütücü, 2026-10-14, K4 tur 3): foreground duman/ön-uçuştan ve kuyruk k4t3-h08 satırları eklenmeden ÖNCE yazıldı; koşum sonrası değiştirilmez. Kart: hipotezler/H08.md (PROTOKOL KARTI; mtime 06:55:21 < ilk lastnorm-ep336eq* koşumu). Eşikler kartın üst tablosundan (Bütçe, Öldürme kuralı / Mekanik DUR, 'görülmemiş kadar iyi' (a)(b)) ve uygulama notundan AYNEN alındı. Bit-bit referanslar metrics.json val_ anahtarlarından tam hassasiyetle okundu: duman ← runs/20261014-052508_lastnorm_s2023 val_mse_h336 = 0.3949749767780304 (h336 resmî 1 epoch → duman --epoch-ust 1 aynı ayar); ön-uçuş kontrol ufukları ← runs/20261014-050501_lastnorm-onucus_s2023 (h96 0.12360674142837524, h192 0.2120865285396576, h720 1.050795078277588); |fark| < 1e-6 → aralık ±1e-6. Ana metrik val_mse_h336 (kart). Kartta olup kural türüyle ifade edilemeyenler: (1) ön-uçuş h336 ≠ lastnorm-onucus h336 0.3949749767780304 (yama devrede) — ebeveyn kuyrukta yok, foreground'da sınanır ve günlüğe yazılır; (2) aşama-3 kontrol ufuklarının seed başına lastnorm aynı-seed koşumuyla bit-bit eşitliği (İNCELE b) tek aralıkla ifade edilemez (seed başına farklı değer) → tahlilci eşleştirilmiş Δ ile denetler (|Δ| > 1e-6 → İNCELE), H03 emsali. Aşama-3 üst sınırı kartta yok → H03 beklentisindeki kaynaklı mekanik makullük (1.5 × Repeat val h336 0.3933 ≈ 0.59) kullanıldı; kartın TERS sonucu (≥ +1.5% ≈ 0.398) bu aralığın içindedir. yon_vs / sure_orani ebeveyn kuyrukta olmadığı için sınanamaz; S1/S2 kararı kartın öldürme kuralıyla leaderboard'dan (eşleştirilmiş seed). TEST sayısı hiçbir kurala konmadı (M4).",
+  "metrik": "val_mse_h336",
+  "yon": "min",
+  "asama": {
+    "1": {
+      "aciklama": "DUMAN — varyant lastnorm-ep336eq-duman: s2023, yalnız ufuk 336, --epoch-ust 1 → min(10,1)=1 epoch = ebeveyn lastnorm ile AYNI ayar. Yama-öncesi sağlama: lastnorm s2023 h336 ile bit-bit aynı çıkmalı.",
+      "kurallar": [
+        {"tur": "sonlu"},
+        {"tur": "min_kosum", "n": 1},
+        {"tur": "aralik", "varyant": "lastnorm-ep336eq-duman", "alt": 0.3949739767780304, "ust": 0.3949759767780304,
+         "kaynak": "H08 kartı Bütçe + Mekanik DUR + uygulama notu: duman val_mse_h336 == 20261014-052508_lastnorm_s2023 val_mse_h336 0.3949749767780304, |fark| < 1e-6 (KURULUM §5: aynı seed tekrarı bit-bit aynı)"},
+        {"tur": "ikincil_aralik", "metrik": "param_sayisi", "alt": 255184, "ust": 255184,
+         "kaynak": "H08 kartı ikincil: parametre h336 255 184, ebeveynle eşit olmalı"}
+      ]
+    },
+    "2": {
+      "aciklama": "ÖN-UÇUŞ — varyant lastnorm-ep336eq-onucus: s2023, 4 ufuk, --epoch-ust 2 (h336: min(10,2)=2 epoch; diğerleri 10 → 2, lastnorm-onucus ile aynı). Kontrol ufukları lastnorm-onucus_s2023 ile bit-bit aynı; h336 makul aralıkta.",
+      "kurallar": [
+        {"tur": "sonlu"},
+        {"tur": "min_kosum", "n": 1},
+        {"tur": "aralik", "varyant": "lastnorm-ep336eq-onucus", "alt": 0.30, "ust": 0.42,
+         "kaynak": "H08 kartı Mekanik DUR + uygulama notu: ön-uçuş val_mse_h336 ∈ [0.30, 0.42]"},
+        {"tur": "ikincil_aralik", "metrik": "val_mse_h96", "alt": 0.12360574142837524, "ust": 0.12360774142837524,
+         "kaynak": "H08 kartı Mekanik DUR + uygulama notu: ön-uçuş kontrol ufukları == 20261014-050501_lastnorm-onucus_s2023 (val_mse_h96 0.12360674142837524), |fark| < 1e-6"},
+        {"tur": "ikincil_aralik", "metrik": "val_mse_h192", "alt": 0.2120855285396576, "ust": 0.2120875285396576,
+         "kaynak": "aynı (val_mse_h192 0.2120865285396576)"},
+        {"tur": "ikincil_aralik", "metrik": "val_mse_h720", "alt": 1.050794078277588, "ust": 1.050796078277588,
+         "kaynak": "aynı (val_mse_h720 1.050795078277588)"},
+        {"tur": "ikincil_aralik", "metrik": "param_sayisi", "alt": 304720, "ust": 304720,
+         "kaynak": "H08 kartı ikincil: parametre ebeveynle eşit (param_sayisi = son ufuk h720 304 720)"}
+      ]
+    },
+    "3": {
+      "aciklama": "TAM — varyant lastnorm-ep336eq: 3 seed {2023, 2024, 2025} (ebeveyn lastnorm ile aynı seed kümesi, M5), 4 ufuk, yalnız h336 train_epochs 10. Kuyruk son aşamadan sonra kapı koşmaz; şef/tahlilci beklenti_kontrol.py --asama 3 ile elle koşar. Karar (S1 DOĞRULANDI/DOĞRULANMADI/TERS; S2 TOPLANIR/İKAME/TERS ETKİLEŞİM) kartın ön-kayıtlı kuralıyla, betikle.",
+      "kurallar": [
+        {"tur": "sonlu"},
+        {"tur": "farkli_seedler_farkli"},
+        {"tur": "min_kosum", "n": 3},
+        {"tur": "aralik", "varyant": "lastnorm-ep336eq", "alt": 0.3343, "ust": 0.59,
+         "kaynak": "alt: H08 kartı 'görülmemiş kadar iyi' (a) val_mse_h336 ≤ 0.3343 (vs baseline-ep336eq −10%) → İNCELE; üst: kartta yok → H03 beklentisinin kaynaklı mekanik makullük sınırı 1.5 × Repeat val h336 0.3933 (data/naive_val.csv)"},
+        {"tur": "ikincil_aralik", "metrik": "param_sayisi", "alt": 304720, "ust": 304720,
+         "kaynak": "H08 kartı ikincil: parametre ebeveynle eşit olmalı"},
+        {"tur": "ikincil_aralik", "metrik": "egitim_sure_sn", "alt": 60, "ust": 900,
+         "kaynak": "H08 kartı Bütçe tavanı: seed başına > 15 dk → durdur, teşhis"}
+      ]
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "kuyruk": "k3-baseline",
+  "toplam": 6,
+  "koşulan": 3,
+  "basarili": 3,
+  "basarisiz": 0,
+  "sure_sn": 456.4,
+  "bitis": "2026-10-14T01:58:12",
+  "kademeli": true,
+  "durduruldu_asama": 2,
+  "kapi_raporlari": [
+    {
+      "asama": 1,
+      "rc": 0,
+      "rapor": "C:\\Users\\karsl\\Downloads\\yzmakaleuretimskill\\yzmakaleuretimskill\\deney_workspace\\5-3-exchange-itransformer\\sonuclar\\beklenti-k3-baseline-asama1.md"
+    },
+    {
+      "asama": 2,
+      "rc": 2,
+      "rapor": "C:\\Users\\karsl\\Downloads\\yzmakaleuretimskill\\yzmakaleuretimskill\\deney_workspace\\5-3-exchange-itransformer\\sonuclar\\beklenti-k3-baseline-asama2.md"
+    }
+  ],
+  "sonuclar": [
+    {
+      "sira": 0,
+      "varyant": "baseline-duman",
+      "seed": "2023",
+      "asama": 1,
+      "rc": 0
+    },
+    {
+      "sira": 1,
+      "varyant": "baseline-onucus",
+      "seed": "2023",
+      "asama": 2,
+      "rc": 0
+    },
+    {
+      "sira": 2,
+      "varyant": "baseline-onucus",
+      "seed": "2024",
+      "asama": 2,
+      "rc": 0
+    }
+  ]
+}

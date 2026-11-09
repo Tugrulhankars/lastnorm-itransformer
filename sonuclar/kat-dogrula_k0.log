@@ -1,0 +1,13 @@
+[kat_dogrula] veri=exchange csv=C:\Users\karsl\Downloads\yzmakaleuretimskill\yzmakaleuretimskill\deney_workspace\5-3-exchange-itransformer\data\exchange_rate\exchange_rate.csv sha256=48b4d9d3d508f5104162e85b9a6042e3557fde11aa9f2944eba8c0d0efc89842 (sabit: 48b4d9d3d508f5104162e85b9a6042e3557fde11aa9f2944eba8c0d0efc89842) taban=Dataset_Custom
+
+=== kat K0: n=7588 T_resmi=5311 V=760 | train satir [0,3031) | val hedef satir [3031,3791) | val girdi satir [2935,3791) | resmi test bas=6071
+  h96: pencere train 2840 (bek 2840) val 665 (bek 665) test 0 | satir/pencere OK | scaler==numpy(train) OK | olcek OK | sizinti yok (train son hedef 3030 < 3031; val hedef [3031,3790]; test 0 pencere, okuma hatasi=True) OK | naif Repeat val mse 0.146787 mae 0.261828
+  h192: pencere train 2744 (bek 2744) val 569 (bek 569) test 0 | satir/pencere OK | scaler==numpy(train) OK | olcek OK | sizinti yok (train son hedef 3030 < 3031; val hedef [3031,3790]; test 0 pencere, okuma hatasi=True) OK | naif Repeat val mse 0.320508 mae 0.400093
+  h336: pencere train 2600 (bek 2600) val 425 (bek 425) test 0 | satir/pencere OK | scaler==numpy(train) OK | olcek OK | sizinti yok (train son hedef 3030 < 3031; val hedef [3031,3790]; test 0 pencere, okuma hatasi=True) OK | naif Repeat val mse 0.693512 mae 0.599725
+  h720: pencere train 2216 (bek 2216) val 41 (bek 41) test 0 | satir/pencere OK | scaler==numpy(train) OK | olcek OK | sizinti yok (train son hedef 3030 < 3031; val hedef [3031,3790]; test 0 pencere, okuma hatasi=True) OK | naif Repeat val mse 2.695795 mae 1.275962
+  scaler ort (kat train) = [0.69068 1.60834 0.73886 0.70037 0.14115 0.00859 0.61816 0.56324]
+  scaler std (kat train) = [0.08909 0.13007 0.07446 0.07967 0.03263 0.00112 0.05534 0.08237]
+
+naif Repeat val MSE (4 ufuk ort.): K0=0.964151
+yazildi: C:\Users\karsl\Downloads\yzmakaleuretimskill\yzmakaleuretimskill\deney_workspace\5-3-exchange-itransformer\sonuclar\naif-kat_k0.csv
+SONUC: GECTI

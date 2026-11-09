@@ -1,0 +1,13 @@
+{
+  "test_mse_avg": 0.2507791817188263,
+  "test_mae_avg": 0.31285369396209717,
+  "test_mse_h192": 0.2507791817188263,
+  "test_mae_h192": 0.31285369396209717,
+  "seed": 2025,
+  "ufuk_sayisi": 1,
+  "kisaltilmis": 0,
+  "not": "KILITLI: K4 ajanlarina verilmez; yalniz K3 replikasyon kapisi ve K5.",
+  "ufuk": 192,
+  "ufuk_basi": 1,
+  "veri": "ettm2"
+}

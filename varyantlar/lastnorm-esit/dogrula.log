@@ -1,0 +1,51 @@
+[dogrula H14] 2026-10-14 17:20:28 varyant=lastnorm-esit w=0.5 sabit | CPU (CUDA_VISIBLE_DEVICES=-1)
+  K3 s2023 h96: (i) w=1 C==P bit-bit, |dMSE|=0.0e+00 OK | (ii) w=0 C==R, |dMSE naif|=3.4e-07 OK | (iii) kimlik |d|=0.0e+00 OK
+  K3 s2023 h192: (i) w=1 C==P bit-bit, |dMSE|=0.0e+00 OK | (ii) w=0 C==R, |dMSE naif|=2.6e-08 OK | (iii) kimlik |d|=8.3e-17 OK
+  K3 s2023 h336: (i) w=1 C==P bit-bit, |dMSE|=0.0e+00 OK | (ii) w=0 C==R, |dMSE naif|=2.7e-07 OK | (iii) kimlik |d|=1.1e-16 OK
+  K3 s2023 h720: (i) w=1 C==P bit-bit, |dMSE|=0.0e+00 OK | (ii) w=0 C==R, |dMSE naif|=4.5e-07 OK | (iii) kimlik |d|=2.2e-16 OK
+  => K3 s2023 hedef=20261014-052508_lastnorm_s2023 (beklenen 20261014-052508_lastnorm_s2023: True) | (i) True (ii) True (iii) True (v-esit) True (v-izleme: 5 ayri runs/ preds+metrics dosyasi (9 acilis), hepsi hedef, K0 yok) True
+  K3 s2024 h96: (i) w=1 C==P bit-bit, |dMSE|=0.0e+00 OK | (ii) w=0 C==R, |dMSE naif|=3.4e-07 OK | (iii) kimlik |d|=1.4e-17 OK
+  K3 s2024 h192: (i) w=1 C==P bit-bit, |dMSE|=0.0e+00 OK | (ii) w=0 C==R, |dMSE naif|=2.6e-08 OK | (iii) kimlik |d|=2.8e-17 OK
+  K3 s2024 h336: (i) w=1 C==P bit-bit, |dMSE|=0.0e+00 OK | (ii) w=0 C==R, |dMSE naif|=2.7e-07 OK | (iii) kimlik |d|=1.1e-16 OK
+  K3 s2024 h720: (i) w=1 C==P bit-bit, |dMSE|=0.0e+00 OK | (ii) w=0 C==R, |dMSE naif|=4.5e-07 OK | (iii) kimlik |d|=2.2e-16 OK
+  => K3 s2024 hedef=20261014-053601_lastnorm_s2024 (beklenen 20261014-053601_lastnorm_s2024: True) | (i) True (ii) True (iii) True (v-esit) True (v-izleme: 5 ayri runs/ preds+metrics dosyasi (9 acilis), hepsi hedef, K0 yok) True
+  K3 s2025 h96: (i) w=1 C==P bit-bit, |dMSE|=0.0e+00 OK | (ii) w=0 C==R, |dMSE naif|=3.4e-07 OK | (iii) kimlik |d|=0.0e+00 OK
+  K3 s2025 h192: (i) w=1 C==P bit-bit, |dMSE|=0.0e+00 OK | (ii) w=0 C==R, |dMSE naif|=2.6e-08 OK | (iii) kimlik |d|=1.1e-16 OK
+  K3 s2025 h336: (i) w=1 C==P bit-bit, |dMSE|=0.0e+00 OK | (ii) w=0 C==R, |dMSE naif|=2.7e-07 OK | (iii) kimlik |d|=2.8e-16 OK
+  K3 s2025 h720: (i) w=1 C==P bit-bit, |dMSE|=0.0e+00 OK | (ii) w=0 C==R, |dMSE naif|=4.5e-07 OK | (iii) kimlik |d|=0.0e+00 OK
+  => K3 s2025 hedef=20261014-054213_lastnorm_s2025 (beklenen 20261014-054213_lastnorm_s2025: True) | (i) True (ii) True (iii) True (v-esit) True (v-izleme: 5 ayri runs/ preds+metrics dosyasi (9 acilis), hepsi hedef, K0 yok) True
+  K2 s2023 h96: (i) w=1 C==P bit-bit, |dMSE|=0.0e+00 OK | (ii) w=0 C==R, |dMSE naif|=5.0e-07 OK | (iii) kimlik |d|=5.6e-17 OK
+  K2 s2023 h192: (i) w=1 C==P bit-bit, |dMSE|=0.0e+00 OK | (ii) w=0 C==R, |dMSE naif|=1.8e-07 OK | (iii) kimlik |d|=0.0e+00 OK
+  K2 s2023 h336: (i) w=1 C==P bit-bit, |dMSE|=0.0e+00 OK | (ii) w=0 C==R, |dMSE naif|=4.1e-07 OK | (iii) kimlik |d|=4.4e-16 OK
+  K2 s2023 h720: (i) w=1 C==P bit-bit, |dMSE|=0.0e+00 OK | (ii) w=0 C==R, |dMSE naif|=2.5e-07 OK | (iii) kimlik |d|=2.2e-16 OK
+  => K2 s2023 hedef=20261014-163051_lastnorm-k2_s2023 (beklenen 20261014-163051_lastnorm-k2_s2023: True) | (i) True (ii) True (iii) True (v-esit) True (v-izleme: 5 ayri runs/ preds+metrics dosyasi (9 acilis), hepsi hedef, K0 yok) True
+  K2 s2024 h96: (i) w=1 C==P bit-bit, |dMSE|=0.0e+00 OK | (ii) w=0 C==R, |dMSE naif|=5.0e-07 OK | (iii) kimlik |d|=5.6e-17 OK
+  K2 s2024 h192: (i) w=1 C==P bit-bit, |dMSE|=0.0e+00 OK | (ii) w=0 C==R, |dMSE naif|=1.8e-07 OK | (iii) kimlik |d|=4.4e-16 OK
+  K2 s2024 h336: (i) w=1 C==P bit-bit, |dMSE|=0.0e+00 OK | (ii) w=0 C==R, |dMSE naif|=4.1e-07 OK | (iii) kimlik |d|=1.1e-15 OK
+  K2 s2024 h720: (i) w=1 C==P bit-bit, |dMSE|=0.0e+00 OK | (ii) w=0 C==R, |dMSE naif|=2.5e-07 OK | (iii) kimlik |d|=4.4e-16 OK
+  => K2 s2024 hedef=20261014-163203_lastnorm-k2_s2024 (beklenen 20261014-163203_lastnorm-k2_s2024: True) | (i) True (ii) True (iii) True (v-esit) True (v-izleme: 5 ayri runs/ preds+metrics dosyasi (9 acilis), hepsi hedef, K0 yok) True
+  K2 s2025 h96: (i) w=1 C==P bit-bit, |dMSE|=0.0e+00 OK | (ii) w=0 C==R, |dMSE naif|=5.0e-07 OK | (iii) kimlik |d|=2.8e-16 OK
+  K2 s2025 h192: (i) w=1 C==P bit-bit, |dMSE|=0.0e+00 OK | (ii) w=0 C==R, |dMSE naif|=1.8e-07 OK | (iii) kimlik |d|=1.0e-15 OK
+  K2 s2025 h336: (i) w=1 C==P bit-bit, |dMSE|=0.0e+00 OK | (ii) w=0 C==R, |dMSE naif|=4.1e-07 OK | (iii) kimlik |d|=4.4e-16 OK
+  K2 s2025 h720: (i) w=1 C==P bit-bit, |dMSE|=0.0e+00 OK | (ii) w=0 C==R, |dMSE naif|=2.5e-07 OK | (iii) kimlik |d|=0.0e+00 OK
+  => K2 s2025 hedef=20261014-163345_lastnorm-k2_s2025 (beklenen 20261014-163345_lastnorm-k2_s2025: True) | (i) True (ii) True (iii) True (v-esit) True (v-izleme: 5 ayri runs/ preds+metrics dosyasi (9 acilis), hepsi hedef, K0 yok) True
+  K1 s2023 h96: (i) w=1 C==P bit-bit, |dMSE|=0.0e+00 OK | (ii) w=0 C==R, |dMSE naif|=1.2e-07 OK | (iii) kimlik |d|=1.4e-17 OK
+  K1 s2023 h192: (i) w=1 C==P bit-bit, |dMSE|=0.0e+00 OK | (ii) w=0 C==R, |dMSE naif|=3.8e-08 OK | (iii) kimlik |d|=1.7e-16 OK
+  K1 s2023 h336: (i) w=1 C==P bit-bit, |dMSE|=0.0e+00 OK | (ii) w=0 C==R, |dMSE naif|=1.8e-07 OK | (iii) kimlik |d|=2.8e-17 OK
+  K1 s2023 h720: (i) w=1 C==P bit-bit, |dMSE|=0.0e+00 OK | (ii) w=0 C==R, |dMSE naif|=4.2e-07 OK | (iii) kimlik |d|=1.1e-16 OK
+  => K1 s2023 hedef=20261014-163510_lastnorm-k1_s2023 (beklenen 20261014-163510_lastnorm-k1_s2023: True) | (i) True (ii) True (iii) True (v-esit) True (v-izleme: 5 ayri runs/ preds+metrics dosyasi (9 acilis), hepsi hedef, K0 yok) True
+  K1 s2024 h96: (i) w=1 C==P bit-bit, |dMSE|=0.0e+00 OK | (ii) w=0 C==R, |dMSE naif|=1.2e-07 OK | (iii) kimlik |d|=1.4e-17 OK
+  K1 s2024 h192: (i) w=1 C==P bit-bit, |dMSE|=0.0e+00 OK | (ii) w=0 C==R, |dMSE naif|=3.8e-08 OK | (iii) kimlik |d|=8.3e-17 OK
+  K1 s2024 h336: (i) w=1 C==P bit-bit, |dMSE|=0.0e+00 OK | (ii) w=0 C==R, |dMSE naif|=1.8e-07 OK | (iii) kimlik |d|=1.7e-16 OK
+  K1 s2024 h720: (i) w=1 C==P bit-bit, |dMSE|=0.0e+00 OK | (ii) w=0 C==R, |dMSE naif|=4.2e-07 OK | (iii) kimlik |d|=1.1e-16 OK
+  => K1 s2024 hedef=20261014-163633_lastnorm-k1_s2024 (beklenen 20261014-163633_lastnorm-k1_s2024: True) | (i) True (ii) True (iii) True (v-esit) True (v-izleme: 5 ayri runs/ preds+metrics dosyasi (9 acilis), hepsi hedef, K0 yok) True
+  K1 s2025 h96: (i) w=1 C==P bit-bit, |dMSE|=0.0e+00 OK | (ii) w=0 C==R, |dMSE naif|=1.2e-07 OK | (iii) kimlik |d|=2.8e-17 OK
+  K1 s2025 h192: (i) w=1 C==P bit-bit, |dMSE|=0.0e+00 OK | (ii) w=0 C==R, |dMSE naif|=3.8e-08 OK | (iii) kimlik |d|=0.0e+00 OK
+  K1 s2025 h336: (i) w=1 C==P bit-bit, |dMSE|=0.0e+00 OK | (ii) w=0 C==R, |dMSE naif|=1.8e-07 OK | (iii) kimlik |d|=2.8e-17 OK
+  K1 s2025 h720: (i) w=1 C==P bit-bit, |dMSE|=0.0e+00 OK | (ii) w=0 C==R, |dMSE naif|=4.2e-07 OK | (iii) kimlik |d|=5.6e-17 OK
+  => K1 s2025 hedef=20261014-163802_lastnorm-k1_s2025 (beklenen 20261014-163802_lastnorm-k1_s2025: True) | (i) True (ii) True (iii) True (v-esit) True (v-izleme: 5 ayri runs/ preds+metrics dosyasi (9 acilis), hepsi hedef, K0 yok) True
+
+(iv) test_kilitli/, test_* dosyasi, test_ anahtarli metrics.json -> SystemExit: True
+(vi) birlesim.agirlik_kestir / tum_agirliklar yasaklanarak 9 hesap kosuldu -> cagri yok: True
+
+SONUC: GECTI

@@ -1,0 +1,21 @@
+== 20261014-040042_san_s2023
+h96 train: tahmin std==0 orani 1.000 | tahmin std ort 0.0000 | gercek dilim std ort 0.0389 | girdi dilim std ort 0.0387
+h96 val: tahmin std==0 orani 1.000 | tahmin std ort 0.0000 | gercek dilim std ort 0.0478 | girdi dilim std ort 0.0487
+h96: omurga |grad| toplami = 9.110e-04
+h336 train: tahmin std==0 orani 1.000 | tahmin std ort 0.0000 | gercek dilim std ort 0.0388 | girdi dilim std ort 0.0382
+h336 val: tahmin std==0 orani 1.000 | tahmin std ort 0.0000 | gercek dilim std ort 0.0500 | girdi dilim std ort 0.0442
+h336: omurga |grad| toplami = 1.078e-03
+== 20261014-040547_san_s2024
+h96 train: tahmin std==0 orani 1.000 | tahmin std ort 0.0000 | gercek dilim std ort 0.0389 | girdi dilim std ort 0.0387
+h96 val: tahmin std==0 orani 1.000 | tahmin std ort 0.0000 | gercek dilim std ort 0.0478 | girdi dilim std ort 0.0487
+h96: omurga |grad| toplami = 8.051e-04
+h336 train: tahmin std==0 orani 0.987 | tahmin std ort 0.0007 | gercek dilim std ort 0.0388 | girdi dilim std ort 0.0382
+h336 val: tahmin std==0 orani 0.998 | tahmin std ort 0.0002 | gercek dilim std ort 0.0500 | girdi dilim std ort 0.0442
+h336: omurga |grad| toplami = 3.029e-02
+== 20261014-041102_san_s2025
+h96 train: tahmin std==0 orani 1.000 | tahmin std ort 0.0000 | gercek dilim std ort 0.0389 | girdi dilim std ort 0.0387
+h96 val: tahmin std==0 orani 1.000 | tahmin std ort 0.0000 | gercek dilim std ort 0.0478 | girdi dilim std ort 0.0487
+h96: omurga |grad| toplami = 1.187e-03
+h336 train: tahmin std==0 orani 0.954 | tahmin std ort 0.0021 | gercek dilim std ort 0.0388 | girdi dilim std ort 0.0382
+h336 val: tahmin std==0 orani 0.962 | tahmin std ort 0.0025 | gercek dilim std ort 0.0500 | girdi dilim std ort 0.0442
+h336: omurga |grad| toplami = 1.233e+00

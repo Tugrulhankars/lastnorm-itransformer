@@ -1,0 +1,30 @@
+[H11 kapi] 2026-10-14 16:45:08 | torch 2.4.1+cu121 | cihaz CPU (cuda gorunur=False, CUDA_VISIBLE_DEVICES=-1) | seed 2023 | katlar [3, 1] | kollar ['relu', 'softplus']
+[H11 kapi] esikler: G1 softplus o_H<=0.05 (2 kat x 4/4); G2 softplus q_H in [0.5,2.0] (her kat >=3/4); G3 relu K3 o_H>=0.8 (>=3/4); olu: sigma_hat<0.001
+  K3 h96 relu     (ReLU): o_H=1.0000 q_H=0.0000 R_H=1.2084 | sigma_hat ort 0.0000 gercek ort 0.0480 | n_pencere 665 hucre 85120 (sigma_gercek=0: 0) | on-egitim en iyi ep 2 val 0.079733 | 13s
+  K3 h96 softplus (Softplus): o_H=0.8271 q_H=0.0000 R_H=1.2084 | sigma_hat ort 0.0010 gercek ort 0.0480 | n_pencere 665 hucre 85120 (sigma_gercek=0: 0) | on-egitim en iyi ep 2 val 0.079710 | 23s
+  K3 h192 relu     (ReLU): o_H=1.0000 q_H=0.0000 R_H=1.3514 | sigma_hat ort 0.0000 gercek ort 0.0490 | n_pencere 569 hucre 145664 (sigma_gercek=0: 0) | on-egitim en iyi ep 1 val 0.154642 | 31s
+  K3 h192 softplus (Softplus): o_H=0.8470 q_H=0.0000 R_H=1.3514 | sigma_hat ort 0.0010 gercek ort 0.0490 | n_pencere 569 hucre 145664 (sigma_gercek=0: 0) | on-egitim en iyi ep 1 val 0.154617 | 40s
+  K3 h336 relu     (ReLU): o_H=0.9999 q_H=0.0000 R_H=1.2504 | sigma_hat ort 0.0000 gercek ort 0.0502 | n_pencere 425 hucre 190400 (sigma_gercek=0: 0) | on-egitim en iyi ep 1 val 0.249052 | 48s
+  K3 h336 softplus (Softplus): o_H=0.8284 q_H=0.0000 R_H=1.2504 | sigma_hat ort 0.0011 gercek ort 0.0502 | n_pencere 425 hucre 190400 (sigma_gercek=0: 0) | on-egitim en iyi ep 1 val 0.249028 | 56s
+  K3 h720 relu     (ReLU): o_H=0.9876 q_H=0.0000 R_H=1.1440 | sigma_hat ort 0.0005 gercek ort 0.0473 | n_pencere 41 hucre 39360 (sigma_gercek=0: 0) | on-egitim en iyi ep 1 val 0.691802 | 66s
+  K3 h720 softplus (Softplus): o_H=0.8750 q_H=0.0000 R_H=1.1440 | sigma_hat ort 0.0012 gercek ort 0.0473 | n_pencere 41 hucre 39360 (sigma_gercek=0: 0) | on-egitim en iyi ep 1 val 0.691806 | 78s
+  K1 h96 relu     (ReLU): o_H=0.9978 q_H=0.0000 R_H=1.0582 | sigma_hat ort 0.0001 gercek ort 0.0394 | n_pencere 665 hucre 85120 (sigma_gercek=0: 541) | on-egitim en iyi ep 2 val 0.041608 | 83s
+  K1 h96 softplus (Softplus): o_H=0.5557 q_H=0.0147 R_H=1.0582 | sigma_hat ort 0.0084 gercek ort 0.0394 | n_pencere 665 hucre 85120 (sigma_gercek=0: 541) | on-egitim en iyi ep 2 val 0.041534 | 90s
+  K1 h192 relu     (ReLU): o_H=0.9292 q_H=0.0000 R_H=0.9730 | sigma_hat ort 0.0036 gercek ort 0.0384 | n_pencere 569 hucre 145664 (sigma_gercek=0: 750) | on-egitim en iyi ep 1 val 0.066929 | 96s
+  K1 h192 softplus (Softplus): o_H=0.5531 q_H=0.0150 R_H=0.9730 | sigma_hat ort 0.0120 gercek ort 0.0384 | n_pencere 569 hucre 145664 (sigma_gercek=0: 750) | on-egitim en iyi ep 1 val 0.067009 | 101s
+  K1 h336 relu     (ReLU): o_H=0.9521 q_H=0.0000 R_H=1.1183 | sigma_hat ort 0.0016 gercek ort 0.0386 | n_pencere 425 hucre 190400 (sigma_gercek=0: 954) | on-egitim en iyi ep 1 val 0.130735 | 108s
+  K1 h336 softplus (Softplus): o_H=0.5506 q_H=0.0142 R_H=1.1183 | sigma_hat ort 0.0131 gercek ort 0.0386 | n_pencere 425 hucre 190400 (sigma_gercek=0: 954) | on-egitim en iyi ep 1 val 0.130854 | 114s
+  K1 h720 relu     (ReLU): o_H=0.9782 q_H=0.0000 R_H=1.0163 | sigma_hat ort 0.0005 gercek ort 0.0405 | n_pencere 41 hucre 39360 (sigma_gercek=0: 371) | on-egitim en iyi ep 1 val 0.237547 | 121s
+  K1 h720 softplus (Softplus): o_H=0.6758 q_H=0.0037 R_H=1.0163 | sigma_hat ort 0.0136 gercek ort 0.0405 | n_pencere 41 hucre 39360 (sigma_gercek=0: 371) | on-egitim en iyi ep 1 val 0.237948 | 128s
+
+OZET (kat | kol | o_H h96/h192/h336/h720 | q_H | R_H):
+K3 | relu | 1.0000/1.0000/0.9999/0.9876 | 0.0000/0.0000/0.0000/0.0000 | 1.2084/1.3514/1.2504/1.1440
+K3 | softplus | 0.8271/0.8470/0.8284/0.8750 | 0.0000/0.0000/0.0000/0.0000 | 1.2084/1.3514/1.2504/1.1440
+K1 | relu | 0.9978/0.9292/0.9521/0.9782 | 0.0000/0.0000/0.0000/0.0000 | 1.0582/0.9730/1.1183/1.0163
+K1 | softplus | 0.5557/0.5531/0.5506/0.6758 | 0.0147/0.0150/0.0142/0.0037 | 1.0582/0.9730/1.1183/1.0163
+
+G1 (softplus o_H<=0.05, 4/4 her katta): K3 0/4, K1 0/4 -> BASARISIZ
+G2 (softplus q_H in [0.5,2.0], >=3/4 her katta): K3 0/4, K1 0/4 -> BASARISIZ
+G3 (relu K3 o_H>=0.8, >=3/4): 4/4 -> GECER (H01 teshisi yeniden uretildi)
+[H11 kapi] sure 128.1s | csv: C:\Users\karsl\Downloads\yzmakaleuretimskill\yzmakaleuretimskill\deney_workspace\5-3-exchange-itransformer\sonuclar\h11-kapi.csv
+KAPI=BASARISIZ

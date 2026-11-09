@@ -1,0 +1,187 @@
+# 2026-10-15T06:53:50 $ C:/Users/karsl/Downloads/yzmakaleuretimskill/yzmakaleuretimskill/deney_workspace/5-3-exchange-itransformer/env/.venv/Scripts/python.exe C:/Users/karsl/Downloads/yzmakaleuretimskill/yzmakaleuretimskill/deney_workspace/5-3-exchange-itransformer/scripts/rakip_kos.py --seed 2029 --out 'C:\Users\karsl\Downloads\yzmakaleuretimskill\yzmakaleuretimskill\deney_workspace\5-3-exchange-itransformer\runs\20261015-065347_baseline-ekseed_s2029/metrics.json' --num-workers 0
+[rakip_kos] rakip commit c2426e68ca13f74aaec08045c5c724d8ad328124 | run.py fix_seed=2023 -> sarmalayici seed=2029 | cihaz cuda:0 / NVIDIA GeForce RTX 3060 Laptop GPU | torch 2.4.1+cu121 | ufuklar [96, 192, 336, 720] | epoch_ust=None | num_workers=resmi
+Args in experiment:
+Namespace(is_training=1, model_id='Exchange_96_96', model='iTransformer', data='custom', root_path='C:\\Users\\karsl\\Downloads\\yzmakaleuretimskill\\yzmakaleuretimskill\\deney_workspace\\5-3-exchange-itransformer\\data\\exchange_rate\\', data_path='exchange_rate.csv', features='M', target='OT', freq='h', checkpoints='C:\\Users\\karsl\\Downloads\\yzmakaleuretimskill\\yzmakaleuretimskill\\deney_workspace\\5-3-exchange-itransformer\\runs\\20261015-065347_baseline-ekseed_s2029\\ckpt\\', seq_len=96, label_len=48, pred_len=96, enc_in=8, dec_in=8, c_out=8, d_model=128, n_heads=8, e_layers=2, d_layers=1, d_ff=128, moving_avg=25, factor=1, distil=True, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, do_predict=False, num_workers=0, itr=1, train_epochs=10, batch_size=32, patience=3, learning_rate=0.0001, des='Exp', loss='MSE', lradj='type1', use_amp=False, use_gpu=True, gpu=0, use_multi_gpu=False, devices='0,1,2,3', exp_name='MTSF', channel_independence=False, inverse=False, class_strategy='projection', target_root_path='./data/electricity/', target_data_path='electricity.csv', efficient_training=False, use_norm=True, partial_start_index=0)
+Use GPU: cuda:0
+>>>>>>>start training : Exchange_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 5120
+val 665
+test 1422
+	iters: 100, epoch: 1 | loss: 0.1186993
+	speed: 0.0298s/iter; left time: 44.7381s
+Epoch: 1 cost time: 3.9349112510681152
+Epoch: 1, Steps: 160 | Train Loss: 0.1607202 Vali Loss: 0.1360362 Test Loss: <kilitli>
+Validation loss decreased (inf --> 0.136036).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 2 | loss: 0.1741201
+	speed: 0.1143s/iter; left time: 153.3228s
+Epoch: 2 cost time: 3.2032008171081543
+Epoch: 2, Steps: 160 | Train Loss: 0.1314347 Vali Loss: 0.1230691 Test Loss: <kilitli>
+Validation loss decreased (0.136036 --> 0.123069).  Saving model ...
+Updating learning rate to 5e-05
+	iters: 100, epoch: 3 | loss: 0.0807147
+	speed: 0.1152s/iter; left time: 136.0768s
+Epoch: 3 cost time: 3.3144078254699707
+Epoch: 3, Steps: 160 | Train Loss: 0.1241554 Vali Loss: 0.1243201 Test Loss: <kilitli>
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 2.5e-05
+	iters: 100, epoch: 4 | loss: 0.1323824
+	speed: 0.1161s/iter; left time: 118.5494s
+Epoch: 4 cost time: 3.278064489364624
+Epoch: 4, Steps: 160 | Train Loss: 0.1216919 Vali Loss: 0.1246602 Test Loss: <kilitli>
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 1.25e-05
+	iters: 100, epoch: 5 | loss: 0.1800421
+	speed: 0.1153s/iter; left time: 99.2520s
+Epoch: 5 cost time: 3.6628363132476807
+Epoch: 5, Steps: 160 | Train Loss: 0.1207484 Vali Loss: 0.1235810 Test Loss: <kilitli>
+EarlyStopping counter: 3 out of 3
+Early stopping
+>>>>>>>testing : Exchange_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 1422
+test shape: (1422, 1, 96, 8) (1422, 1, 96, 8)
+test shape: (1422, 96, 8) (1422, 96, 8)
+<test metrigi kilitli: test_kilitli/ altinda>
+[rakip_kos] h96: val_mse=0.123498 val_mae=0.242025 epoch=5/10 sure=94.2s vram_tepe=27MB (test hesaplandi, kilitli)
+Args in experiment:
+Namespace(is_training=1, model_id='Exchange_96_192', model='iTransformer', data='custom', root_path='C:\\Users\\karsl\\Downloads\\yzmakaleuretimskill\\yzmakaleuretimskill\\deney_workspace\\5-3-exchange-itransformer\\data\\exchange_rate\\', data_path='exchange_rate.csv', features='M', target='OT', freq='h', checkpoints='C:\\Users\\karsl\\Downloads\\yzmakaleuretimskill\\yzmakaleuretimskill\\deney_workspace\\5-3-exchange-itransformer\\runs\\20261015-065347_baseline-ekseed_s2029\\ckpt\\', seq_len=96, label_len=48, pred_len=192, enc_in=8, dec_in=8, c_out=8, d_model=128, n_heads=8, e_layers=2, d_layers=1, d_ff=128, moving_avg=25, factor=1, distil=True, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, do_predict=False, num_workers=0, itr=1, train_epochs=10, batch_size=32, patience=3, learning_rate=0.0001, des='Exp', loss='MSE', lradj='type1', use_amp=False, use_gpu=True, gpu=0, use_multi_gpu=False, devices='0,1,2,3', exp_name='MTSF', channel_independence=False, inverse=False, class_strategy='projection', target_root_path='./data/electricity/', target_data_path='electricity.csv', efficient_training=False, use_norm=True, partial_start_index=0)
+Use GPU: cuda:0
+>>>>>>>start training : Exchange_96_192_iTransformer_custom_M_ft96_sl48_ll192_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 5024
+val 569
+test 1326
+	iters: 100, epoch: 1 | loss: 0.2841841
+	speed: 0.0238s/iter; left time: 34.9543s
+Epoch: 1 cost time: 3.7424545288085938
+Epoch: 1, Steps: 157 | Train Loss: 0.2896873 Vali Loss: 0.2285615 Test Loss: <kilitli>
+Validation loss decreased (inf --> 0.228562).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 2 | loss: 0.2442828
+	speed: 0.1399s/iter; left time: 183.7849s
+Epoch: 2 cost time: 3.710602045059204
+Epoch: 2, Steps: 157 | Train Loss: 0.2576806 Vali Loss: 0.2131062 Test Loss: <kilitli>
+Validation loss decreased (0.228562 --> 0.213106).  Saving model ...
+Updating learning rate to 5e-05
+	iters: 100, epoch: 3 | loss: 0.3099164
+	speed: 0.1417s/iter; left time: 163.9136s
+Epoch: 3 cost time: 3.588827610015869
+Epoch: 3, Steps: 157 | Train Loss: 0.2480804 Vali Loss: 0.2103146 Test Loss: <kilitli>
+Validation loss decreased (0.213106 --> 0.210315).  Saving model ...
+Updating learning rate to 2.5e-05
+	iters: 100, epoch: 4 | loss: 0.2194149
+	speed: 0.1325s/iter; left time: 132.5197s
+Epoch: 4 cost time: 3.5910940170288086
+Epoch: 4, Steps: 157 | Train Loss: 0.2444177 Vali Loss: 0.2115416 Test Loss: <kilitli>
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 1.25e-05
+	iters: 100, epoch: 5 | loss: 0.3032461
+	speed: 0.1373s/iter; left time: 115.7736s
+Epoch: 5 cost time: 3.7353949546813965
+Epoch: 5, Steps: 157 | Train Loss: 0.2428502 Vali Loss: 0.2106963 Test Loss: <kilitli>
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 6.25e-06
+	iters: 100, epoch: 6 | loss: 0.1812610
+	speed: 0.1407s/iter; left time: 96.5124s
+Epoch: 6 cost time: 3.67146897315979
+Epoch: 6, Steps: 157 | Train Loss: 0.2420512 Vali Loss: 0.2106096 Test Loss: <kilitli>
+EarlyStopping counter: 3 out of 3
+Early stopping
+>>>>>>>testing : Exchange_96_192_iTransformer_custom_M_ft96_sl48_ll192_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 1326
+test shape: (1326, 1, 192, 8) (1326, 1, 192, 8)
+test shape: (1326, 192, 8) (1326, 192, 8)
+<test metrigi kilitli: test_kilitli/ altinda>
+[rakip_kos] h192: val_mse=0.209726 val_mae=0.327509 epoch=6/10 sure=116.7s vram_tepe=28MB (test hesaplandi, kilitli)
+Args in experiment:
+Namespace(is_training=1, model_id='Exchange_96_336', model='iTransformer', data='custom', root_path='C:\\Users\\karsl\\Downloads\\yzmakaleuretimskill\\yzmakaleuretimskill\\deney_workspace\\5-3-exchange-itransformer\\data\\exchange_rate\\', data_path='exchange_rate.csv', features='M', target='OT', freq='h', checkpoints='C:\\Users\\karsl\\Downloads\\yzmakaleuretimskill\\yzmakaleuretimskill\\deney_workspace\\5-3-exchange-itransformer\\runs\\20261015-065347_baseline-ekseed_s2029\\ckpt\\', seq_len=96, label_len=48, pred_len=336, enc_in=8, dec_in=8, c_out=8, d_model=128, n_heads=8, e_layers=2, d_layers=1, d_ff=128, moving_avg=25, factor=1, distil=True, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, do_predict=False, num_workers=0, itr=1, train_epochs=1, batch_size=32, patience=3, learning_rate=0.0001, des='Exp', loss='MSE', lradj='type1', use_amp=False, use_gpu=True, gpu=0, use_multi_gpu=False, devices='0,1,2,3', exp_name='MTSF', channel_independence=False, inverse=False, class_strategy='projection', target_root_path='./data/electricity/', target_data_path='electricity.csv', efficient_training=False, use_norm=True, partial_start_index=0)
+Use GPU: cuda:0
+>>>>>>>start training : Exchange_96_336_iTransformer_custom_M_ft96_sl48_ll336_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 4880
+val 425
+test 1182
+	iters: 100, epoch: 1 | loss: 0.4266525
+	speed: 0.0260s/iter; left time: 1.3762s
+Epoch: 1 cost time: 3.855478286743164
+Epoch: 1, Steps: 152 | Train Loss: 0.4678705 Vali Loss: 0.4046461 Test Loss: <kilitli>
+Validation loss decreased (inf --> 0.404646).  Saving model ...
+Updating learning rate to 0.0001
+>>>>>>>testing : Exchange_96_336_iTransformer_custom_M_ft96_sl48_ll336_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 1182
+test shape: (1182, 1, 336, 8) (1182, 1, 336, 8)
+test shape: (1182, 336, 8) (1182, 336, 8)
+<test metrigi kilitli: test_kilitli/ altinda>
+[rakip_kos] h336: val_mse=0.403604 val_mae=0.462238 epoch=1/1 sure=42.0s vram_tepe=29MB (test hesaplandi, kilitli)
+Args in experiment:
+Namespace(is_training=1, model_id='Exchange_96_720', model='iTransformer', data='custom', root_path='C:\\Users\\karsl\\Downloads\\yzmakaleuretimskill\\yzmakaleuretimskill\\deney_workspace\\5-3-exchange-itransformer\\data\\exchange_rate\\', data_path='exchange_rate.csv', features='M', target='OT', freq='h', checkpoints='C:\\Users\\karsl\\Downloads\\yzmakaleuretimskill\\yzmakaleuretimskill\\deney_workspace\\5-3-exchange-itransformer\\runs\\20261015-065347_baseline-ekseed_s2029\\ckpt\\', seq_len=96, label_len=48, pred_len=720, enc_in=8, dec_in=8, c_out=8, d_model=128, n_heads=8, e_layers=2, d_layers=1, d_ff=128, moving_avg=25, factor=1, distil=True, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, do_predict=False, num_workers=0, itr=1, train_epochs=10, batch_size=32, patience=3, learning_rate=0.0001, des='Exp', loss='MSE', lradj='type1', use_amp=False, use_gpu=True, gpu=0, use_multi_gpu=False, devices='0,1,2,3', exp_name='MTSF', channel_independence=False, inverse=False, class_strategy='projection', target_root_path='./data/electricity/', target_data_path='electricity.csv', efficient_training=False, use_norm=True, partial_start_index=0)
+Use GPU: cuda:0
+>>>>>>>start training : Exchange_96_720_iTransformer_custom_M_ft96_sl48_ll720_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 4496
+val 41
+test 798
+	iters: 100, epoch: 1 | loss: 0.7774049
+	speed: 0.0272s/iter; left time: 35.3951s
+Epoch: 1 cost time: 3.814899206161499
+Epoch: 1, Steps: 140 | Train Loss: 0.8588981 Vali Loss: 1.1939948 Test Loss: <kilitli>
+Validation loss decreased (inf --> 1.193995).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 2 | loss: 0.7791362
+	speed: 0.1000s/iter; left time: 116.1239s
+Epoch: 2 cost time: 3.651291847229004
+Epoch: 2, Steps: 140 | Train Loss: 0.8312163 Vali Loss: 1.1780165 Test Loss: <kilitli>
+Validation loss decreased (1.193995 --> 1.178017).  Saving model ...
+Updating learning rate to 5e-05
+	iters: 100, epoch: 3 | loss: 0.8125430
+	speed: 0.0983s/iter; left time: 100.3488s
+Epoch: 3 cost time: 3.5419888496398926
+Epoch: 3, Steps: 140 | Train Loss: 0.8241843 Vali Loss: 1.0553243 Test Loss: <kilitli>
+Validation loss decreased (1.178017 --> 1.055324).  Saving model ...
+Updating learning rate to 2.5e-05
+	iters: 100, epoch: 4 | loss: 0.7998896
+	speed: 0.0995s/iter; left time: 87.6662s
+Epoch: 4 cost time: 3.632448434829712
+Epoch: 4, Steps: 140 | Train Loss: 0.8181376 Vali Loss: 1.0238584 Test Loss: <kilitli>
+Validation loss decreased (1.055324 --> 1.023858).  Saving model ...
+Updating learning rate to 1.25e-05
+	iters: 100, epoch: 5 | loss: 0.7627031
+	speed: 0.0982s/iter; left time: 72.7326s
+Epoch: 5 cost time: 3.553720235824585
+Epoch: 5, Steps: 140 | Train Loss: 0.8162292 Vali Loss: 1.0182184 Test Loss: <kilitli>
+Validation loss decreased (1.023858 --> 1.018218).  Saving model ...
+Updating learning rate to 6.25e-06
+	iters: 100, epoch: 6 | loss: 0.8507915
+	speed: 0.0988s/iter; left time: 59.3930s
+Epoch: 6 cost time: 3.5908963680267334
+Epoch: 6, Steps: 140 | Train Loss: 0.8137088 Vali Loss: 1.0066377 Test Loss: <kilitli>
+Validation loss decreased (1.018218 --> 1.006638).  Saving model ...
+Updating learning rate to 3.125e-06
+	iters: 100, epoch: 7 | loss: 0.7987827
+	speed: 0.1011s/iter; left time: 46.6269s
+Epoch: 7 cost time: 3.6169819831848145
+Epoch: 7, Steps: 140 | Train Loss: 0.8132049 Vali Loss: 0.9680724 Test Loss: <kilitli>
+Validation loss decreased (1.006638 --> 0.968072).  Saving model ...
+Updating learning rate to 1.5625e-06
+	iters: 100, epoch: 8 | loss: 0.7154388
+	speed: 0.0986s/iter; left time: 31.6389s
+Epoch: 8 cost time: 3.476355791091919
+Epoch: 8, Steps: 140 | Train Loss: 0.8124980 Vali Loss: 1.0138563 Test Loss: <kilitli>
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 7.8125e-07
+	iters: 100, epoch: 9 | loss: 0.8260933
+	speed: 0.1002s/iter; left time: 18.1312s
+Epoch: 9 cost time: 3.401888370513916
+Epoch: 9, Steps: 140 | Train Loss: 0.8126289 Vali Loss: 1.0196831 Test Loss: <kilitli>
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 3.90625e-07
+	iters: 100, epoch: 10 | loss: 0.8675792
+	speed: 0.1010s/iter; left time: 4.1430s
+Epoch: 10 cost time: 3.822855234146118
+Epoch: 10, Steps: 140 | Train Loss: 0.8117354 Vali Loss: 0.9805133 Test Loss: <kilitli>
+EarlyStopping counter: 3 out of 3
+Early stopping
+>>>>>>>testing : Exchange_96_720_iTransformer_custom_M_ft96_sl48_ll720_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 798
+test shape: (798, 1, 720, 8) (798, 1, 720, 8)
+test shape: (798, 720, 8) (798, 720, 8)
+<test metrigi kilitli: test_kilitli/ altinda>
+[rakip_kos] h720: val_mse=0.987421 val_mae=0.790784 epoch=10/10 sure=118.9s vram_tepe=31MB (test hesaplandi, kilitli)
+[rakip_kos] bitti: val_mse_avg=0.431062 sure=378.3s -> C:\Users\karsl\Downloads\yzmakaleuretimskill\yzmakaleuretimskill\deney_workspace\5-3-exchange-itransformer\runs\20261015-065347_baseline-ekseed_s2029\metrics.json

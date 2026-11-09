@@ -1,0 +1,119 @@
+# hata_analizi.py  etiket=xmark-yok  runs=['20261014-061948_xmark-yok_s2023', '20261014-062637_xmark-yok_s2024', '20261014-063215_xmark-yok_s2025']
+bloklar (val kendi satirlari, hedef-satiri bazli): [(5311, 5501), (5501, 5691), (5691, 5881), (5881, 6071)]
+
+===== H=96  N_pencere=665  bagimsiz-hedef-parcasi~7.92
+[1] MSE seed=[0.1241 0.1234 0.1242] ort=0.1239 sd=0.0004 min=0.1234 max=0.1242 | Repeat=0.1282  D=-0.0043 (-3.4%) | seed-bazli D%=[-3.2 -3.7 -3.1]
+    MAE ort=0.2434 Repeat=0.2487 (-2.2%) | modelin Repeat'i yendigi pencere orani=0.570
+[6] seed sd=0.0004 (CV 0.33%)  MDE(3v3, a=.05, guc=.8)=0.0012 (1.0% goreli)
+[2] degisken: 0: 0.166 (pay 17%, Rep 0.170, M/R 0.98, OOR 0.85) | 1: 0.048 (pay 5%, Rep 0.048, M/R 0.99, OOR 0.00) | 2: 0.057 (pay 6%, Rep 0.056, M/R 1.01, OOR 0.00) | 3: 0.346 (pay 35%, Rep 0.364, M/R 0.95, OOR 0.88) | 4: 0.003 (pay 0%, Rep 0.002, M/R 1.07, OOR 0.00) | 5: 0.110 (pay 11%, Rep 0.105, M/R 1.05, OOR 0.54) | 6: 0.127 (pay 13%, Rep 0.132, M/R 0.96, OOR 0.95) | OT: 0.135 (pay 14%, Rep 0.147, M/R 0.92, OOR 0.24)
+    Spearman(OOR, MSE)=+0.78 (p=0.022, n=8)  Spearman(OOR, M/R)=-0.56
+    degisken-ici OOR vs ic hucre MSE (seed-ort tahmin): 0: OOR 0.148 vs ic 0.256 (Rep 0.152 vs 0.273); 3: OOR 0.370 vs ic 0.146 (Rep 0.393 vs 0.155); 5: OOR 0.096 vs ic 0.124 (Rep 0.092 vs 0.120); 6: OOR 0.130 vs ic 0.041 (Rep 0.137 vs 0.049); OT: OOR 0.168 vs ic 0.122 (Rep 0.185 vs 0.135)
+[3] blok MSE (seed-ort): [0.0971 0.0679 0.217  0.1013]  Repeat: [0.1101 0.0781 0.2141 0.0985]  M/R: [0.88 0.87 1.01 1.03]
+    worst_block_mse seed=[0.2131 0.2196 0.2183] ort=0.2170 (en kotu blok idx seed: [2 2 2]) | worst/avg ort=1.752 | Repeat worst=0.2141 (B3) worst/avg=1.670
+    blok hucre sayisi: [109440, 145920, 145920, 109440]
+    Spearman(s_io, pencere MSE): model ort=+0.271 (seed sd 0.085) Repeat=+0.370  | (s_io, M/R oran)=-0.105
+    Spearman(s_in_mu, pencere MSE): model ort=+0.357 (seed sd 0.059) Repeat=+0.213  | (s_in_mu, M/R oran)=+0.299
+    Spearman(s_oor_in, pencere MSE): model ort=+0.286 (seed sd 0.066) Repeat=+0.130  | (s_oor_in, M/R oran)=+0.302
+    Spearman(s_sd_lb, pencere MSE): model ort=+0.045 (seed sd 0.032) Repeat=+0.068  | (s_sd_lb, M/R oran)=-0.004
+    s_io medyan: gercek=1.67  tahmin(|mu(P)-mu_lb|/sd_lb)=1.15  (oran 0.65)  girdi sd_lb medyan (z)=0.163
+    s_io ust %10 (67 pencere): model MSE=0.1668 (x1.35 ort) Repeat=0.1618 (x1.26) M/R=1.03
+    Spearman(pencere sirasi, M/R)=+0.302  Spearman(pencere sirasi, s_in_mu)=+0.839  Spearman(pencere sirasi, s_sd_lb)=-0.014
+    zaman seyri (pencere sirasi 8 dilim) model/Repeat MSE: 0.125/0.150, 0.051/0.050, 0.059/0.074, 0.104/0.115, 0.196/0.201, 0.267/0.247, 0.097/0.101, 0.091/0.086
+[4] adim-dilimi M/R: 1.49 1.11 1.05 1.01 0.98 0.96 0.94 0.93 0.92 0.92
+    adim1: model 0.0123 Repeat 0.0033 | adimH: model 0.2221 Repeat 0.2379 | ||P-R||^2 adimH 0.0140 vs ||Y-R||^2 0.2379
+    adim H isaret uyumu(P-son, Y-son)=0.593  egim(Y-son ~ P-son)=+0.899  alpha*(tum adimlar)=+0.672 (seed [0.678 0.672 0.666])
+[5] bias (P-Y) degisken: 0:-0.069 1:+0.012 2:+0.009 3:-0.036 4:-0.029 5:-0.071 6:-0.076 OT:-0.039 | ort -0.037  Repeat bias ort -0.063
+    ufuk-ici trend (adimH-adim1) gercek/tahmin: 0:+0.201/+0.016 1:+0.039/+0.012 2:+0.059/+0.010 3:+0.127/+0.009 4:+0.056/-0.003 5:+0.154/-0.000 6:+0.181/+0.003 OT:+0.143/+0.006
+    seviye capasi beta (P1-mu_lb ~ beta*(son-mu_lb))=0.916  |P1-son| ort=0.0675  |Y1-son| ort=0.0361
+    corr(P1-son, mu_lb-son)=+0.316  isaretli ort(P1-son)=+0.0185
+    TANISAL: yeniden-capa MSE=0.1270 (+2.5% vs model, -0.9% vs Rep)  0.5-karisim MSE=0.1229 (-0.8% vs model)
+    varyans orani pencere-ici std(P)/std(Y)=0.203  degisken: 0:0.21 1:0.24 2:0.22 3:0.18 4:0.17 5:0.23 6:0.17 OT:0.20 | std(P_H-son)/std(Y_H-son)=0.244
+
+===== H=192  N_pencere=569  bagimsiz-hedef-parcasi~3.96
+[1] MSE seed=[0.2119 0.21   0.2113] ort=0.2111 sd=0.0010 min=0.2100 max=0.2119 | Repeat=0.2263  D=-0.0152 (-6.7%) | seed-bazli D%=[-6.4 -7.2 -6.6]
+    MAE ort=0.3258 Repeat=0.3404 (-4.3%) | modelin Repeat'i yendigi pencere orani=0.613
+[6] seed sd=0.0010 (CV 0.45%)  MDE(3v3, a=.05, guc=.8)=0.0029 (1.4% goreli)
+[2] degisken: 0: 0.255 (pay 15%, Rep 0.282, M/R 0.91, OOR 0.89) | 1: 0.066 (pay 4%, Rep 0.069, M/R 0.96, OOR 0.00) | 2: 0.094 (pay 6%, Rep 0.094, M/R 0.99, OOR 0.00) | 3: 0.722 (pay 43%, Rep 0.740, M/R 0.98, OOR 0.92) | 4: 0.007 (pay 0%, Rep 0.008, M/R 0.95, OOR 0.00) | 5: 0.163 (pay 10%, Rep 0.182, M/R 0.90, OOR 0.55) | 6: 0.215 (pay 13%, Rep 0.240, M/R 0.90, OOR 0.97) | OT: 0.166 (pay 10%, Rep 0.197, M/R 0.84, OOR 0.27)
+    Spearman(OOR, MSE)=+0.88 (p=0.004, n=8)  Spearman(OOR, M/R)=-0.39
+    degisken-ici OOR vs ic hucre MSE (seed-ort tahmin): 0: OOR 0.242 vs ic 0.346 (Rep 0.273 vs 0.353); 3: OOR 0.761 vs ic 0.254 (Rep 0.788 vs 0.209); 5: OOR 0.151 vs ic 0.175 (Rep 0.182 vs 0.181); 6: OOR 0.220 vs ic 0.031 (Rep 0.246 vs 0.049); OT: OOR 0.239 vs ic 0.137 (Rep 0.306 vs 0.157)
+[3] blok MSE (seed-ort): [0.1581 0.1453 0.3144 0.1887]  Repeat: [0.1945 0.1878 0.3159 0.1555]  M/R: [0.81 0.77 0.99 1.21]
+    worst_block_mse seed=[0.3145 0.3132 0.3154] ort=0.3144 (en kotu blok idx seed: [2 2 2]) | worst/avg ort=1.489 | Repeat worst=0.3159 (B3) worst/avg=1.396
+    blok hucre sayisi: [145160, 291832, 291832, 145160]
+    Spearman(s_io, pencere MSE): model ort=+0.411 (seed sd 0.003) Repeat=+0.585  | (s_io, M/R oran)=-0.500
+    Spearman(s_in_mu, pencere MSE): model ort=+0.154 (seed sd 0.010) Repeat=-0.123  | (s_in_mu, M/R oran)=+0.613
+    Spearman(s_oor_in, pencere MSE): model ort=+0.099 (seed sd 0.010) Repeat=-0.179  | (s_oor_in, M/R oran)=+0.637
+    Spearman(s_sd_lb, pencere MSE): model ort=-0.456 (seed sd 0.004) Repeat=-0.426  | (s_sd_lb, M/R oran)=+0.127
+    s_io medyan: gercek=2.19  tahmin(|mu(P)-mu_lb|/sd_lb)=1.27  (oran 0.57)  girdi sd_lb medyan (z)=0.165
+    s_io ust %10 (57 pencere): model MSE=0.2554 (x1.21 ort) Repeat=0.3011 (x1.33) M/R=0.85
+    Spearman(pencere sirasi, M/R)=+0.676  Spearman(pencere sirasi, s_in_mu)=+0.928  Spearman(pencere sirasi, s_sd_lb)=+0.097
+    zaman seyri (pencere sirasi 8 dilim) model/Repeat MSE: 0.228/0.301, 0.121/0.140, 0.147/0.194, 0.266/0.310, 0.215/0.215, 0.333/0.348, 0.249/0.206, 0.129/0.095
+[4] adim-dilimi M/R: 1.29 1.01 0.96 0.92 0.91 0.92 0.94 0.93 0.91 0.90
+    adim1: model 0.0178 Repeat 0.0036 | adimH: model 0.3340 Repeat 0.3747 | ||P-R||^2 adimH 0.0237 vs ||Y-R||^2 0.3747
+    adim H isaret uyumu(P-son, Y-son)=0.653  egim(Y-son ~ P-son)=+0.982  alpha*(tum adimlar)=+0.858 (seed [0.835 0.879 0.859])
+[5] bias (P-Y) degisken: 0:-0.106 1:+0.033 2:+0.015 3:-0.072 4:-0.063 5:-0.070 6:-0.105 OT:-0.060 | ort -0.053  Repeat bias ort -0.120
+    ufuk-ici trend (adimH-adim1) gercek/tahmin: 0:+0.302/+0.048 1:+0.045/+0.032 2:+0.086/+0.027 3:+0.238/+0.054 4:+0.118/+0.001 5:+0.227/+0.014 6:+0.293/+0.035 OT:+0.244/+0.037
+    seviye capasi beta (P1-mu_lb ~ beta*(son-mu_lb))=0.908  |P1-son| ort=0.0854  |Y1-son| ort=0.0367
+    corr(P1-son, mu_lb-son)=+0.375  isaretli ort(P1-son)=+0.0415
+    TANISAL: yeniden-capa MSE=0.2220 (+5.2% vs model, -1.9% vs Rep)  0.5-karisim MSE=0.2134 (+1.1% vs model)
+    varyans orani pencere-ici std(P)/std(Y)=0.157  degisken: 0:0.18 1:0.22 2:0.18 3:0.14 4:0.10 5:0.15 6:0.13 OT:0.16 | std(P_H-son)/std(Y_H-son)=0.234
+
+===== H=336  N_pencere=425  bagimsiz-hedef-parcasi~2.26
+[1] MSE seed=[0.4022 0.4003 0.4006] ort=0.4010 sd=0.0011 min=0.4003 max=0.4022 | Repeat=0.3933  D=+0.0077 (+2.0%) | seed-bazli D%=[2.3 1.8 1.8]
+    MAE ort=0.4604 Repeat=0.4514 (+2.0%) | modelin Repeat'i yendigi pencere orani=0.482
+[6] seed sd=0.0011 (CV 0.26%)  MDE(3v3, a=.05, guc=.8)=0.0032 (0.8% goreli)
+[2] degisken: 0: 0.543 (pay 17%, Rep 0.519, M/R 1.05, OOR 0.91) | 1: 0.110 (pay 3%, Rep 0.105, M/R 1.04, OOR 0.00) | 2: 0.153 (pay 5%, Rep 0.159, M/R 0.96, OOR 0.00) | 3: 1.341 (pay 42%, Rep 1.362, M/R 0.98, OOR 0.94) | 4: 0.026 (pay 1%, Rep 0.023, M/R 1.14, OOR 0.00) | 5: 0.282 (pay 9%, Rep 0.263, M/R 1.08, OOR 0.59) | 6: 0.458 (pay 14%, Rep 0.415, M/R 1.10, OOR 0.98) | OT: 0.295 (pay 9%, Rep 0.300, M/R 0.98, OOR 0.29)
+    Spearman(OOR, MSE)=+0.88 (p=0.004, n=8)  Spearman(OOR, M/R)=+0.22
+    degisken-ici OOR vs ic hucre MSE (seed-ort tahmin): 0: OOR 0.559 vs ic 0.332 (Rep 0.534 vs 0.364); 3: OOR 1.401 vs ic 0.401 (Rep 1.427 vs 0.415); 5: OOR 0.332 vs ic 0.205 (Rep 0.329 vs 0.167); 6: OOR 0.466 vs ic 0.061 (Rep 0.424 vs 0.049); OT: OOR 0.534 vs ic 0.192 (Rep 0.521 vs 0.208)
+[3] blok MSE (seed-ort): [0.2153 0.4622 0.4491 0.266 ]  Repeat: [0.1945 0.4249 0.4404 0.3612]  M/R: [1.11 1.09 1.02 0.74]
+    worst_block_mse seed=[0.466  0.4588 0.462 ] ort=0.4622 (en kotu blok idx seed: [1 1 1]) | worst/avg ort=1.153 | Repeat worst=0.4404 (B3) worst/avg=1.120
+    blok hucre sayisi: [145160, 426040, 426040, 145160]
+    Spearman(s_io, pencere MSE): model ort=+0.811 (seed sd 0.005) Repeat=+0.664  | (s_io, M/R oran)=+0.473
+    Spearman(s_in_mu, pencere MSE): model ort=-0.770 (seed sd 0.008) Repeat=-0.607  | (s_in_mu, M/R oran)=-0.505
+    Spearman(s_oor_in, pencere MSE): model ort=-0.774 (seed sd 0.008) Repeat=-0.608  | (s_oor_in, M/R oran)=-0.519
+    Spearman(s_sd_lb, pencere MSE): model ort=+0.449 (seed sd 0.007) Repeat=+0.414  | (s_sd_lb, M/R oran)=+0.147
+    s_io medyan: gercek=2.99  tahmin(|mu(P)-mu_lb|/sd_lb)=0.88  (oran 0.30)  girdi sd_lb medyan (z)=0.150
+    s_io ust %10 (43 pencere): model MSE=0.7433 (x1.85 ort) Repeat=0.6405 (x1.63) M/R=1.16
+    Spearman(pencere sirasi, M/R)=-0.513  Spearman(pencere sirasi, s_in_mu)=+0.997  Spearman(pencere sirasi, s_sd_lb)=-0.497
+    zaman seyri (pencere sirasi 8 dilim) model/Repeat MSE: 0.701/0.676, 0.676/0.593, 0.410/0.334, 0.405/0.374, 0.267/0.284, 0.217/0.220, 0.182/0.198, 0.345/0.462
+[4] adim-dilimi M/R: 1.20 1.03 1.02 1.00 0.99 0.99 1.02 1.03 1.03 1.03
+    adim1: model 0.0173 Repeat 0.0026 | adimH: model 0.6688 Repeat 0.6620 | ||P-R||^2 adimH 0.0208 vs ||Y-R||^2 0.6620
+    adim H isaret uyumu(P-son, Y-son)=0.471  egim(Y-son ~ P-son)=+1.250  alpha*(tum adimlar)=+0.298 (seed [0.266 0.323 0.306])
+[5] bias (P-Y) degisken: 0:-0.379 1:-0.051 2:-0.051 3:-0.535 4:-0.142 5:-0.381 6:-0.349 OT:-0.301 | ort -0.274  Repeat bias ort -0.240
+    ufuk-ici trend (adimH-adim1) gercek/tahmin: 0:+0.432/-0.050 1:+0.000/-0.030 2:+0.012/-0.022 3:+0.432/-0.069 4:+0.226/-0.007 5:+0.538/-0.045 6:+0.396/-0.043 OT:+0.445/-0.043
+    seviye capasi beta (P1-mu_lb ~ beta*(son-mu_lb))=0.725  |P1-son| ort=0.0896  |Y1-son| ort=0.0324
+    corr(P1-son, mu_lb-son)=+0.681  isaretli ort(P1-son)=-0.0116
+    TANISAL: yeniden-capa MSE=0.4089 (+2.0% vs model, +4.0% vs Rep)  0.5-karisim MSE=0.3924 (-2.2% vs model)
+    varyans orani pencere-ici std(P)/std(Y)=0.167  degisken: 0:0.21 1:0.27 2:0.19 3:0.11 4:0.10 5:0.20 6:0.13 OT:0.19 | std(P_H-son)/std(Y_H-son)=0.179
+
+===== H=720  N_pencere=41  bagimsiz-hedef-parcasi~1.06
+[1] MSE seed=[1.0558 0.9955 1.0635] ort=1.0383 sd=0.0372 min=0.9955 max=1.0635 | Repeat=1.1443  D=-0.1060 (-9.3%) | seed-bazli D%=[ -7.7 -13.   -7.1]
+    MAE ort=0.8078 Repeat=0.8755 (-7.7%) | modelin Repeat'i yendigi pencere orani=0.780
+[6] seed sd=0.0372 (CV 3.58%)  MDE(3v3, a=.05, guc=.8)=0.1130 (10.9% goreli)
+[2] degisken: 0: 1.959 (pay 24%, Rep 2.262, M/R 0.87, OOR 0.82) | 1: 0.220 (pay 3%, Rep 0.299, M/R 0.74, OOR 0.00) | 2: 0.164 (pay 2%, Rep 0.216, M/R 0.76, OOR 0.00) | 3: 2.594 (pay 31%, Rep 2.724, M/R 0.95, OOR 0.85) | 4: 0.094 (pay 1%, Rep 0.091, M/R 1.04, OOR 0.00) | 5: 1.267 (pay 15%, Rep 1.219, M/R 1.04, OOR 0.54) | 6: 1.311 (pay 16%, Rep 1.509, M/R 0.87, OOR 0.91) | OT: 0.697 (pay 8%, Rep 0.836, M/R 0.83, OOR 0.23)
+    Spearman(OOR, MSE)=+0.90 (p=0.002, n=8)  Spearman(OOR, M/R)=+0.39
+    degisken-ici OOR vs ic hucre MSE (seed-ort tahmin): 0: OOR 2.269 vs ic 0.402 (Rep 2.648 vs 0.474); 3: OOR 2.983 vs ic 0.378 (Rep 3.154 vs 0.342); 5: OOR 1.872 vs ic 0.559 (Rep 1.809 vs 0.533); 6: OOR 1.429 vs ic 0.039 (Rep 1.645 vs 0.063); OT: OOR 1.526 vs ic 0.440 (Rep 1.789 vs 0.546)
+[3] blok MSE (seed-ort): [0.3086 1.1284 1.6494 0.9842]  Repeat: [0.3284 1.2471 1.7936 1.1195]  M/R: [0.94 0.9  0.92 0.88]
+    worst_block_mse seed=[1.6717 1.5915 1.6849] ort=1.6494 (en kotu blok idx seed: [2 2 2]) | worst/avg ort=1.589 | Repeat worst=1.7936 (B3) worst/avg=1.567
+    blok hucre sayisi: [55760, 62320, 62320, 55760]
+    Spearman(s_io, pencere MSE): model ort=+0.835 (seed sd 0.109) Repeat=+0.868  | (s_io, M/R oran)=+0.574
+    Spearman(s_in_mu, pencere MSE): model ort=+0.529 (seed sd 0.144) Repeat=+0.640  | (s_in_mu, M/R oran)=+0.375
+    Spearman(s_oor_in, pencere MSE): model ort=+nan (seed sd nan) Repeat=+nan  | (s_oor_in, M/R oran)=+nan
+    Spearman(s_sd_lb, pencere MSE): model ort=-0.311 (seed sd 0.205) Repeat=-0.490  | (s_sd_lb, M/R oran)=+0.003
+    s_io medyan: gercek=6.00  tahmin(|mu(P)-mu_lb|/sd_lb)=1.15  (oran 0.20)  girdi sd_lb medyan (z)=0.186
+    s_io ust %10 (5 pencere): model MSE=1.4948 (x1.44 ort) Repeat=1.2808 (x1.12) M/R=1.17
+    Spearman(pencere sirasi, M/R)=-0.576  Spearman(pencere sirasi, s_in_mu)=-0.796  Spearman(pencere sirasi, s_sd_lb)=+0.664
+    zaman seyri (pencere sirasi 8 dilim) model/Repeat MSE: 1.728/1.454, 1.283/1.229, 0.904/1.157, 0.925/1.222, 1.051/1.160, 0.824/1.010, 0.729/0.937, 0.724/0.924
+[4] adim-dilimi M/R: 1.05 0.89 0.90 0.87 0.92 0.93 0.93 0.88 0.90 0.89
+    adim1: model 0.0374 Repeat 0.0022 | adimH: model 1.2449 Repeat 1.4049 | ||P-R||^2 adimH 0.0429 vs ||Y-R||^2 1.4049
+    adim H isaret uyumu(P-son, Y-son)=0.658  egim(Y-son ~ P-son)=+0.214  alpha*(tum adimlar)=+1.893 (seed [1.589 2.407 1.682])
+[5] bias (P-Y) degisken: 0:-1.262 1:-0.363 2:-0.266 3:-1.376 4:-0.272 5:-1.048 6:-1.053 OT:-0.709 | ort -0.794  Repeat bias ort -0.872
+    ufuk-ici trend (adimH-adim1) gercek/tahmin: 0:+1.607/+0.008 1:+0.593/+0.012 2:+0.570/+0.015 3:+1.291/+0.022 4:+0.423/+0.000 5:+1.368/+0.029 6:+1.601/-0.003 OT:+1.162/-0.004
+    seviye capasi beta (P1-mu_lb ~ beta*(son-mu_lb))=1.021  |P1-son| ort=0.1432  |Y1-son| ort=0.0301
+    corr(P1-son, mu_lb-son)=+0.096  isaretli ort(P1-son)=+0.0784
+    TANISAL: yeniden-capa MSE=1.1546 (+11.2% vs model, +0.9% vs Rep)  0.5-karisim MSE=1.0818 (+4.2% vs model)
+    varyans orani pencere-ici std(P)/std(Y)=0.160  degisken: 0:0.23 1:0.34 2:0.26 3:0.11 4:0.02 5:0.13 6:0.09 OT:0.17 | std(P_H-son)/std(Y_H-son)=0.390
+
+4-ufuk ort: model 0.4436 Repeat 0.4730 (-6.2%)  H720 payi model 59%
+val_mse_avg seed=[0.4485 0.4323 0.4499] sd=0.0098 MDE(3v3)=0.0297 (6.7%)
+yazildi: C:\Users\karsl\Downloads\yzmakaleuretimskill\yzmakaleuretimskill\deney_workspace\5-3-exchange-itransformer\sonuclar\hata-kirilim_xmark-yok.csv (180 satir)
+yazildi: C:\Users\karsl\Downloads\yzmakaleuretimskill\yzmakaleuretimskill\deney_workspace\5-3-exchange-itransformer\sonuclar\hata-adim_xmark-yok.csv (40 satir)

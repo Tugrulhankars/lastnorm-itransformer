@@ -1,0 +1,6 @@
+2026-10-14T02:50:46+03:00
+h96: omurga_agirlik_ayni=True param_fark=16 maks_fark_eval=0.000e+00 maks_fark_train=0.000e+00 -> GECTI
+h192: omurga_agirlik_ayni=True param_fark=16 maks_fark_eval=0.000e+00 maks_fark_train=0.000e+00 -> GECTI
+h336: omurga_agirlik_ayni=True param_fark=16 maks_fark_eval=0.000e+00 maks_fark_train=0.000e+00 -> GECTI
+h720: omurga_agirlik_ayni=True param_fark=16 maks_fark_eval=0.000e+00 maks_fark_train=0.000e+00 -> GECTI
+SONUC: GECTI (max fark < 1e-6, tek-degisken korunuyor)

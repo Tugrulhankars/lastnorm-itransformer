@@ -1,0 +1,69 @@
+{
+  "_aciklama": "ON-KAYIT (rakip-kurucu P2, 2026-10-14): ETT kosumlarindan (duman/on-ucus dahil) ONCE yazildi; kosum sonrasi degistirilmez. Metrik val_mse_avg = 4 ufkun val MSE ortalamasi (olcekli uzay, resmi val'in tum pencereleri, batch 1, drop_last yok; test ile ayni tanim). Literaturdeki sayilar TEST'tir ve val ile dogrudan kiyaslanamaz (ETT'de val/test duzeyi farkli) -> araliklar ORAN (model/Repeat) uzerinden VAL naif referansina tasindi. TEST sayisi hicbir kurala konmadi; replikasyon karari ayri (replikasyon_kapisi.py, test_mse_avg, K3 istisnasi; rakip/KURULUM.md §ETT). FAZ II sef karari: ETT'de secim yapilmaz. Kol lastnorm: Exchange'de secilen H04 AYNEN (varyantlar/lastnorm, hiperparametre aktarma/ayar YOK); aralik baseline ile ayni makullük araligidir (yon kurali yok: ETT'de secim yapilmaz, karsilastirma K5'te).",
+  "metrik": "val_mse_avg",
+  "yon": "min",
+  "asama": {
+    "1": {
+      "aciklama": "DUMAN -- etth1-lastnorm-duman: s2023, yalniz h96, --epoch-ust 1 (foreground, --kuyruk p2-etth1-lastnorm --asama 1).",
+      "kurallar": [
+        {
+          "tur": "sonlu"
+        },
+        {
+          "tur": "min_kosum",
+          "n": 1
+        },
+        {
+          "tur": "aralik",
+          "varyant": "etth1-lastnorm-duman",
+          "alt": 0.2326,
+          "ust": 2.2433,
+          "kaynak": "h96: alt = 0.5 x lit. h96 orani (0.386/1.295 = 0.298; Liu 2024 Tab.10, Zeng 2023 Tab.2) x Repeat val h96 1.5608; ust = 1.5 x en iyi trivial val h96 (train-ortalamasi 1.4955) -- 1 epoch kisaltma icin 1.5x gevsetme (H04 karti emsali)"
+        },
+        {
+          "tur": "ikincil_aralik",
+          "metrik": "param_sayisi",
+          "alt": 841568,
+          "ust": 841568,
+          "kaynak": "resmi iTransformer.Model(.sh h96 argumanlari) CPU'da sayildi (Exchange degerleri 224224/304720 ile yontem dogrulandi)"
+        }
+      ]
+    },
+    "3": {
+      "aciklama": "TAM -- etth1-lastnorm: 3 seed {2023,2024,2025}, resmi ETTh1 .sh birebir (10 epoch, patience 3), 4 ufuk. Kuyruk yalniz asama-3 satiri tasir (duman foreground'da ayni kuyruk etiketiyle damgalandi); son asamadan sonra kapi otomatik kosmaz -> sef beklenti_kontrol.py --asama 3 ile elle.",
+      "kurallar": [
+        {
+          "tur": "sonlu"
+        },
+        {
+          "tur": "farkli_seedler_farkli"
+        },
+        {
+          "tur": "min_kosum",
+          "n": 3
+        },
+        {
+          "tur": "aralik",
+          "varyant": "etth1-lastnorm",
+          "alt": 0.3568,
+          "ust": 1.5384,
+          "kaynak": "alt = 0.5 x lit. oran x Repeat val = 0.5 x 0.344 x 2.0758 = 0.3568: literaturun bildirdigi modelin Repeat'e oraninin yarisinin altina inmek sizinti/protokol suphesi -> INCELE; ust = en iyi trivial VAL tahminci (train-ortalamasi) ort. 1.5384: literaturde iTransformer test'te Repeat'in 0.34 kati; tam egitimli modelin trivial tahminciden kotu olmasi kurulum hatasi. iTransformer ETTh1 L=96 test MSE ort. 0.454 (Liu et al. 2024 Tab.10, s.23) / Repeat test ort. 1.3205 (Zeng et al. 2023 Tab.2, s.5) = oran 0.344 (hesap; notlar/literatur-cipa-ett.md §1-2); VAL naif (data/naive_val_etth1.csv K3 = resmi val, kat_dogrula.py ile bit-bit dogrulandi): Repeat ort. 2.0758, train-ortalamasi ort. 1.5384"
+        },
+        {
+          "tur": "ikincil_aralik",
+          "metrik": "param_sayisi",
+          "alt": 3576016,
+          "ust": 3576016,
+          "kaynak": "resmi Model(.sh h720) CPU sayimi; lastnorm yeni parametre eklemez (H04 karti)"
+        },
+        {
+          "tur": "ikincil_aralik",
+          "metrik": "egitim_sure_sn",
+          "alt": 60,
+          "ust": 5000,
+          "kaynak": "Exchange on-ucus 233 s (rakip/KURULUM.md §5) x ETT/Exchange pencere orani ~1.65-2.0 -> tam kosum tahmini <=1250 s/seed (en cok 10 epoch x 4 ufuk); 4x = 5000 s (hesaplama-kaynagi.md §4 sure anormalligi)"
+        }
+      ]
+    }
+  }
+}

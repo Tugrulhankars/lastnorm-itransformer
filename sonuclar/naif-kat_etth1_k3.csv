@@ -1,0 +1,5 @@
+veri,kat,ufuk,seq_len,train_satir_son,val_satir_bas,val_satir_son,pencere_train,pencere_val,yontem,mse,mae
+etth1,3,96,96,8640,8640,11520,8449,2785,repeat_last,1.560809,0.846302
+etth1,3,192,96,8640,8640,11520,8353,2689,repeat_last,1.880851,0.946458
+etth1,3,336,96,8640,8640,11520,8209,2545,repeat_last,2.251628,1.057930
+etth1,3,720,96,8640,8640,11520,7825,2161,repeat_last,2.609958,1.161644

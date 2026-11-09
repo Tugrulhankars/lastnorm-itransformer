@@ -1,0 +1,47 @@
+[H05 onkosul] 2026-10-14 05:01:52 | torch 2.4.1+cu121 | cihaz CPU (cuda gorunur=True) | kosumlar {2023: '20261014-040042_san_s2023', 2024: '20261014-040547_san_s2024', 2025: '20261014-041102_san_s2025'}
+[H05 onkosul] esikler: R_H<1.0, O1: #{R_H<1}>=3 ve ort R<1.0; O2: sigma_son_dilim<0.001 orani<=10% (val); P=6
+h96: val pencere=665 | sigma_son_dilim ort=0.0485 min=2.62e-04 | <0.001 orani=0.0041
+  h96 s2023 val  : E_san=0.155532 E_naif=0.128704 E_son=0.125056 E_lb=0.190132 R=1.2084 | sigma_hat==0 orani=1.000 | n=665 | san_ckpt==istasyon_ckpt: True
+  h96 s2023 train: E_san=0.115635 E_naif=0.124279 E_son=0.120162 E_lb=0.208309 R=0.9304 | sigma_hat==0 orani=1.000 | n=5120 | san_ckpt==istasyon_ckpt: True
+  h96 s2024 val  : E_san=0.160201 E_naif=0.128704 E_son=0.125056 E_lb=0.190132 R=1.2447 | sigma_hat==0 orani=1.000 | n=665 | san_ckpt==istasyon_ckpt: True
+  h96 s2024 train: E_san=0.112966 E_naif=0.124279 E_son=0.120162 E_lb=0.208309 R=0.9090 | sigma_hat==0 orani=1.000 | n=5120 | san_ckpt==istasyon_ckpt: True
+  h96 s2025 val  : E_san=0.154931 E_naif=0.128704 E_son=0.125056 E_lb=0.190132 R=1.2038 | sigma_hat==0 orani=1.000 | n=665 | san_ckpt==istasyon_ckpt: True
+  h96 s2025 train: E_san=0.114248 E_naif=0.124279 E_son=0.120162 E_lb=0.208309 R=0.9193 | sigma_hat==0 orani=1.000 | n=5120 | san_ckpt==istasyon_ckpt: True
+h192: val pencere=569 | sigma_son_dilim ort=0.0496 min=2.62e-04 | <0.001 orani=0.0048
+  h192 s2023 val  : E_san=0.306149 E_naif=0.226545 E_son=0.222982 E_lb=0.301962 R=1.3514 | sigma_hat==0 orani=1.000 | n=569 | san_ckpt==istasyon_ckpt: True
+  h192 s2023 train: E_san=0.231212 E_naif=0.249569 E_son=0.245688 E_lb=0.327809 R=0.9264 | sigma_hat==0 orani=1.000 | n=5024 | san_ckpt==istasyon_ckpt: True
+  h192 s2024 val  : E_san=0.266383 E_naif=0.226545 E_son=0.222982 E_lb=0.301962 R=1.1758 | sigma_hat==0 orani=1.000 | n=569 | san_ckpt==istasyon_ckpt: True
+  h192 s2024 train: E_san=0.230146 E_naif=0.249569 E_son=0.245688 E_lb=0.327809 R=0.9222 | sigma_hat==0 orani=1.000 | n=5024 | san_ckpt==istasyon_ckpt: True
+  h192 s2025 val  : E_san=0.281488 E_naif=0.226545 E_son=0.222982 E_lb=0.301962 R=1.2425 | sigma_hat==0 orani=0.973 | n=569 | san_ckpt==istasyon_ckpt: True
+  h192 s2025 train: E_san=0.226566 E_naif=0.249569 E_son=0.245688 E_lb=0.327809 R=0.9078 | sigma_hat==0 orani=0.963 | n=5024 | san_ckpt==istasyon_ckpt: True
+h336: val pencere=425 | sigma_son_dilim ort=0.0450 min=2.62e-04 | <0.001 orani=0.0062
+  h336 s2023 val  : E_san=0.491901 E_naif=0.393391 E_son=0.389697 E_lb=0.493595 R=1.2504 | sigma_hat==0 orani=1.000 | n=425 | san_ckpt==istasyon_ckpt: True
+  h336 s2023 train: E_san=0.381897 E_naif=0.428926 E_son=0.425361 E_lb=0.497989 R=0.8904 | sigma_hat==0 orani=1.000 | n=4880 | san_ckpt==istasyon_ckpt: True
+  h336 s2024 val  : E_san=0.555500 E_naif=0.393391 E_son=0.389697 E_lb=0.493595 R=1.4121 | sigma_hat==0 orani=0.998 | n=425 | san_ckpt==istasyon_ckpt: True
+  h336 s2024 train: E_san=0.388361 E_naif=0.428926 E_son=0.425361 E_lb=0.497989 R=0.9054 | sigma_hat==0 orani=0.987 | n=4880 | san_ckpt==istasyon_ckpt: True
+  h336 s2025 val  : E_san=0.526151 E_naif=0.393391 E_son=0.389697 E_lb=0.493595 R=1.3375 | sigma_hat==0 orani=0.962 | n=425 | san_ckpt==istasyon_ckpt: True
+  h336 s2025 train: E_san=0.383780 E_naif=0.428926 E_son=0.425361 E_lb=0.497989 R=0.8947 | sigma_hat==0 orani=0.954 | n=4880 | san_ckpt==istasyon_ckpt: True
+h720: val pencere=41 | sigma_son_dilim ort=0.0475 min=4.61e-04 | <0.001 orani=0.0091
+  h720 s2023 val  : E_san=1.361946 E_naif=1.190548 E_son=1.141231 E_lb=1.264296 R=1.1440 | sigma_hat==0 orani=0.988 | n=41 | san_ckpt==istasyon_ckpt: True
+  h720 s2023 train: E_san=0.728203 E_naif=0.819784 E_son=0.816676 E_lb=0.880527 R=0.8883 | sigma_hat==0 orani=0.983 | n=4496 | san_ckpt==istasyon_ckpt: True
+  h720 s2024 val  : E_san=1.358275 E_naif=1.190548 E_son=1.141231 E_lb=1.264296 R=1.1409 | sigma_hat==0 orani=0.980 | n=41 | san_ckpt==istasyon_ckpt: True
+  h720 s2024 train: E_san=0.727405 E_naif=0.819784 E_son=0.816676 E_lb=0.880527 R=0.8873 | sigma_hat==0 orani=0.969 | n=4496 | san_ckpt==istasyon_ckpt: True
+  h720 s2025 val  : E_san=1.337881 E_naif=1.190548 E_son=1.141231 E_lb=1.264296 R=1.1238 | sigma_hat==0 orani=0.939 | n=41 | san_ckpt==istasyon_ckpt: True
+  h720 s2025 train: E_san=0.729671 E_naif=0.819784 E_son=0.816676 E_lb=0.880527 R=0.8901 | sigma_hat==0 orani=0.944 | n=4496 | san_ckpt==istasyon_ckpt: True
+
+OZET (seed ortalamalari; R_H = ort_s(E_san) / ort_s(E_naif)):
+split | H | E_san | E_naif | E_son | E_lb | R_H
+val | 96 | 0.156888 | 0.128704 | 0.125056 | 0.190132 | 1.2190
+val | 192 | 0.284673 | 0.226545 | 0.222982 | 0.301962 | 1.2566
+val | 336 | 0.524517 | 0.393391 | 0.389697 | 0.493595 | 1.3333
+val | 720 | 1.352701 | 1.190548 | 1.141231 | 1.264296 | 1.1362
+train | 96 | 0.114283 | 0.124279 | 0.120162 | 0.208309 | 0.9196
+train | 192 | 0.229308 | 0.249569 | 0.245688 | 0.327809 | 0.9188
+train | 336 | 0.384680 | 0.428926 | 0.425361 | 0.497989 | 0.8968
+train | 720 | 0.728426 | 0.819784 | 0.816676 | 0.880527 | 0.8886
+
+O1 (val): R_H = h96 1.2190, h192 1.2566, h336 1.3333, h720 1.1362 | #{R_H<1} = 0/4 (gerekli >= 3) | ort R = 1.2363 (gerekli < 1.0) -> BASARISIZ
+O1 (train, yalniz bilgi): R_H = h96 0.9196, h192 0.9188, h336 0.8968, h720 0.8886 | ort R = 0.9059
+O2 (val): sigma_son_dilim<0.001 orani = h96 0.0041, h192 0.0048, h336 0.0062, h720 0.0091 | maks 0.0091 (gerekli <= 0.1) -> GECER
+[H05 onkosul] sure 12.4s | csv: C:\Users\karsl\Downloads\yzmakaleuretimskill\yzmakaleuretimskill\deney_workspace\5-3-exchange-itransformer\sonuclar\h05-onkosul.csv
+KAPI=BASARISIZ

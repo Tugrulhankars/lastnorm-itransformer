@@ -1,0 +1,145 @@
+{
+  "_aciklama": "ON-KAYIT (deney-yurutucu, FAZ III H16, 2026-10-15): ettm1 tam kosumlarindan ONCE yazildi (asama 1 ETTm1 duman kurallari dumandan ONCE). Satir = (kol, ufuk, seed); varyant adi '<veri>-<kol>-h<H>', metrik val_mse_avg = o ufkun val MSE'si (--ufuk-basi; notlar/h16-kuyruk.md sema). Kollar: baseline = resmi iTransformer .sh birebir (scripts/rakip_kos.py), lastnorm = H04 AYNEN (varyantlar/lastnorm/kos.py; hiperparametre aktarma/ayar yok). Yon kurali YOK: H16 tahmini TEST uzerinde ve test kilitli; val'de secim yapilmaz. TEST hicbir kurala konmadi. Replikasyon capasi (yalniz kilit acilisinda, 4 ufuk birlestirilmis seed basina test_mse_avg ortalamasi): lit 0.407 (Liu 2024 Tab.10 Avg), tol 0.009, YESIL [0.398, 0.416], SARI [0.389, 0.425] (notlar/literatur-cipa-faz3.md §3). Son asamadan sonra kapi otomatik kosmaz -> sef beklenti_kontrol.py --asama 3 ile elle. | EK (2026-10-15 06:50, ETTm1 dumanlari 20261015-062958 / 063927 SONRASI, tam kosumlardan ONCE; mevcut kurallar degistirilmedi): h96 ust siniri (yalniz ettm1) ve egitim_sure_sn ikincil araligi eklendi. | DUZELTME (2026-10-15 07:15, tam kosumdan ONCE): sef karariyla hizlandirma (a) PDF yok (b) egitim-ici vali(test) atlanir (RNG korunur) -> egitim_sure_sn ikincil araligi yeni kodun A/B olcumuyle duzeltildi; val araliklari degismedi (A/B: val/test bit-bit ayni).",
+  "metrik": "val_mse_avg",
+  "yon": "min",
+  "asama": {
+    "1": {
+      "aciklama": "DUMAN -- ettm1-{baseline,lastnorm}-h96-duman: s2023, --ufuk-basi --ufuklar 96 --epoch-ust 1 (foreground, deney-yurutucu; sure olcumu -> tam satir tahmini).",
+      "kurallar": [
+        {
+          "tur": "sonlu"
+        },
+        {
+          "tur": "min_kosum",
+          "n": 2
+        },
+        {
+          "tur": "kollar_farkli"
+        },
+        {
+          "tur": "aralik",
+          "varyant": "ettm1-baseline-h96-duman",
+          "alt": 0.1719,
+          "ust": 1.8745,
+          "kaynak": "alt = 0.5 x lit oran h96 0.2751 x Repeat val h96 1.2497; ust = 1.5 x en iyi trivial val h96 1.2497 (1 epoch kisaltmasi; P2 ETTh1 duman emsali)"
+        },
+        {
+          "tur": "aralik",
+          "varyant": "ettm1-lastnorm-h96-duman",
+          "alt": 0.1719,
+          "ust": 1.8745,
+          "kaynak": "alt = 0.5 x lit oran h96 0.2751 x Repeat val h96 1.2497; ust = 1.5 x en iyi trivial val h96 1.2497 (1 epoch kisaltmasi; P2 ETTh1 duman emsali)"
+        },
+        {
+          "tur": "ikincil_aralik",
+          "metrik": "param_sayisi",
+          "alt": 224224,
+          "ust": 224224,
+          "kaynak": "resmi Model(.sh h96) CPU sayimi; LastNorm esit"
+        }
+      ]
+    },
+    "3": {
+      "aciklama": "TAM -- {baseline, lastnorm} x h{96,192,336,720} x seed {2023,2024,2025} = 24 satir; resmi ettm1 .sh birebir (10 epoch, patience 3), ufuk basina ayri surec.",
+      "kurallar": [
+        {
+          "tur": "sonlu"
+        },
+        {
+          "tur": "farkli_seedler_farkli"
+        },
+        {
+          "tur": "kollar_farkli"
+        },
+        {
+          "tur": "min_kosum",
+          "n": 24
+        },
+        {
+          "tur": "aralik",
+          "varyant": "ettm1-baseline-h96",
+          "alt": 0.1719,
+          "ust": 1.2497,
+          "kaynak": "alt = 0.5 x lit oran 0.2751 (iTr 0.334 Liu 2024 Tab.10 s.23 / Repeat 1.214 Zeng 2023 Tab.2 s.5) x Repeat val h96 1.2497; ust = en iyi trivial val h96 min(Repeat 1.2497, train-ort 1.4718) (data/naive_val_ettm1.csv; P2 ETTh1 emsali)"
+        },
+        {
+          "tur": "aralik",
+          "varyant": "ettm1-lastnorm-h96",
+          "alt": 0.1719,
+          "ust": 1.2497,
+          "kaynak": "alt = 0.5 x lit oran 0.2751 (iTr 0.334 Liu 2024 Tab.10 s.23 / Repeat 1.214 Zeng 2023 Tab.2 s.5) x Repeat val h96 1.2497; ust = en iyi trivial val h96 min(Repeat 1.2497, train-ort 1.4718) (data/naive_val_ettm1.csv; P2 ETTh1 emsali); lastnorm: ayni makullük araligi (yon kurali yok, secim yok)"
+        },
+        {
+          "tur": "aralik",
+          "varyant": "ettm1-baseline-h192",
+          "alt": 0.2042,
+          "ust": 1.3659,
+          "kaynak": "alt = 0.5 x lit oran 0.2990 (iTr 0.377 Liu 2024 Tab.10 s.23 / Repeat 1.261 Zeng 2023 Tab.2 s.5) x Repeat val h192 1.3659; ust = en iyi trivial val h192 min(Repeat 1.3659, train-ort 1.4742) (data/naive_val_ettm1.csv; P2 ETTh1 emsali)"
+        },
+        {
+          "tur": "aralik",
+          "varyant": "ettm1-lastnorm-h192",
+          "alt": 0.2042,
+          "ust": 1.3659,
+          "kaynak": "alt = 0.5 x lit oran 0.2990 (iTr 0.377 Liu 2024 Tab.10 s.23 / Repeat 1.261 Zeng 2023 Tab.2 s.5) x Repeat val h192 1.3659; ust = en iyi trivial val h192 min(Repeat 1.3659, train-ort 1.4742) (data/naive_val_ettm1.csv; P2 ETTh1 emsali); lastnorm: ayni makullük araligi (yon kurali yok, secim yok)"
+        },
+        {
+          "tur": "aralik",
+          "varyant": "ettm1-baseline-h336",
+          "alt": 0.2507,
+          "ust": 1.4777,
+          "kaynak": "alt = 0.5 x lit oran 0.3320 (iTr 0.426 Liu 2024 Tab.10 s.23 / Repeat 1.283 Zeng 2023 Tab.2 s.5) x Repeat val h336 1.5102; ust = en iyi trivial val h336 min(Repeat 1.5102, train-ort 1.4777) (data/naive_val_ettm1.csv; P2 ETTh1 emsali)"
+        },
+        {
+          "tur": "aralik",
+          "varyant": "ettm1-lastnorm-h336",
+          "alt": 0.2507,
+          "ust": 1.4777,
+          "kaynak": "alt = 0.5 x lit oran 0.3320 (iTr 0.426 Liu 2024 Tab.10 s.23 / Repeat 1.283 Zeng 2023 Tab.2 s.5) x Repeat val h336 1.5102; ust = en iyi trivial val h336 min(Repeat 1.5102, train-ort 1.4777) (data/naive_val_ettm1.csv; P2 ETTh1 emsali); lastnorm: ayni makullük araligi (yon kurali yok, secim yok)"
+        },
+        {
+          "tur": "aralik",
+          "varyant": "ettm1-baseline-h720",
+          "alt": 0.341,
+          "ust": 1.497,
+          "kaynak": "alt = 0.5 x lit oran 0.3723 (iTr 0.491 Liu 2024 Tab.10 s.23 / Repeat 1.319 Zeng 2023 Tab.2 s.5) x Repeat val h720 1.8321; ust = en iyi trivial val h720 min(Repeat 1.8321, train-ort 1.4970) (data/naive_val_ettm1.csv; P2 ETTh1 emsali)"
+        },
+        {
+          "tur": "aralik",
+          "varyant": "ettm1-lastnorm-h720",
+          "alt": 0.341,
+          "ust": 1.497,
+          "kaynak": "alt = 0.5 x lit oran 0.3723 (iTr 0.491 Liu 2024 Tab.10 s.23 / Repeat 1.319 Zeng 2023 Tab.2 s.5) x Repeat val h720 1.8321; ust = en iyi trivial val h720 min(Repeat 1.8321, train-ort 1.4970) (data/naive_val_ettm1.csv; P2 ETTh1 emsali); lastnorm: ayni makullük araligi (yon kurali yok, secim yok)"
+        },
+        {
+          "tur": "ikincil_aralik",
+          "metrik": "param_sayisi",
+          "alt": 224224,
+          "ust": 304720,
+          "kaynak": "resmi Model(.sh h96..h720) CPU sayimi; ikincil_aralik varyanta gore suzulmez -> ufuk min..max; LastNorm esit"
+        },
+        {
+          "tur": "aralik",
+          "varyant": "ettm1-baseline-h96",
+          "alt": 0.0,
+          "ust": 0.4338,
+          "kaynak": "duman ettm1-baseline-h96-duman s2023 epoch-1 val_mse 0.3944; resmi erken durdurma en iyi vali-kaybi checkpoint'ini yukler (epoch 1 dahil; ayni tohumda epoch 1 = duman) -> tam val_h96 <= epoch-1 degeri (+ seed farki icin %10 pay)"
+        },
+        {
+          "tur": "aralik",
+          "varyant": "ettm1-lastnorm-h96",
+          "alt": 0.0,
+          "ust": 0.443,
+          "kaynak": "duman ettm1-lastnorm-h96-duman s2023 epoch-1 val_mse 0.4028; resmi erken durdurma en iyi vali-kaybi checkpoint'ini yukler (epoch 1 dahil; ayni tohumda epoch 1 = duman) -> tam val_h96 <= epoch-1 degeri (+ seed farki icin %10 pay)"
+        },
+        {
+          "tur": "ikincil_aralik",
+          "metrik": "egitim_sure_sn",
+          "alt": 150,
+          "ust": 1500,
+          "kaynak": "DUZELTME 07:15 (kod degisti: sef karari hizlandirma (a)+(b), tam kosumdan ONCE; eski [300, 1800] hizlandirmasiz koda aitti): A/B kosumu 20261015-070607_ettm1-baseline-h96-ep2-hizacik_s2023 2 epoch satir 234 s (sabit ~185 s + epoch ~27 s, GPU paylasimli); E in [4,10] -> ~310-470 s; alt 150 (paylasimsiz pay), ust 1500 = zaman siniri 25 dk"
+        }
+      ]
+    }
+  }
+}

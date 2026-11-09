@@ -1,0 +1,36 @@
+{
+  "run_id": "20261014-072750_lastnorm-ep336eq_s2023",
+  "varyant": "lastnorm-ep336eq",
+  "seed": "2023",
+  "etiket": "PROTOKOL: lastnorm + h336 train_epochs 1->10 (diğer ufuklar lastnorm ile aynı)",
+  "ebeveyn": "20261014-052508_lastnorm_s2023",
+  "hipotez": "H08",
+  "kuyruk": "k4t3-h08",
+  "asama": 3,
+  "kural": {
+    "nan_kes": true,
+    "min_adim": 1,
+    "ust_sinir": {
+      "val_loss": 3.0,
+      "loss": 3.0
+    },
+    "alt_sinir": {
+      "val_loss": 0.01
+    },
+    "sabit_sn": 900,
+    "ilerleme_zorunlu_sn": 600
+  },
+  "komut": [
+    "C:/Users/karsl/Downloads/yzmakaleuretimskill/yzmakaleuretimskill/deney_workspace/5-3-exchange-itransformer/env/.venv/Scripts/python.exe",
+    "C:/Users/karsl/Downloads/yzmakaleuretimskill/yzmakaleuretimskill/deney_workspace/5-3-exchange-itransformer/varyantlar/lastnorm-ep336eq/kos.py",
+    "--seed",
+    "2023",
+    "--out",
+    "C:\\Users\\karsl\\Downloads\\yzmakaleuretimskill\\yzmakaleuretimskill\\deney_workspace\\5-3-exchange-itransformer\\runs\\20261014-072750_lastnorm-ep336eq_s2023/metrics.json",
+    "--num-workers",
+    "0"
+  ],
+  "cwd": "C:\\Users\\karsl\\Downloads\\yzmakaleuretimskill\\yzmakaleuretimskill\\deney_workspace\\5-3-exchange-itransformer",
+  "baslangic": "2026-10-14T07:27:54",
+  "makine": "MetropolTilkisi"
+}
