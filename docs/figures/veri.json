@@ -1,0 +1,60 @@
+{
+  "_aciklama": "README grafiklerinin tek veri kaynagi. Her sayi makalenin kanit defterindeki (evidence.json) kayittan birebir alinmistir; 'kaynak' alani kayit kimligini verir. 'turetilmis' isaretli degerler, belirtilen kayitlardan make_figures.py icinde hesaplanir. Butun MSE degerleri test bolumu, z-olcek, 3 seed ortalamasi (aksi belirtilmedikce).",
+  "bes_veri_seti": {
+    "_birim": "LastNorm'un iTransformer'a gore test MSE degisimi [%], dort ufuk ortalamasi, 3 seed",
+    "satirlar": [
+      {"veri": "Exchange", "dpct": -4.96, "kaynak": "STAT.test.BIRINCIL-1.dpct"},
+      {"veri": "ETTm2",    "dpct": -0.90, "kaynak": "H16.ettm2.test.dpct (-0.903532)"},
+      {"veri": "ETTm1",    "dpct":  0.15, "kaynak": "H16.ettm1.test.dpct (0.151339)"},
+      {"veri": "ETTh2",    "dpct":  1.88, "kaynak": "ETT.etth2.test.dpct"},
+      {"veri": "ETTh1",    "dpct":  3.82, "kaynak": "ETT.etth1.test.dpct"}
+    ],
+    "repeat_exchange_dpct": {"deger": -6.48, "kaynak": "EX.test.repeat.avg.dpct_vs_itr (-6.477913)"}
+  },
+  "exchange_ufuk": {
+    "_birim": "test MSE, Exchange-Rate",
+    "ufuklar": [96, 192, 336, 720],
+    "itransformer": {"deger": [0.086586, 0.179389, 0.335089, 0.857424], "kaynak": "EX.test.baseline.h{96,192,336,720}.mse"},
+    "lastnorm":     {"deger": [0.082955, 0.172843, 0.315242, 0.815137], "kaynak": "EX.test.lastnorm.h{96,192,336,720}.mse"},
+    "repeat":       {"deger": [0.081126, 0.167119, 0.305700, 0.810064], "kaynak": "EX.test.repeat.h{96,192,336,720}.mse"},
+    "lastnorm_dpct_makale": {"deger": [-4.19, -3.65, -5.92, -4.93], "kaynak": "STAT.test.BIRINCIL-1.h{96,192,336,720}.dpct"}
+  },
+  "on_seed": {
+    "_birim": "Exchange test MSE, dort ufuk ortalamasi, seed basina",
+    "_kaynak": "makale figures/data/f1_seed_{pre,ek}_h*.dat (koşum test_metrics.json; md5 = sonuclar/f3-seed-test.log); ufuk ortalamasi make_figures.py disinda hesaplandi",
+    "seedler":   [2023, 2024, 2025, 2026, 2027, 2028, 2029, 2030, 2031, 2032],
+    "on_kayitli":[true, true, true, false, false, false, false, false, false, false],
+    "itransformer": [0.364269, 0.364096, 0.365501, 0.364241, 0.362475, 0.361069, 0.364556, 0.363489, 0.362060, 0.365152],
+    "lastnorm":     [0.346141, 0.348566, 0.344924, 0.347635, 0.348416, 0.349438, 0.349075, 0.353633, 0.346461, 0.352357],
+    "repeat": {"deger": 0.341002, "kaynak": "EX.test.repeat.avg.mse"},
+    "ozet": {"lastnorm_iyi": "10/10", "kaynak": "E2.test.tum10.avg.sayim", "dpct_10seed": -4.13, "dpct_kaynak": "E2.test.tum10.avg.dpct (-4.131523)"}
+  },
+  "ilk_adim": {
+    "_birim": "ilk tahmin adiminin MSE'si / Repeat'in ilk adim MSE'si (1 = Repeat duzeyi), Exchange test",
+    "ufuklar": [96, 192, 336, 720],
+    "itransformer": {"deger": [2.0339, 2.4467, 3.3935, 2.3097], "kaynak": "ADIM.exchange.test.h*.itr_MR1"},
+    "lastnorm":     {"deger": [1.0739, 1.1035, 1.2365, 1.0841], "kaynak": "ADIM.exchange.test.h*.ln_MR1"}
+  },
+  "ablasyon": {
+    "_birim": "Exchange test MSE, dort ufuk ortalamasi, 3 seed",
+    "satirlar": [
+      {"ad": "LastNorm (son değer + σ)",       "mse": 0.346544, "kaynak": "ABL.lastnorm.test.avg"},
+      {"ad": "iTransformer (ortalama + σ)",    "mse": 0.364622, "kaynak": "ABL.baseline.test.avg"},
+      {"ad": "LastNorm − σ (yalnız son değer)", "mse": 0.381807, "kaynak": "ABL.lastnorm-merkez.test.avg"},
+      {"ad": "Normalizasyon yok",               "mse": 0.964396, "kaynak": "ABL.normsuz.test.avg"}
+    ],
+    "repeat": {"mse": 0.341002, "kaynak": "EX.test.repeat.avg.mse"}
+  },
+  "kalicilik": {
+    "_birim": "R = egitim bolumunde son-deger naif MSE / pencere-ortalamasi naif MSE (dort ufuk ortalamasi); dpct = LastNorm vs iTransformer test MSE degisimi [%]",
+    "satirlar": [
+      {"veri": "Exchange", "R": 0.778959, "dpct": -4.96, "rol": "kalibrasyon", "kaynak": "H16.R.exchange.avg; STAT.test.BIRINCIL-1.dpct"},
+      {"veri": "ETTh1",    "R": 1.539864, "dpct":  3.82, "rol": "kalibrasyon", "kaynak": "H16.R.etth1.avg; ETT.etth1.test.dpct"},
+      {"veri": "ETTh2",    "R": 1.176964, "dpct":  1.88, "rol": "kalibrasyon", "kaynak": "H16.R.etth2.avg; ETT.etth2.test.dpct"},
+      {"veri": "ETTm1",    "R": 1.535990, "dpct":  0.15, "rol": "ileriye donuk", "kaynak": "H16.R.ettm1.avg; H16.ettm1.test.dpct"},
+      {"veri": "ETTm2",    "R": 1.096745, "dpct": -0.90, "rol": "ileriye donuk", "kaynak": "H16.R.ettm2.avg; H16.ettm2.test.dpct"}
+    ],
+    "kural": {"metin": "R<1 => LastNorm daha iyi; R>1 => LastNorm daha iyi degil", "kaynak": "H16.kural"},
+    "spearman": {"rho": 0.90, "p_tek_yonlu": 0.042, "kaynak": "H16.spearman5"}
+  }
+}
